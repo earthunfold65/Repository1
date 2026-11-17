@@ -1,0 +1,136 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .mono { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.12em; }
+    .tag { position:absolute; padding: 14px 26px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 40px; letter-spacing: .12em; background: rgba(8,10,18,.82); }
+    .stamp { position:absolute; padding: 18px 34px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 64px; letter-spacing: .02em; background: rgba(8,10,18,.55); white-space: nowrap; }
+
+    #map-fit { position:absolute; left:200px; top:360px; width:900px; height:900px; transform: scale(0.7556); transform-origin: 0 0; overflow: hidden; border-radius: 24px; }
+    #map-drift { position:absolute; left:0; top:0; width:900px; height:900px; transform-origin: 450px 450px; }
+    #map-cam { position:absolute; left:0; top:0; width:900px; height:900px; transform-origin: 416px 533px; }
+    #map-cam svg { position:absolute; inset:0; overflow: visible; }
+    .blob { fill: rgba(255,200,61,.85); stroke: #FFC83D; stroke-width: 3; }
+    .dot { fill: #FF7A1A; stroke: #fff; stroke-width: 3; }
+    #map-pin { position:absolute; left: 400px; top: 410px; width: 100px; height: 80px; }
+    #map-pin div { position:absolute; left: 36px; top: 26px; width: 28px; height: 28px; border-radius: 50%; background:#fff; box-shadow: 0 0 0 10px rgba(255,255,255,.25), 0 0 30px #fff; }
+    #map-pinlbl { left: 300px; top: 300px; width: 300px; text-align:center; color:#fff; font-size: 38px; padding: 10px 0; }
+    #map-lbl-nl { left: 60px; top: 150px; color:#FF7A1A; }  #map-lbl-be { left: 60px; top: 700px; color:#FFC83D; }
+    #map-stamp { left: 0; top: 520px; width: 900px; text-align:center; transform-origin: 450px 560px; }
+    #map-count { left: 340px; top: 372px; width: 400px; text-align: center; background: rgba(8,10,18,.82); padding: 8px 0 14px; }
+    #map-count-n { font-size: 120px; font-weight: 900; color: #FFC83D; line-height: 1; font-family: 'Inter Display'; letter-spacing: 0; }
+    .cl { font-size: 28px; color: #F4F1EA; }
+    #map-count2 { left: 240px; width: 600px; text-align: center; background: rgba(8,10,18,.85); padding: 8px 0 14px; top: 372px; opacity: 0; }
+    #map-count2-n { font-size: 120px; font-weight: 900; color: #FF7A1A; line-height: 1; font-family: 'Inter Display'; letter-spacing: 0; }
+    #map-note { left: 90px; top: 1010px; width: 900px; text-align: center; font-size: 28px; color: rgba(244,241,234,.55); background:none; }
+  </style>
+  <div id="root" data-composition-id="map" data-width="1080" data-height="1920">
+    <div id="map-fit"><div id="map-drift"><div id="map-cam">
+      <svg width="900" height="900" viewBox="0 0 900 900">
+        <path id="map-nl" d="M20,40 Q450,0 880,40 L880,450 L20,450 Z" fill="rgba(255,122,26,.16)" stroke="#FF7A1A" stroke-width="4"/>
+        <path id="map-be" d="M20,450 L880,450 L880,860 Q450,900 20,860 Z" fill="rgba(255,200,61,.14)" stroke="#FFC83D" stroke-width="4"/>
+        <path id="map-nlfull" d="M20,40 Q450,0 880,40 L880,860 Q450,900 20,860 Z" fill="rgba(255,122,26,.16)" stroke="#FF7A1A" stroke-width="4" opacity="0"/>
+        <path id="map-line" d="M0,450 L900,450" stroke="#FFC83D" stroke-width="8" stroke-dasharray="22 16" fill="none"/>
+        <path id="map-jag" d="M0,450 L60,534 L120,349 L180,542 L240,401 L300,504 L360,383 L420,507 L480,413 L540,554 L600,351 L660,487 L720,380 L780,487 L840,414 L900,554" stroke="#FFC83D" stroke-width="8" stroke-dasharray="22 16" fill="none" opacity="0"/>
+        <path id="map-b0" class="blob" d="M191.3,439.5 Q191.3,439.5 185.4,453.4 Q179.6,467.3 166.2,471.6 Q152.9,475.9 141.2,472.4 Q129.5,468.9 119.8,460.8 Q110.1,452.7 111.1,439.8 Q112.0,426.9 118.3,414.3 Q124.6,401.6 138.5,403.4 Q152.5,405.2 164.0,410.1 Q175.6,415.0 183.4,427.3 Z" style="transform-origin:146.4px 439.5px"/>
+        <path id="map-b1" class="blob" d="M628.6,632.6 Q628.6,632.6 629.6,642.3 Q630.5,652.0 621.5,656.6 Q612.5,661.2 604.3,656.8 Q596.1,652.3 589.7,646.8 Q583.2,641.4 583.5,632.7 Q583.8,624.0 588.7,616.3 Q593.6,608.6 603.1,606.1 Q612.5,603.6 617.9,611.5 Q623.3,619.3 626.0,625.9 Z" style="transform-origin:607.4px 632.6px"/>
+        <path id="map-b2" class="blob" d="M283.5,547.7 Q283.5,547.7 280.6,555.5 Q277.8,563.3 269.8,563.2 Q261.9,563.1 256.6,562.3 Q251.3,561.5 244.4,558.6 Q237.5,555.6 237.9,547.9 Q238.4,540.1 243.4,534.6 Q248.4,529.1 255.4,529.5 Q262.3,529.9 268.8,532.1 Q275.2,534.3 279.4,541.0 Z" style="transform-origin:259.2px 547.7px"/>
+        <path id="map-b3" class="blob" d="M263.0,621.2 Q263.0,621.2 262.1,627.7 Q261.2,634.2 255.1,636.8 Q248.9,639.5 242.1,639.3 Q235.3,639.2 230.6,633.8 Q226.0,628.4 228.5,622.1 Q231.0,615.8 234.6,612.0 Q238.2,608.1 243.9,603.3 Q249.7,598.5 254.4,604.2 Q259.1,609.9 261.1,615.6 Z" style="transform-origin:245.7px 621.2px"/>
+        <path id="map-b4" class="blob" d="M178.0,685.1 Q178.0,685.1 172.5,696.4 Q167.0,707.8 157.1,716.8 Q147.2,725.9 134.5,721.2 Q121.8,716.6 114.7,706.7 Q107.6,696.9 104.3,683.9 Q101.0,670.9 107.4,655.3 Q113.8,639.7 131.2,637.8 Q148.7,635.9 163.2,644.7 Q177.7,653.5 177.8,669.3 Z" style="transform-origin:140.0px 685.1px"/>
+        <path id="map-b5" class="blob" d="M391.1,384.7 Q391.1,384.7 387.0,399.1 Q382.9,413.6 369.7,421.8 Q356.5,430.0 340.3,428.5 Q324.1,427.0 315.2,413.5 Q306.3,400.0 304.7,384.1 Q303.0,368.1 318.0,363.0 Q333.0,357.8 344.2,351.8 Q355.4,345.7 370.7,349.5 Q385.9,353.3 388.5,369.0 Z" style="transform-origin:348.5px 384.7px"/>
+        <path id="map-b6" class="blob" d="M709.2,597.3 Q709.2,597.3 706.4,605.4 Q703.6,613.6 695.7,616.1 Q687.9,618.7 681.2,616.4 Q674.4,614.1 671.5,608.5 Q668.5,602.9 665.2,596.1 Q661.9,589.2 667.6,583.8 Q673.3,578.5 680.9,575.7 Q688.4,572.9 694.2,578.5 Q699.9,584.0 704.6,590.6 Z" style="transform-origin:684.1px 597.3px"/>
+        <path id="map-b7" class="blob" d="M419.4,568.3 Q419.4,568.3 412.6,581.3 Q405.9,594.2 395.0,606.9 Q384.0,619.6 369.9,610.7 Q355.7,601.7 342.1,593.4 Q328.5,585.2 330.4,569.0 Q332.3,552.8 344.1,544.0 Q355.9,535.2 369.7,527.8 Q383.4,520.3 393.6,532.2 Q403.9,544.1 411.6,556.2 Z" style="transform-origin:375.0px 568.3px"/>
+        <path id="map-b8" class="blob" d="M562.7,710.3 Q562.7,710.3 564.2,727.7 Q565.8,745.1 548.2,745.5 Q530.6,745.9 515.3,749.1 Q500.0,752.4 495.6,737.4 Q491.1,722.4 489.5,709.7 Q487.8,697.0 492.3,679.9 Q496.9,662.7 513.9,667.8 Q530.9,672.9 545.7,676.4 Q560.5,679.9 561.6,695.1 Z" style="transform-origin:524.3px 710.3px"/>
+        <path id="map-b9" class="blob" d="M617.4,330.2 Q617.4,330.2 612.6,341.2 Q607.8,352.2 597.3,356.0 Q586.8,359.8 573.4,363.6 Q560.0,367.4 557.7,353.5 Q555.4,339.7 551.3,328.6 Q547.2,317.6 553.5,305.0 Q559.7,292.4 573.2,296.9 Q586.6,301.5 598.4,303.8 Q610.3,306.0 613.9,318.1 Z" style="transform-origin:581.5px 330.2px"/>
+        <path id="map-b10" class="blob" d="M320.9,761.8 Q320.9,761.8 317.2,769.7 Q313.4,777.6 306.3,782.7 Q299.2,787.8 291.5,784.2 Q283.8,780.7 275.5,776.3 Q267.2,771.8 267.2,761.8 Q267.1,751.8 274.1,745.0 Q281.0,738.2 289.7,739.6 Q298.4,741.0 306.3,743.2 Q314.3,745.4 317.6,753.6 Z" style="transform-origin:294.7px 761.8px"/>
+        <path id="map-b11" class="blob" d="M584.3,570.4 Q584.3,570.4 579.7,586.7 Q575.0,602.9 560.8,615.8 Q546.6,628.7 529.4,620.5 Q512.2,612.2 501.1,599.8 Q490.0,587.3 489.1,570.1 Q488.3,552.9 501.9,543.7 Q515.5,534.4 530.2,528.1 Q544.9,521.8 560.6,529.4 Q576.3,536.9 580.3,553.7 Z" style="transform-origin:536.3px 570.4px"/>
+        <path id="map-b12" class="blob" d="M752.0,525.1 Q752.0,525.1 749.5,535.8 Q747.0,546.5 737.1,552.3 Q727.2,558.1 717.9,552.7 Q708.6,547.3 703.9,540.2 Q699.1,533.2 696.6,524.1 Q694.0,515.1 700.8,508.1 Q707.6,501.1 717.6,495.5 Q727.6,489.9 737.5,496.6 Q747.4,503.3 749.7,514.2 Z" style="transform-origin:721.4px 525.1px"/>
+        <path id="map-b13" class="blob" d="M215.6,328.8 Q215.6,328.8 214.8,340.9 Q213.9,353.0 202.8,359.4 Q191.7,365.8 178.3,364.8 Q165.0,363.7 161.3,351.3 Q157.7,338.8 157.3,328.7 Q157.0,318.5 163.9,311.3 Q170.9,304.0 180.6,301.7 Q190.4,299.4 202.5,301.7 Q214.6,304.1 215.1,316.5 Z" style="transform-origin:185.2px 328.8px"/>
+        <path id="map-b14" class="blob" d="M505.7,436.3 Q505.7,436.3 506.3,450.3 Q506.9,464.3 493.9,471.3 Q480.9,478.3 465.2,478.1 Q449.4,478.0 444.9,463.2 Q440.3,448.3 440.5,436.3 Q440.6,424.3 446.0,411.1 Q451.4,398.0 466.2,396.0 Q481.0,394.1 491.0,403.6 Q501.1,413.2 503.4,424.7 Z" style="transform-origin:473.5px 436.3px"/>
+        <path id="map-b15" class="blob" d="M785.6,725.8 Q785.6,725.8 775.1,733.8 Q764.6,741.9 758.2,751.8 Q751.8,761.8 741.7,755.6 Q731.7,749.5 719.5,744.5 Q707.3,739.6 714.6,728.4 Q721.8,717.2 723.9,704.7 Q726.0,692.2 738.8,691.4 Q751.6,690.6 763.2,695.8 Q774.9,701.0 780.2,713.4 Z" style="transform-origin:745.4px 725.8px"/>
+        <path id="map-b16" class="blob" d="M771.4,357.0 Q771.4,357.0 767.5,371.5 Q763.5,386.1 750.0,393.1 Q736.4,400.2 721.5,397.8 Q706.6,395.5 697.2,383.7 Q687.8,371.9 685.2,356.0 Q682.6,340.1 695.6,331.1 Q708.6,322.0 722.9,315.5 Q737.3,309.0 746.4,321.8 Q755.5,334.6 763.5,345.8 Z" style="transform-origin:728.8px 357.0px"/>
+        <path id="map-b17" class="blob" d="M302.4,457.8 Q302.4,457.8 299.7,473.0 Q297.0,488.2 283.2,497.8 Q269.5,507.4 255.9,498.6 Q242.2,489.8 229.6,481.7 Q217.1,473.7 217.6,458.0 Q218.2,442.3 228.4,430.8 Q238.5,419.3 252.5,422.1 Q266.5,424.9 275.8,431.1 Q285.1,437.4 293.7,447.6 Z" style="transform-origin:260.7px 457.8px"/>
+        <path id="map-b18" class="blob" d="M226.6,761.1 Q226.6,761.1 226.3,770.0 Q226.1,778.8 217.6,781.5 Q209.1,784.3 201.6,782.1 Q194.1,780.0 187.6,774.9 Q181.2,769.8 181.1,761.1 Q181.1,752.4 186.7,745.9 Q192.4,739.3 200.9,737.9 Q209.4,736.5 215.8,741.6 Q222.3,746.6 224.5,753.9 Z" style="transform-origin:205.0px 761.1px"/>
+        <path id="map-b19" class="blob" d="M408.3,464.1 Q408.3,464.1 405.9,472.1 Q403.6,480.1 395.9,483.0 Q388.3,485.9 380.8,484.6 Q373.3,483.2 369.1,477.2 Q364.8,471.2 361.8,463.0 Q358.8,454.7 366.6,450.8 Q374.5,447.0 381.0,446.5 Q387.6,446.1 393.4,448.8 Q399.3,451.6 403.8,457.8 Z" style="transform-origin:384.4px 464.1px"/>
+        <path id="map-b20" class="blob" d="M393.0,790.7 Q393.0,790.7 389.3,798.0 Q385.5,805.2 378.9,809.5 Q372.2,813.8 364.0,813.0 Q355.7,812.2 353.3,804.6 Q350.9,797.0 349.1,790.0 Q347.3,783.1 351.5,776.1 Q355.7,769.2 364.1,767.8 Q372.4,766.5 378.5,771.7 Q384.6,776.9 388.8,783.8 Z" style="transform-origin:368.2px 790.7px"/>
+        <path id="map-b21" class="blob" d="M661.0,522.8 Q661.0,522.8 661.0,532.3 Q661.0,541.8 652.2,546.5 Q643.4,551.2 634.2,548.6 Q625.0,546.0 620.7,538.4 Q616.4,530.8 612.9,521.5 Q609.3,512.3 616.1,504.1 Q622.8,495.9 632.9,495.9 Q643.1,496.0 651.1,500.7 Q659.1,505.4 660.1,514.1 Z" style="transform-origin:638.3px 522.8px"/>
+        <circle id="map-d0" class="dot" cx="536.3" cy="570.4" r="19.6" style="transform-origin:536.3px 570.4px"/>
+        <circle id="map-d1" class="dot" cx="375.0" cy="568.3" r="19.4" style="transform-origin:375.0px 568.3px"/>
+        <circle id="map-d2" class="dot" cx="728.8" cy="357.0" r="18.3" style="transform-origin:728.8px 357.0px"/>
+        <circle id="map-d3" class="dot" cx="524.3" cy="710.3" r="17.7" style="transform-origin:524.3px 710.3px"/>
+        <circle id="map-d4" class="dot" cx="140.0" cy="685.1" r="17.4" style="transform-origin:140.0px 685.1px"/>
+        <circle id="map-d5" class="dot" cx="260.7" cy="457.8" r="16.5" style="transform-origin:260.7px 457.8px"/>
+        <circle id="map-d6" class="dot" cx="348.5" cy="384.7" r="16.1" style="transform-origin:348.5px 384.7px"/>
+      </svg>
+      <div id="map-pin"><div></div></div>
+      <div id="map-pinlbl" class="tag">BAARLE</div>
+      <div id="map-lbl-nl" class="tag">NETHERLANDS</div>
+      <div id="map-lbl-be" class="tag">BELGIUM</div>
+      <div id="map-stamp" class="stamp">NOT THAT SIMPLE</div>
+    </div></div></div>
+    <div id="map-count" class="tag"><div id="map-count-n">0</div><div class="cl">BELGIAN ENCLAVES</div></div>
+    <div id="map-count2" class="tag"><div id="map-count2-n">7</div><div class="cl">DUTCH ENCLAVES INSIDE THEM</div></div>
+    <div id="map-note" class="tag">ILLUSTRATIVE MAP · NOT TO SCALE</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#map-drift", { scale: 1, rotation: -1.2 }, { scale: 1.1, rotation: 1.2, duration: 13.5, ease: "none" }, 0);
+      tl.fromTo("#map-cam", { scale: 0.86, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "power3.out" }, 0);
+      tl.fromTo("#map-pin", { scale: 0 }, { scale: 1, duration: 0.3, ease: "back.out(2)" }, 0.35);
+      tl.fromTo("#map-pinlbl", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25 }, 0.45);
+      tl.fromTo("#map-lbl-nl, #map-lbl-be", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.25);
+      tl.fromTo("#map-count, #map-count2, #map-stamp", { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      // "But not with one simple line": la línea recta se rompe
+      tl.to("#map-line", { opacity: 0, duration: 0.15 }, 3.229);
+      tl.fromTo("#map-jag", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 3.229);
+      tl.fromTo("#map-stamp", { opacity: 0, scale: 1.6, rotation: -14 }, { opacity: 1, scale: 1, rotation: -6, duration: 0.18, ease: "power4.in" }, 3.804);
+      // "Belgium owns 22 islands": todo es Países Bajos, aparecen los enclaves
+      tl.to("#map-stamp, #map-jag, #map-be, #map-lbl-be, #map-pin, #map-pinlbl", { opacity: 0, duration: 0.25 }, 5.091);
+      tl.to("#map-nl", { opacity: 0, duration: 0.25 }, 5.091);
+      tl.fromTo("#map-nlfull", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 5.091);
+      tl.to("#map-lbl-nl", { opacity: 0, duration: 0.2 }, 5.091);
+      tl.fromTo("#map-count", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25 }, 5.191);
+      const c = { n: 0 }, el = document.querySelector("#map-count-n");
+      tl.fromTo(c, { n: 0 }, { n: 22, duration: 1.359, ease: "none", onUpdate: () => { el.textContent = Math.round(c.n); } }, 6.927);
+      tl.fromTo("#map-note", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 6.927);
+      tl.fromTo("#map-b0", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 6.927);
+      tl.fromTo("#map-b1", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 6.980);
+      tl.fromTo("#map-b2", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.033);
+      tl.fromTo("#map-b3", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.085);
+      tl.fromTo("#map-b4", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.138);
+      tl.fromTo("#map-b5", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.191);
+      tl.fromTo("#map-b6", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.244);
+      tl.fromTo("#map-b7", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.297);
+      tl.fromTo("#map-b8", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.349);
+      tl.fromTo("#map-b9", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.402);
+      tl.fromTo("#map-b10", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.455);
+      tl.fromTo("#map-b11", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.508);
+      tl.fromTo("#map-b12", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.561);
+      tl.fromTo("#map-b13", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.614);
+      tl.fromTo("#map-b14", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.666);
+      tl.fromTo("#map-b15", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.719);
+      tl.fromTo("#map-b16", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.772);
+      tl.fromTo("#map-b17", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.825);
+      tl.fromTo("#map-b18", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.878);
+      tl.fromTo("#map-b19", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.930);
+      tl.fromTo("#map-b20", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 7.983);
+      tl.fromTo("#map-b21", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.2)" }, 8.036);
+      // "And inside those Belgian islands? Seven Dutch ones": zoom
+      tl.to("#map-cam", { scale: 1.28, duration: 1.1, ease: "power3.inOut" }, 10.097);
+      tl.to("#map-count, #map-note", { opacity: 0, duration: 0.2 }, 10.097);
+      tl.fromTo("#map-count2", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)" }, 12.135);
+      tl.fromTo("#map-d0", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.5)" }, 12.135);
+      tl.fromTo("#map-d1", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.5)" }, 12.205);
+      tl.fromTo("#map-d2", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.5)" }, 12.275);
+      tl.fromTo("#map-d3", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.5)" }, 12.345);
+      tl.fromTo("#map-d4", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.5)" }, 12.415);
+      tl.fromTo("#map-d5", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.5)" }, 12.485);
+      tl.fromTo("#map-d6", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.5)" }, 12.555);
+      tl.to("#map-cam", { scale: 1.33, duration: 2.303, ease: "none" }, 11.197);
+      window.__timelines["map"] = tl;
+    })();
+  </script>
+</template>

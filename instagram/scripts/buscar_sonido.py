@@ -16,6 +16,7 @@ import re
 import sys
 import time
 import urllib.parse
+import urllib.error
 import urllib.request
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -27,11 +28,17 @@ LIC_URL = {"cc0": "https://creativecommons.org/publicdomain/zero/1.0/",
            "by": "https://creativecommons.org/licenses/by/{v}/"}
 
 
-def get(url, binary=False):
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=30) as r:
-        data = r.read()
-    return data if binary else data.decode("utf-8", "replace")
+def get(url, binary=False, intentos=4):
+    for n in range(intentos):
+        try:
+            req = urllib.request.Request(url, headers=UA)
+            with urllib.request.urlopen(req, timeout=30) as r:
+                data = r.read()
+            return data if binary else data.decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            if e.code not in (403, 429, 500, 502, 503) or n == intentos - 1:
+                raise
+            time.sleep(5 * (n + 1))  # el servidor limita ráfagas: espera y reintenta
 
 
 def args_opt(argv, name, default):
@@ -70,18 +77,27 @@ def bajar(argv):
         with open(LIC, "w", encoding="utf-8") as f:
             f.write("# Licencias de los sonidos\n\n| Archivo | Licencia | Autor | Página | Verificada | Crédito para el caption |\n|---|---|---|---|---|---|\n")
     for oid in argv:
+        try:
+            bajar_uno(oid, rol)
+        except Exception as e:  # un fallo no detiene el resto
+            print(f"✗ {oid}: {e}")
+        time.sleep(1.5)  # descargas educadas, de una en una
+
+
+def bajar_uno(oid, rol):
+    if True:
         r = json.loads(get(f"https://api.openverse.org/v1/audio/{oid}/"))
         lic, ver = r["license"], r.get("license_version") or ""
         page = r.get("foreign_landing_url") or ""
         if lic not in OK_LIC:
-            print(f"✗ {r['title']}: licencia {lic} no permitida"); continue
+            print(f"✗ {r['title']}: licencia {lic} no permitida"); return
         if "freesound.org" not in page:
-            print(f"✗ {r['title']}: no es de Freesound, verifica a mano: {page}"); continue
+            print(f"✗ {r['title']}: no es de Freesound, verifica a mano: {page}"); return
         html = get(page)
         links = set(re.findall(r"creativecommons\.org/(publicdomain/zero/1\.0|licenses/[a-z\-]+/[\d.]+)", html))
         esperado = "publicdomain/zero/1.0" if lic == "cc0" else f"licenses/by/{ver}"
         if links != {esperado}:
-            print(f"✗ {r['title']}: la página dice {links or 'nada'}, Openverse dice {esperado}. Descartado."); continue
+            print(f"✗ {r['title']}: la página dice {links or 'nada'}, Openverse dice {esperado}. Descartado."); return
         audio = r["url"]
         ext = os.path.splitext(urllib.parse.urlparse(audio).path)[1] or ".mp3"
         fid = re.search(r"/sounds/(\d+)", page).group(1)
@@ -96,7 +112,6 @@ def bajar(argv):
         with open(LIC, "a", encoding="utf-8") as f:
             f.write(f"| `{rel}` | {lic_txt} | {r.get('creator')} | {page} | {datetime.date.today()} en la página | {cred} |\n")
         print(f"✓ {rel}  ({lic_txt}, verificada en {page})")
-        time.sleep(1.5)  # descargas educadas, de una en una
 
 
 def main():

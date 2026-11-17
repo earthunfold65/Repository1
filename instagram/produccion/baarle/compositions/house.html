@@ -1,0 +1,52 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .mono { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.12em; }
+    .tag { position:absolute; padding: 14px 26px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 40px; letter-spacing: .12em; background: rgba(8,10,18,.82); }
+    .stamp { position:absolute; padding: 18px 34px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 64px; letter-spacing: .02em; background: rgba(8,10,18,.55); white-space: nowrap; }
+.door { position:absolute; border-radius: 18px 18px 6px 6px; background: linear-gradient(180deg,#6b4527,#3d2615);
+            border: 12px solid #24150b; box-shadow: 0 30px 80px rgba(0,0,0,.55), inset 0 0 0 4px rgba(255,200,61,.15); }
+    .door .panel { position:absolute; border: 6px solid rgba(0,0,0,.35); border-radius: 8px; background: rgba(255,255,255,.03); }
+    .door .knob { position:absolute; width: 34px; height: 34px; border-radius: 50%; background: #FFC83D; box-shadow: 0 0 24px #FFC83D; }
+    #house-cam { position:absolute; inset:0; transform-origin: 540px 760px; }
+    #house-body { position:absolute; left: 220px; top: 600px; width: 640px; height: 380px; background:#1d2438; border: 6px solid #36405c; }
+    #house-roof { position:absolute; left: 180px; top: 420px; width: 0; height: 0; border-left: 360px solid transparent; border-right: 360px solid transparent; border-bottom: 180px solid #2b3350; }
+    #house-line { position:absolute; left: 536px; top: 400px; width: 0; height: 575px; border-left: 8px dashed #FFC83D; }
+    #house-tag { left:0; width:1080px; top: 995px; text-align:center; background:none; padding:0; }
+    #house-t-be, #house-t-nl { position:absolute; left:0; width:100%; font-size: 40px; }
+    #house-t-be { color:#FFC83D; } #house-t-nl { color:#FF7A1A; opacity:0; }
+    #house-stamp { left: 0; width: 1080px; top: 372px; text-align:center; border:none; background:none; padding:0; }
+    #house-stamp span { display:inline-block; padding: 16px 30px; border: 7px solid #FFC83D; border-radius: 16px; background: rgba(8,10,18,.6); }
+  </style>
+  <div id="root" data-composition-id="house" data-width="1080" data-height="1920">
+    <div id="house-cam">
+      <div id="house-roof"></div><div id="house-body"></div>
+      <div id="house-door" class="door" style="width:170px;height:290px;left:320px;top:690px;">
+        <div class="panel" style="left:12%;top:7%;width:76%;height:38%"></div>
+        <div class="panel" style="left:12%;top:52%;width:76%;height:40%"></div>
+        <div class="knob" style="right:10%;top:52%"></div>
+      </div>
+      <div id="house-line"></div>
+      <div id="house-be" class="tag" style="left:240px;top:620px;color:#FFC83D;font-size:32px">BE</div>
+      <div id="house-nl" class="tag" style="left:762px;top:620px;color:#FF7A1A;font-size:32px">NL</div>
+      <div id="house-tag" class="tag"><div id="house-t-be">DOOR IN BELGIUM → BELGIAN</div><div id="house-t-nl">DOOR IN NL → DUTCH</div></div>
+      <div id="house-stamp" class="stamp"><span>THE FRONT DOOR RULE</span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#house-cam", { scale: 1 }, { scale: 1.06, duration: 4.3, ease: "none" }, 0);
+      tl.fromTo("#house-line", { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: "power2.out", transformOrigin: "50% 0%" }, 0.1);
+      tl.fromTo("#house-tag, #house-be, #house-nl", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 0.5);
+      tl.fromTo("#house-door", { x: 0 }, { x: 280, duration: 0.55, ease: "power3.inOut" }, 2.073);
+      tl.fromTo("#house-t-be", { opacity: 1 }, { opacity: 0, duration: 0.15 }, 2.473);
+      tl.fromTo("#house-t-nl", { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2)" }, 2.623);
+      tl.fromTo("#house-stamp", { opacity: 0, scale: 1.6, rotation: -10 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.18, ease: "power4.in" }, 2.798);
+      window.__timelines["house"] = tl;
+    })();
+  </script>
+</template>

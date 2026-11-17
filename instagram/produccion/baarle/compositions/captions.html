@@ -1,0 +1,211 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .mono { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.12em; }
+    .tag { position:absolute; padding: 14px 26px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 40px; letter-spacing: .12em; background: rgba(8,10,18,.82); }
+    .stamp { position:absolute; padding: 18px 34px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 64px; letter-spacing: .02em; background: rgba(8,10,18,.55); white-space: nowrap; }
+
+    .cg { position:absolute; left:0; top: 1070px; width: 1000px; text-align:center; font-family:'Inter Display'; font-weight: 900;
+          line-height: 1.05; overflow: visible; visibility: hidden; transform-origin: 500px 60px; }
+    .cg .in { -webkit-text-stroke: 8px rgba(5,6,12,.95); paint-order: stroke fill; text-shadow: 0 6px 18px rgba(0,0,0,.6); }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1080" data-height="1920">
+    <div id="cg0" class="cg"><span class="in"><span style="color:#F4F1EA">IN</span> <span style="color:#F4F1EA">THIS</span> <span style="color:#F4F1EA">TOWN...</span></span></div>
+    <div id="cg1" class="cg"><span class="in"><span style="color:#F4F1EA">YOUR</span> <span style="color:#FFC83D">FRONT</span> <span style="color:#FFC83D">DOOR</span></span></div>
+    <div id="cg2" class="cg"><span class="in"><span style="color:#F4F1EA">DECIDES</span> <span style="color:#F4F1EA">WHICH</span> <span style="color:#F4F1EA">COUNTRY</span></span></div>
+    <div id="cg3" class="cg"><span class="in"><span style="color:#F4F1EA">YOU</span> <span style="color:#F4F1EA">LIVE</span> <span style="color:#F4F1EA">IN.</span></span></div>
+    <div id="cg4" class="cg"><span class="in"><span style="color:#F4F1EA">BAARLE</span> <span style="color:#F4F1EA">IS</span> <span style="color:#F4F1EA">SPLIT</span></span></div>
+    <div id="cg5" class="cg"><span class="in"><span style="color:#F4F1EA">BETWEEN</span> <span style="color:#FFC83D">BELGIUM</span> <span style="color:#F4F1EA">AND</span></span></div>
+    <div id="cg6" class="cg"><span class="in"><span style="color:#F4F1EA">THE</span> <span style="color:#FFC83D">NETHERLANDS.</span></span></div>
+    <div id="cg7" class="cg"><span class="in"><span style="color:#F4F1EA">BUT</span> <span style="color:#F4F1EA">NOT</span> <span style="color:#F4F1EA">WITH</span></span></div>
+    <div id="cg8" class="cg"><span class="in"><span style="color:#F4F1EA">ONE</span> <span style="color:#F4F1EA">SIMPLE</span> <span style="color:#F4F1EA">LINE.</span></span></div>
+    <div id="cg9" class="cg"><span class="in"><span style="color:#FFC83D">BELGIUM</span> <span style="color:#F4F1EA">OWNS</span> <span style="color:#FFC83D">TWENTY-TWO</span></span></div>
+    <div id="cg10" class="cg"><span class="in"><span style="color:#F4F1EA">LITTLE</span> <span style="color:#F4F1EA">ISLANDS</span> <span style="color:#F4F1EA">OF</span></span></div>
+    <div id="cg11" class="cg"><span class="in"><span style="color:#F4F1EA">LAND...</span></span></div>
+    <div id="cg12" class="cg"><span class="in"><span style="color:#F4F1EA">INSIDE</span> <span style="color:#F4F1EA">THE</span> <span style="color:#FFC83D">NETHERLANDS.</span></span></div>
+    <div id="cg13" class="cg"><span class="in"><span style="color:#F4F1EA">AND</span> <span style="color:#F4F1EA">INSIDE</span> <span style="color:#F4F1EA">THOSE</span></span></div>
+    <div id="cg14" class="cg"><span class="in"><span style="color:#FFC83D">BELGIAN</span> <span style="color:#F4F1EA">ISLANDS?</span></span></div>
+    <div id="cg15" class="cg"><span class="in"><span style="color:#FFC83D">SEVEN</span> <span style="color:#FFC83D">DUTCH</span> <span style="color:#F4F1EA">ONES.</span></span></div>
+    <div id="cg16" class="cg"><span class="in"><span style="color:#F4F1EA">COUNTRIES</span> <span style="color:#F4F1EA">INSIDE</span> <span style="color:#F4F1EA">COUNTRIES...</span></span></div>
+    <div id="cg17" class="cg"><span class="in"><span style="color:#F4F1EA">INSIDE</span> <span style="color:#F4F1EA">COUNTRIES.</span></span></div>
+    <div id="cg18" class="cg"><span class="in"><span style="color:#F4F1EA">THE</span> <span style="color:#FFC83D">BORDER</span> <span style="color:#F4F1EA">RUNS</span></span></div>
+    <div id="cg19" class="cg"><span class="in"><span style="color:#F4F1EA">THROUGH</span> <span style="color:#F4F1EA">STREETS</span></span></div>
+    <div id="cg20" class="cg"><span class="in"><span style="color:#F4F1EA">SHOPS...</span></span></div>
+    <div id="cg21" class="cg"><span class="in"><span style="color:#F4F1EA">EVEN</span> <span style="color:#F4F1EA">HOMES.</span></span></div>
+    <div id="cg22" class="cg"><span class="in"><span style="color:#F4F1EA">SO</span> <span style="color:#F4F1EA">WHICH</span> <span style="color:#F4F1EA">COUNTRY</span></span></div>
+    <div id="cg23" class="cg"><span class="in"><span style="color:#F4F1EA">IS</span> <span style="color:#F4F1EA">YOUR</span> <span style="color:#F4F1EA">HOUSE</span></span></div>
+    <div id="cg24" class="cg"><span class="in"><span style="color:#F4F1EA">IN?</span></span></div>
+    <div id="cg25" class="cg"><span class="in"><span style="color:#F4F1EA">WHICHEVER</span> <span style="color:#F4F1EA">SIDE</span> <span style="color:#F4F1EA">YOUR</span></span></div>
+    <div id="cg26" class="cg"><span class="in"><span style="color:#FFC83D">FRONT</span> <span style="color:#FFC83D">DOOR</span> <span style="color:#F4F1EA">IS</span></span></div>
+    <div id="cg27" class="cg"><span class="in"><span style="color:#F4F1EA">ON.</span></span></div>
+    <div id="cg28" class="cg"><span class="in"><span style="color:#F4F1EA">ON</span> <span style="color:#F4F1EA">ONE</span> <span style="color:#F4F1EA">STREET</span></span></div>
+    <div id="cg29" class="cg"><span class="in"><span style="color:#F4F1EA">THE</span> <span style="color:#FFC83D">BORDER</span> <span style="color:#F4F1EA">CUTS</span></span></div>
+    <div id="cg30" class="cg"><span class="in"><span style="color:#F4F1EA">RIGHT</span> <span style="color:#F4F1EA">THROUGH</span> <span style="color:#F4F1EA">THE</span></span></div>
+    <div id="cg31" class="cg"><span class="in"><span style="color:#F4F1EA">MIDDLE</span> <span style="color:#F4F1EA">OF</span> <span style="color:#F4F1EA">A</span></span></div>
+    <div id="cg32" class="cg"><span class="in"><span style="color:#FFC83D">FRONT</span> <span style="color:#FFC83D">DOOR.</span></span></div>
+    <div id="cg33" class="cg"><span class="in"><span style="color:#F4F1EA">BUT</span> <span style="color:#F4F1EA">THAT'S</span> <span style="color:#F4F1EA">NOT</span></span></div>
+    <div id="cg34" class="cg"><span class="in"><span style="color:#F4F1EA">THE</span> <span style="color:#FFC83D">STRANGEST</span> <span style="color:#FFC83D">BORDER</span></span></div>
+    <div id="cg35" class="cg"><span class="in"><span style="color:#F4F1EA">IN</span> <span style="color:#F4F1EA">EUROPE.</span></span></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const fit = (sel, text) => {
+        let fs = 96;
+        const r = window.__hyperframes && window.__hyperframes.fitTextFontSize
+          ? window.__hyperframes.fitTextFontSize(text, { fontFamily: "Inter Display", fontWeight: 900, maxWidth: 760, fontSize: 96, minFontSize: 54 })
+          : null;
+        if (r && r.fontSize) fs = Math.min(96, r.fontSize);
+        document.querySelector(sel).style.fontSize = fs + "px";
+      };
+      fit("#cg0", "IN THIS TOWN...");
+      tl.fromTo("#cg0", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 0.16);
+      tl.to("#cg0", { opacity: 0, duration: 0.08, ease: "power2.in" }, 1.308);
+      tl.set("#cg0", { visibility: "hidden" }, 1.388);
+      fit("#cg1", "YOUR FRONT DOOR");
+      tl.fromTo("#cg1", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 1.368);
+      tl.to("#cg1", { opacity: 0, duration: 0.08, ease: "power2.in" }, 2.251);
+      tl.set("#cg1", { visibility: "hidden" }, 2.331);
+      fit("#cg2", "DECIDES WHICH COUNTRY");
+      tl.fromTo("#cg2", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 2.311);
+      tl.to("#cg2", { opacity: 0, duration: 0.08, ease: "power2.in" }, 3.27);
+      tl.set("#cg2", { visibility: "hidden" }, 3.35);
+      fit("#cg3", "YOU LIVE IN.");
+      tl.fromTo("#cg3", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 3.33);
+      tl.to("#cg3", { opacity: 0, duration: 0.08, ease: "power2.in" }, 4.326);
+      tl.set("#cg3", { visibility: "hidden" }, 4.406);
+      fit("#cg4", "BAARLE IS SPLIT");
+      tl.fromTo("#cg4", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 4.386);
+      tl.to("#cg4", { opacity: 0, duration: 0.08, ease: "power2.in" }, 5.308);
+      tl.set("#cg4", { visibility: "hidden" }, 5.388);
+      fit("#cg5", "BETWEEN BELGIUM AND");
+      tl.fromTo("#cg5", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 5.368);
+      tl.to("#cg5", { opacity: 0, duration: 0.08, ease: "power2.in" }, 6.402);
+      tl.set("#cg5", { visibility: "hidden" }, 6.482);
+      fit("#cg6", "THE NETHERLANDS.");
+      tl.fromTo("#cg6", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 6.462);
+      tl.to("#cg6", { opacity: 0, duration: 0.08, ease: "power2.in" }, 7.496);
+      tl.set("#cg6", { visibility: "hidden" }, 7.576);
+      fit("#cg7", "BUT NOT WITH");
+      tl.fromTo("#cg7", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 7.556);
+      tl.to("#cg7", { opacity: 0, duration: 0.08, ease: "power2.in" }, 8.025);
+      tl.set("#cg7", { visibility: "hidden" }, 8.105);
+      fit("#cg8", "ONE SIMPLE LINE.");
+      tl.fromTo("#cg8", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 8.085);
+      tl.to("#cg8", { opacity: 0, duration: 0.08, ease: "power2.in" }, 9.458);
+      tl.set("#cg8", { visibility: "hidden" }, 9.538);
+      fit("#cg9", "BELGIUM OWNS TWENTY-TWO");
+      tl.fromTo("#cg9", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 9.518);
+      tl.to("#cg9", { opacity: 0, duration: 0.08, ease: "power2.in" }, 10.892);
+      tl.set("#cg9", { visibility: "hidden" }, 10.972);
+      fit("#cg10", "LITTLE ISLANDS OF");
+      tl.fromTo("#cg10", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 10.952);
+      tl.to("#cg10", { opacity: 0, duration: 0.08, ease: "power2.in" }, 11.723);
+      tl.set("#cg10", { visibility: "hidden" }, 11.803);
+      fit("#cg11", "LAND...");
+      tl.fromTo("#cg11", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 11.783);
+      tl.to("#cg11", { opacity: 0, duration: 0.08, ease: "power2.in" }, 12.553);
+      tl.set("#cg11", { visibility: "hidden" }, 12.633);
+      fit("#cg12", "INSIDE THE NETHERLANDS.");
+      tl.fromTo("#cg12", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 12.613);
+      tl.to("#cg12", { opacity: 0, duration: 0.08, ease: "power2.in" }, 14.364);
+      tl.set("#cg12", { visibility: "hidden" }, 14.444);
+      fit("#cg13", "AND INSIDE THOSE");
+      tl.fromTo("#cg13", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 14.424);
+      tl.to("#cg13", { opacity: 0, duration: 0.08, ease: "power2.in" }, 15.119);
+      tl.set("#cg13", { visibility: "hidden" }, 15.199);
+      fit("#cg14", "BELGIAN ISLANDS?");
+      tl.fromTo("#cg14", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 15.179);
+      tl.to("#cg14", { opacity: 0, duration: 0.08, ease: "power2.in" }, 16.402);
+      tl.set("#cg14", { visibility: "hidden" }, 16.482);
+      fit("#cg15", "SEVEN DUTCH ONES.");
+      tl.fromTo("#cg15", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 16.462);
+      tl.to("#cg15", { opacity: 0, duration: 0.08, ease: "power2.in" }, 17.874);
+      tl.set("#cg15", { visibility: "hidden" }, 17.954);
+      fit("#cg16", "COUNTRIES INSIDE COUNTRIES...");
+      tl.fromTo("#cg16", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 17.934);
+      tl.to("#cg16", { opacity: 0, duration: 0.08, ease: "power2.in" }, 19.911);
+      tl.set("#cg16", { visibility: "hidden" }, 19.991);
+      fit("#cg17", "INSIDE COUNTRIES.");
+      tl.fromTo("#cg17", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 19.971);
+      tl.to("#cg17", { opacity: 0, duration: 0.08, ease: "power2.in" }, 21.308);
+      tl.set("#cg17", { visibility: "hidden" }, 21.388);
+      fit("#cg18", "THE BORDER RUNS");
+      tl.fromTo("#cg18", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 21.368);
+      tl.to("#cg18", { opacity: 0, duration: 0.08, ease: "power2.in" }, 22.062);
+      tl.set("#cg18", { visibility: "hidden" }, 22.142);
+      fit("#cg19", "THROUGH STREETS,");
+      tl.fromTo("#cg19", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 22.122);
+      tl.to("#cg19", { opacity: 0, duration: 0.08, ease: "power2.in" }, 23.232);
+      tl.set("#cg19", { visibility: "hidden" }, 23.312);
+      fit("#cg20", "SHOPS...");
+      tl.fromTo("#cg20", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 23.292);
+      tl.to("#cg20", { opacity: 0, duration: 0.08, ease: "power2.in" }, 23.836);
+      tl.set("#cg20", { visibility: "hidden" }, 23.916);
+      fit("#cg21", "EVEN HOMES.");
+      tl.fromTo("#cg21", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 23.896);
+      tl.to("#cg21", { opacity: 0, duration: 0.08, ease: "power2.in" }, 24.968);
+      tl.set("#cg21", { visibility: "hidden" }, 25.048);
+      fit("#cg22", "SO WHICH COUNTRY");
+      tl.fromTo("#cg22", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 25.028);
+      tl.to("#cg22", { opacity: 0, duration: 0.08, ease: "power2.in" }, 25.76);
+      tl.set("#cg22", { visibility: "hidden" }, 25.84);
+      fit("#cg23", "IS YOUR HOUSE");
+      tl.fromTo("#cg23", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 25.82);
+      tl.to("#cg23", { opacity: 0, duration: 0.08, ease: "power2.in" }, 26.477);
+      tl.set("#cg23", { visibility: "hidden" }, 26.557);
+      fit("#cg24", "IN?");
+      tl.fromTo("#cg24", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 26.537);
+      tl.to("#cg24", { opacity: 0, duration: 0.08, ease: "power2.in" }, 27.006);
+      tl.set("#cg24", { visibility: "hidden" }, 27.086);
+      fit("#cg25", "WHICHEVER SIDE YOUR");
+      tl.fromTo("#cg25", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 27.066);
+      tl.to("#cg25", { opacity: 0, duration: 0.08, ease: "power2.in" }, 27.911);
+      tl.set("#cg25", { visibility: "hidden" }, 27.991);
+      fit("#cg26", "FRONT DOOR IS");
+      tl.fromTo("#cg26", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 27.971);
+      tl.to("#cg26", { opacity: 0, duration: 0.08, ease: "power2.in" }, 28.477);
+      tl.set("#cg26", { visibility: "hidden" }, 28.557);
+      fit("#cg27", "ON.");
+      tl.fromTo("#cg27", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 28.537);
+      tl.to("#cg27", { opacity: 0, duration: 0.08, ease: "power2.in" }, 29.27);
+      tl.set("#cg27", { visibility: "hidden" }, 29.35);
+      fit("#cg28", "ON ONE STREET,");
+      tl.fromTo("#cg28", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 29.33);
+      tl.to("#cg28", { opacity: 0, duration: 0.08, ease: "power2.in" }, 30.175);
+      tl.set("#cg28", { visibility: "hidden" }, 30.255);
+      fit("#cg29", "THE BORDER CUTS");
+      tl.fromTo("#cg29", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 30.235);
+      tl.to("#cg29", { opacity: 0, duration: 0.08, ease: "power2.in" }, 30.968);
+      tl.set("#cg29", { visibility: "hidden" }, 31.048);
+      fit("#cg30", "RIGHT THROUGH THE");
+      tl.fromTo("#cg30", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 31.028);
+      tl.to("#cg30", { opacity: 0, duration: 0.08, ease: "power2.in" }, 31.685);
+      tl.set("#cg30", { visibility: "hidden" }, 31.765);
+      fit("#cg31", "MIDDLE OF A");
+      tl.fromTo("#cg31", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 31.745);
+      tl.to("#cg31", { opacity: 0, duration: 0.08, ease: "power2.in" }, 32.138);
+      tl.set("#cg31", { visibility: "hidden" }, 32.218);
+      fit("#cg32", "FRONT DOOR.");
+      tl.fromTo("#cg32", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 32.198);
+      tl.to("#cg32", { opacity: 0, duration: 0.08, ease: "power2.in" }, 33.043);
+      tl.set("#cg32", { visibility: "hidden" }, 33.123);
+      fit("#cg33", "BUT THAT'S NOT");
+      tl.fromTo("#cg33", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 33.103);
+      tl.to("#cg33", { opacity: 0, duration: 0.08, ease: "power2.in" }, 33.534);
+      tl.set("#cg33", { visibility: "hidden" }, 33.614);
+      fit("#cg34", "THE STRANGEST BORDER");
+      tl.fromTo("#cg34", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 33.594);
+      tl.to("#cg34", { opacity: 0, duration: 0.08, ease: "power2.in" }, 34.515);
+      tl.set("#cg34", { visibility: "hidden" }, 34.595);
+      fit("#cg35", "IN EUROPE.");
+      tl.fromTo("#cg35", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.16, ease: "back.out(2)" }, 34.575);
+      tl.to("#cg35", { opacity: 0, duration: 0.08, ease: "power2.in" }, 35.5);
+      tl.set("#cg35", { visibility: "hidden" }, 35.58);
+      window.__timelines["captions"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,51 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .mono { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.12em; }
+    .tag { position:absolute; padding: 14px 26px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 40px; letter-spacing: .12em; background: rgba(8,10,18,.82); }
+    .stamp { position:absolute; padding: 18px 34px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 64px; letter-spacing: .02em; background: rgba(8,10,18,.55); white-space: nowrap; }
+.door { position:absolute; border-radius: 18px 18px 6px 6px; background: linear-gradient(180deg,#6b4527,#3d2615);
+            border: 12px solid #24150b; box-shadow: 0 30px 80px rgba(0,0,0,.55), inset 0 0 0 4px rgba(255,200,61,.15); }
+    .door .panel { position:absolute; border: 6px solid rgba(0,0,0,.35); border-radius: 8px; background: rgba(255,255,255,.03); }
+    .door .knob { position:absolute; width: 34px; height: 34px; border-radius: 50%; background: #FFC83D; box-shadow: 0 0 24px #FFC83D; }
+    #hook-wrap { position:absolute; inset:0; transform-origin: 540px 700px; }
+    #hook-be { position:absolute; left:0; top:0; width:1080px; height:1920px; background: linear-gradient(90deg, rgba(255,200,61,.20), rgba(255,200,61,.07)); transform-origin: 0 0; }
+    #hook-line { position:absolute; top:385px; left:0; width:0; height:610px; border-left: 8px dashed #FFC83D; filter: drop-shadow(0 0 14px #FFC83D); }
+    #hook-lbl-be, #hook-lbl-nl { position:absolute; top: 1000px; font-weight:900; font-size: 30px; }
+    #hook-lbl-be { left: 110px; color:#FFC83D; }  #hook-lbl-nl { left: 570px; color:#FF7A1A; }
+    #hook-tag { left: 0; width:1080px; top: 360px; height: 90px; background:none; text-align:center; padding:0; }
+    #hook-tag-nl, #hook-tag-be { position:absolute; left:0; width:100%; top:0; font-size: 56px; }
+    #hook-tag-nl { color:#FF7A1A; } #hook-tag-be { color:#FFC83D; opacity:0; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <div id="hook-wrap">
+      <div id="hook-be"></div>
+      <div id="hook-line"></div>
+      <div id="hook-door" class="door" style="width:300px;height:500px;left:390px;top:470px;">
+        <div class="panel" style="left:12%;top:7%;width:76%;height:38%"></div>
+        <div class="panel" style="left:12%;top:52%;width:76%;height:40%"></div>
+        <div class="knob" style="right:10%;top:52%"></div>
+      </div>
+      <div id="hook-lbl-be" class="mono">◀ BELGIUM</div>
+      <div id="hook-lbl-nl" class="mono">NETHERLANDS ▶</div>
+      <div id="hook-tag" class="tag"><div id="hook-tag-nl">NETHERLANDS</div><div id="hook-tag-be">BELGIUM</div></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const sweep = 2.351, flip = 2.992;
+      tl.fromTo("#hook-wrap", { scale: 1.0 }, { scale: 1.07, duration: 4.3667, ease: "none" }, 0);
+      tl.fromTo("#hook-be", { scaleX: 0.2778 }, { scaleX: 0.2778, duration: 0.01 }, 0);
+      tl.fromTo("#hook-line", { x: 300 }, { x: 300, duration: 0.01 }, 0);
+      tl.to("#hook-be", { scaleX: 0.7222, duration: 0.55, ease: "power3.inOut" }, sweep);
+      tl.to("#hook-line", { x: 780, duration: 0.55, ease: "power3.inOut" }, sweep);
+      tl.fromTo("#hook-tag-nl", { opacity: 1, y: 0 }, { opacity: 0, y: -40, duration: 0.16, ease: "power2.in" }, flip - 0.16);
+      tl.fromTo("#hook-tag-be", { opacity: 0, y: 40, scale: 1.15 }, { opacity: 1, y: 0, scale: 1, duration: 0.2, ease: "back.out(2)" }, flip);
+      window.__timelines["hook"] = tl;
+    })();
+  </script>
+</template>

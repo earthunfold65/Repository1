@@ -1,0 +1,161 @@
+{
+ "duracion": 40.8,
+ "fps": 30,
+ "voz": {
+  "file": "vo.wav",
+  "gain_db": 0,
+  "t": 0.2
+ },
+ "musica": {
+  "file": "../../../sonido/libreria/musica/fs-631776_documentary-music-strings.mp3",
+  "gain_db": -6,
+  "duck_db": 8,
+  "offset": 8.0,
+  "fade_in": 0.4,
+  "fade_out": 1.2,
+  "rides": [
+   [
+    33.0,
+    0
+   ],
+   [
+    33.45,
+    -10
+   ],
+   [
+    35.300000000000004,
+    -10
+   ],
+   [
+    36.0,
+    0
+   ]
+  ]
+ },
+ "sfx": [
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
+   "t": 2.6333,
+   "anchor": "peak",
+   "gain_db": -13,
+   "label": "frontera barre la puerta (pico de velocidad)"
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 3.0,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "etiqueta cambia a BELGIUM"
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
+   "t": 8.3667,
+   "anchor": "attack",
+   "gain_db": -11,
+   "label": "sello NOT THAT SIMPLE"
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 11.3333,
+   "anchor": "attack",
+   "gain_db": -19,
+   "label": "enclave 1"
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 11.9333,
+   "anchor": "attack",
+   "gain_db": -19,
+   "label": "enclave 12",
+   "pitch": 2
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 12.4667,
+   "anchor": "attack",
+   "gain_db": -19,
+   "label": "enclave 22",
+   "pitch": 4
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-539172_melee-combat-whoosh.mp3",
+   "t": 14.9,
+   "anchor": "peak",
+   "gain_db": -15,
+   "label": "zoom a los enclaves (pico)"
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 16.5333,
+   "anchor": "attack",
+   "gain_db": -14,
+   "label": "aparecen los 7 neerlandeses",
+   "pitch": 3
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
+   "t": 19.0333,
+   "anchor": "attack",
+   "gain_db": -17,
+   "label": "caja Bélgica encaja",
+   "pitch": 2
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
+   "t": 20.6667,
+   "anchor": "attack",
+   "gain_db": -17,
+   "label": "caja NL encaja",
+   "pitch": 4
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 22.5,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "STREETS"
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 23.3333,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "SHOPS"
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 24.3,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "HOMES"
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
+   "t": 28.0,
+   "anchor": "attack",
+   "gain_db": -11,
+   "label": "sello FRONT DOOR RULE"
+  },
+  {
+   "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
+   "t": 31.1,
+   "anchor": "attack",
+   "gain_db": -9,
+   "label": "la frontera parte la puerta (golpe)"
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
+   "t": 35.6667,
+   "anchor": "peak",
+   "gain_db": -17,
+   "label": "entra la tarjeta final (giro)"
+  }
+ ],
+ "master": {
+  "lufs": -14,
+  "tp": -1.5,
+  "tp_aac": -1.0
+ },
+ "salida": "out/audio.wav",
+ "video": "../out/baarle_silent.mp4"
+}

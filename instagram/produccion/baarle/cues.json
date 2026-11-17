@@ -1,0 +1,343 @@
+{
+ "scenes": {
+  "hook": [
+   0.0,
+   4.3667
+  ],
+  "map": [
+   4.3667,
+   13.5
+  ],
+  "nest": [
+   17.8667,
+   3.5
+  ],
+  "street": [
+   21.3667,
+   3.6666
+  ],
+  "house": [
+   25.0333,
+   4.3
+  ],
+  "cut": [
+   29.3333,
+   3.7667
+  ],
+  "brk": [
+   33.1,
+   2.5
+  ],
+  "end": [
+   35.6,
+   5.2
+  ]
+ },
+ "cues": [
+  {
+   "t": 2.631,
+   "kind": "whoosh",
+   "label": "frontera barre la puerta (pico de velocidad)"
+  },
+  {
+   "t": 2.992,
+   "kind": "click",
+   "label": "etiqueta cambia a BELGIUM"
+  },
+  {
+   "t": 8.351,
+   "kind": "stamp",
+   "label": "sello NOT THAT SIMPLE"
+  },
+  {
+   "t": 11.344,
+   "kind": "pop",
+   "pitch": 0,
+   "label": "enclave 1"
+  },
+  {
+   "t": 11.925,
+   "kind": "pop",
+   "pitch": 2,
+   "label": "enclave 12"
+  },
+  {
+   "t": 12.453,
+   "kind": "pop",
+   "pitch": 4,
+   "label": "enclave 22"
+  },
+  {
+   "t": 14.914,
+   "kind": "whoosh2",
+   "label": "zoom a los enclaves (pico)"
+  },
+  {
+   "t": 16.532,
+   "kind": "tick",
+   "pitch": 3,
+   "label": "aparecen los 7 neerlandeses"
+  },
+  {
+   "t": 19.037,
+   "kind": "thunk",
+   "pitch": 2,
+   "label": "caja Bélgica encaja"
+  },
+  {
+   "t": 20.66,
+   "kind": "thunk",
+   "pitch": 4,
+   "label": "caja NL encaja"
+  },
+  {
+   "t": 22.502,
+   "kind": "click",
+   "label": "STREETS"
+  },
+  {
+   "t": 23.332,
+   "kind": "click",
+   "label": "SHOPS"
+  },
+  {
+   "t": 24.313,
+   "kind": "click",
+   "label": "HOMES"
+  },
+  {
+   "t": 28.011,
+   "kind": "stamp",
+   "label": "sello FRONT DOOR RULE"
+  },
+  {
+   "t": 31.111,
+   "kind": "hit",
+   "label": "la frontera parte la puerta (golpe)"
+  },
+  {
+   "t": 35.65,
+   "kind": "whoosh_soft",
+   "label": "entra la tarjeta final (giro)"
+  }
+ ],
+ "captions": [
+  {
+   "id": "cg0",
+   "start": 0.16,
+   "end": 1.388,
+   "text": "IN THIS TOWN..."
+  },
+  {
+   "id": "cg1",
+   "start": 1.368,
+   "end": 2.331,
+   "text": "YOUR FRONT DOOR"
+  },
+  {
+   "id": "cg2",
+   "start": 2.311,
+   "end": 3.35,
+   "text": "DECIDES WHICH COUNTRY"
+  },
+  {
+   "id": "cg3",
+   "start": 3.33,
+   "end": 4.406,
+   "text": "YOU LIVE IN."
+  },
+  {
+   "id": "cg4",
+   "start": 4.386,
+   "end": 5.388,
+   "text": "BAARLE IS SPLIT"
+  },
+  {
+   "id": "cg5",
+   "start": 5.368,
+   "end": 6.482,
+   "text": "BETWEEN BELGIUM AND"
+  },
+  {
+   "id": "cg6",
+   "start": 6.462,
+   "end": 7.576,
+   "text": "THE NETHERLANDS."
+  },
+  {
+   "id": "cg7",
+   "start": 7.556,
+   "end": 8.105,
+   "text": "BUT NOT WITH"
+  },
+  {
+   "id": "cg8",
+   "start": 8.085,
+   "end": 9.538,
+   "text": "ONE SIMPLE LINE."
+  },
+  {
+   "id": "cg9",
+   "start": 9.518,
+   "end": 10.972,
+   "text": "BELGIUM OWNS TWENTY-TWO"
+  },
+  {
+   "id": "cg10",
+   "start": 10.952,
+   "end": 11.803,
+   "text": "LITTLE ISLANDS OF"
+  },
+  {
+   "id": "cg11",
+   "start": 11.783,
+   "end": 12.633,
+   "text": "LAND..."
+  },
+  {
+   "id": "cg12",
+   "start": 12.613,
+   "end": 14.444,
+   "text": "INSIDE THE NETHERLANDS."
+  },
+  {
+   "id": "cg13",
+   "start": 14.424,
+   "end": 15.199,
+   "text": "AND INSIDE THOSE"
+  },
+  {
+   "id": "cg14",
+   "start": 15.179,
+   "end": 16.482,
+   "text": "BELGIAN ISLANDS?"
+  },
+  {
+   "id": "cg15",
+   "start": 16.462,
+   "end": 17.954,
+   "text": "SEVEN DUTCH ONES."
+  },
+  {
+   "id": "cg16",
+   "start": 17.934,
+   "end": 19.991,
+   "text": "COUNTRIES INSIDE COUNTRIES..."
+  },
+  {
+   "id": "cg17",
+   "start": 19.971,
+   "end": 21.388,
+   "text": "INSIDE COUNTRIES."
+  },
+  {
+   "id": "cg18",
+   "start": 21.368,
+   "end": 22.142,
+   "text": "THE BORDER RUNS"
+  },
+  {
+   "id": "cg19",
+   "start": 22.122,
+   "end": 23.312,
+   "text": "THROUGH STREETS,"
+  },
+  {
+   "id": "cg20",
+   "start": 23.292,
+   "end": 23.916,
+   "text": "SHOPS..."
+  },
+  {
+   "id": "cg21",
+   "start": 23.896,
+   "end": 25.048,
+   "text": "EVEN HOMES."
+  },
+  {
+   "id": "cg22",
+   "start": 25.028,
+   "end": 25.84,
+   "text": "SO WHICH COUNTRY"
+  },
+  {
+   "id": "cg23",
+   "start": 25.82,
+   "end": 26.557,
+   "text": "IS YOUR HOUSE"
+  },
+  {
+   "id": "cg24",
+   "start": 26.537,
+   "end": 27.086,
+   "text": "IN?"
+  },
+  {
+   "id": "cg25",
+   "start": 27.066,
+   "end": 27.991,
+   "text": "WHICHEVER SIDE YOUR"
+  },
+  {
+   "id": "cg26",
+   "start": 27.971,
+   "end": 28.557,
+   "text": "FRONT DOOR IS"
+  },
+  {
+   "id": "cg27",
+   "start": 28.537,
+   "end": 29.35,
+   "text": "ON."
+  },
+  {
+   "id": "cg28",
+   "start": 29.33,
+   "end": 30.255,
+   "text": "ON ONE STREET,"
+  },
+  {
+   "id": "cg29",
+   "start": 30.235,
+   "end": 31.048,
+   "text": "THE BORDER CUTS"
+  },
+  {
+   "id": "cg30",
+   "start": 31.028,
+   "end": 31.765,
+   "text": "RIGHT THROUGH THE"
+  },
+  {
+   "id": "cg31",
+   "start": 31.745,
+   "end": 32.218,
+   "text": "MIDDLE OF A"
+  },
+  {
+   "id": "cg32",
+   "start": 32.198,
+   "end": 33.123,
+   "text": "FRONT DOOR."
+  },
+  {
+   "id": "cg33",
+   "start": 33.103,
+   "end": 33.614,
+   "text": "BUT THAT'S NOT"
+  },
+  {
+   "id": "cg34",
+   "start": 33.594,
+   "end": 34.595,
+   "text": "THE STRANGEST BORDER"
+  },
+  {
+   "id": "cg35",
+   "start": 34.575,
+   "end": 35.58,
+   "text": "IN EUROPE."
+  }
+ ],
+ "duration": 40.8
+}

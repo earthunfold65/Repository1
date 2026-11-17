@@ -10,10 +10,11 @@ diseno.json (rutas relativas al propio JSON):
 {
   "duracion": 20.0,
   "voz":    {"file": "voz.mp3", "gain_db": 0, "t": 0},
-  "musica": {"file": "musica.mp3", "gain_db": -16, "duck_db": 8, "offset": 0, "fade_in": 0, "fade_out": 1.5},
+  "musica": {"file": "musica.mp3", "gain_db": -16, "duck_db": 8, "offset": 0, "fade_in": 0, "fade_out": 1.5,
+             "rides": [[30.0, 0], [30.4, -12], [33.0, -12], [33.3, 0]]},   (dB extra en el tiempo del video)
   "sfx": [
     {"file": "sfx/whoosh.wav", "t": 2.00, "anchor": "peak",   "gain_db": -6, "label": "cambio de escena"},
-    {"file": "sfx/pop.wav",    "t": 3.40, "anchor": "attack", "gain_db": -8, "label": "aparece tarjeta 01"},
+    {"file": "sfx/pop.wav",    "t": 3.40, "anchor": "attack", "gain_db": -8, "pitch": 2, "label": "aparece tarjeta 01"},
     {"file": "sfx/riser.wav",  "t": 9.80, "anchor": "end",    "gain_db": -10, "label": "antes del reveal"}
   ],
   "master": {"lufs": -14, "tp": -1.5},
@@ -204,6 +205,12 @@ def mezclar(d):
         fo = m.get("fade_out", 1.5)
         c = (f"[{i}:a]aresample={SR},aformat=channel_layouts=stereo,atrim=start={m.get('offset', 0)},asetpts=PTS-STARTPTS,"
              f"volume={m.get('gain_db', -16)}dB,apad,atrim=0:{dur}")
+        if m.get("rides"):
+            pts = sorted(m["rides"])
+            expr = f"{pts[0][1]}"
+            for (t0, d0), (t1, d1) in zip(pts, pts[1:]):
+                expr = f"if(gte(t,{t0}),if(lt(t,{t1}),{d0}+({d1}-({d0}))*(t-{t0})/({t1}-{t0}),{d1}),{expr})"
+            c += f",volume='pow(10,({expr})/20)':eval=frame"
         if m.get("fade_in"):
             c += f",afade=t=in:d={m['fade_in']}"
         if fo:
@@ -224,7 +231,9 @@ def mezclar(d):
         ms = int(round(max(0.0, st) * 1000))
         pan = max(-1.0, min(1.0, s.get("pan", 0)))
         l, r = (1 - max(0, pan)), (1 + min(0, pan))
-        c = (f"[{i}:a]aresample={SR},aformat=channel_layouts=mono,atrim=start={head}:end={s['_a']['end']},asetpts=PTS-STARTPTS,"
+        st_ = s.get("pitch", 0)
+        pitch = f"asetrate={SR}*{2 ** (st_ / 12):.6f},aresample={SR}," if st_ else ""
+        c = (f"[{i}:a]aresample={SR},aformat=channel_layouts=mono,atrim=start={head}:end={s['_a']['end']},asetpts=PTS-STARTPTS,{pitch}"
              f"afade=t=out:st={max(0, s['_a']['end'] - head - 0.01)}:d=0.01,volume={s.get('gain_db', -6)}dB,"
              f"pan=stereo|c0={l:.3f}*c0|c1={r:.3f}*c0,adelay={ms}:all=1[s{k}]")
         chains.append(c)

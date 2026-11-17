@@ -1,0 +1,46 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .mono { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.12em; }
+    .tag { position:absolute; padding: 14px 26px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 40px; letter-spacing: .12em; background: rgba(8,10,18,.82); }
+    .stamp { position:absolute; padding: 18px 34px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 64px; letter-spacing: .02em; background: rgba(8,10,18,.55); white-space: nowrap; }
+.door { position:absolute; border-radius: 18px 18px 6px 6px; background: linear-gradient(180deg,#6b4527,#3d2615);
+            border: 12px solid #24150b; box-shadow: 0 30px 80px rgba(0,0,0,.55), inset 0 0 0 4px rgba(255,200,61,.15); }
+    .door .panel { position:absolute; border: 6px solid rgba(0,0,0,.35); border-radius: 8px; background: rgba(255,255,255,.03); }
+    .door .knob { position:absolute; width: 34px; height: 34px; border-radius: 50%; background: #FFC83D; box-shadow: 0 0 24px #FFC83D; }
+    #cut-cam { position:absolute; inset:0; transform-origin: 540px 690px; }
+    #cut-l, #cut-r { position:absolute; top: 385px; width: 200px; height: 640px; opacity: 0; }
+    #cut-l { left: 340px; background: rgba(255,200,61,.42); border-radius: 18px 0 0 6px; }
+    #cut-r { left: 540px; background: rgba(255,122,26,.42); border-radius: 0 18px 6px 0; }
+    #cut-line { position:absolute; left: 536px; top: 360px; width: 0; height: 690px; border-left: 9px dashed #FFC83D; filter: drop-shadow(0 0 16px #FFC83D); transform-origin: 50% 0%; }
+    #cut-be { left: 160px; top: 680px; color:#FFC83D; } #cut-nl { left: 790px; top: 680px; color:#FF7A1A; }
+  </style>
+  <div id="root" data-composition-id="cut" data-width="1080" data-height="1920">
+    <div id="cut-cam">
+      <div id="cut-door" class="door" style="width:400px;height:640px;left:340px;top:385px;">
+        <div class="panel" style="left:12%;top:7%;width:76%;height:38%"></div>
+        <div class="panel" style="left:12%;top:52%;width:76%;height:40%"></div>
+        <div class="knob" style="right:10%;top:52%"></div>
+      </div>
+      <div id="cut-l"></div><div id="cut-r"></div>
+      <div id="cut-line"></div>
+      <div id="cut-be" class="tag">BE</div><div id="cut-nl" class="tag">NL</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#cut-cam", { scale: 1.12 }, { scale: 1.0, duration: 1.358, ease: "none" }, 0);
+      tl.fromTo("#cut-line", { scaleY: 0 }, { scaleY: 1, duration: 0.42, ease: "power3.in" }, 1.358);
+      tl.to("#cut-cam", { scale: 1.05, duration: 0.08, ease: "power2.out" }, 1.778);
+      tl.to("#cut-cam", { scale: 1.02, duration: 0.5, ease: "power2.out" }, 1.858);
+      tl.to("#cut-cam", { scale: 1.1, duration: 1.389, ease: "none" }, 2.358);
+      tl.fromTo("#cut-l, #cut-r", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 1.778);
+      tl.fromTo("#cut-be, #cut-nl", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25 }, 1.878);
+      window.__timelines["cut"] = tl;
+    })();
+  </script>
+</template>

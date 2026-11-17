@@ -2,3 +2,7 @@ node_modules/
 out/
 .DS_Store
 instagram/sonido/libreria/
+instagram/produccion/*/out/
+instagram/produccion/*/.hyperframes/
+instagram/produccion/*/audio/*.mp3
+instagram/produccion/*/audio/*.wav
