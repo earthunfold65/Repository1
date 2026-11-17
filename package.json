@@ -1,0 +1,30 @@
+{
+  "name": "repository1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/earthunfold65/Repository1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/earthunfold65/Repository1/issues"
+  },
+  "homepage": "https://github.com/earthunfold65/Repository1#readme",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@remotion/cli": "^4.0.544",
+    "gsap": "^3.15.1",
+    "hyperframes": "^0.9.59",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.544"
+  }
+}
