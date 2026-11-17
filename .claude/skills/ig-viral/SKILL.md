@@ -27,4 +27,6 @@ Si llegan archivos, procésalos con un script (Python/Node) en el scratchpad; no
 - **3–5 patrones** ganadores, cada uno con la evidencia (qué posts).
 - **Qué dejar de hacer** (patrones de los peores).
 - **5 ideas nuevas** que replican los patrones; cada una con hook listo y lista para `/ig-reel`.
+- Añade las reglas nuevas a `instagram/aprendizajes.md` (mismo formato que usa `/ig-referentes`).
+- Para analizar cuentas ajenas usa `/ig-referentes`.
 - Guarda el informe en `instagram/analisis/AAAA-MM-DD-viral.md`.

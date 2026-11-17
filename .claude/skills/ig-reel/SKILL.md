@@ -9,8 +9,9 @@ Entrada: un tema, una idea o un texto fuente (`$ARGUMENTS`). Si no hay tema, pre
 
 ## Antes de escribir
 1. Lee `instagram/marca.md` (audiencia, voz, oferta, trato). Si no existe o está vacío, sigue con tono neutro y dilo al final.
-2. Lee `hooks.md` (en esta misma carpeta): las 26 fórmulas de hook.
-3. Decide la duración: 15–30 s por defecto; 30–60 s solo si el tema necesita pasos.
+2. Lee también `instagram/aprendizajes.md`: aplica los patrones ganadores, evita los errores listados y, si contradices una regla confirmada, dilo y explica por qué.
+3. Lee `hooks.md` (en esta misma carpeta): las 26 fórmulas de hook.
+4. Decide la duración: 15–30 s por defecto; 30–60 s solo si el tema necesita pasos.
 
 ## Entregable (en este orden)
 

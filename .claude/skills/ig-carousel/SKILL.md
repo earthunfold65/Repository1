@@ -5,7 +5,7 @@ description: Diseña carruseles de Instagram — estructura slide a slide, texto
 
 # /ig-carousel — Carrusel
 
-Entrada: tema o texto fuente. Lee `instagram/marca.md`.
+Entrada: tema o texto fuente. Lee `instagram/marca.md`. Lee también `instagram/aprendizajes.md`: aplica los patrones ganadores, evita los errores listados y, si contradices una regla confirmada, dilo y explica por qué.
 
 ## Estructura (7–10 slides)
 1. **Portada:** hook de ≤ 8 palabras (usa `../ig-reel/hooks.md`) + subtítulo opcional. Tiene que funcionar como miniatura en el feed.

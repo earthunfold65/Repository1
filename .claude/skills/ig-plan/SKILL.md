@@ -5,7 +5,7 @@ description: Crea un calendario de contenido de Instagram de 1–4 semanas con p
 
 # /ig-plan — Calendario de contenido
 
-Entrada: periodo (por defecto 2 semanas), frecuencia realista (pregunta si no la dicen) y fechas clave (lanzamientos, eventos). Lee `instagram/marca.md` y, si existen, los últimos informes en `instagram/analisis/` para reutilizar lo que funciona.
+Entrada: periodo (por defecto 2 semanas), frecuencia realista (pregunta si no la dicen) y fechas clave (lanzamientos, eventos). Lee `instagram/marca.md` y, si existen, los últimos informes en `instagram/analisis/` para reutilizar lo que funciona. Lee también `instagram/aprendizajes.md`: aplica los patrones ganadores, evita los errores listados y, si contradices una regla confirmada, dilo y explica por qué.
 
 ## Reglas
 - Reparte los **pilares** de la marca; ninguno más del 40 %.

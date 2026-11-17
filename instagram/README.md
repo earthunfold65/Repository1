@@ -1,4 +1,4 @@
-# Kit de Instagram — 13 skills para Claude Code
+# Kit de Instagram — 14 skills para Claude Code
 
 1. Rellena `instagram/marca.md` (una vez).
 2. Abre Claude Code en este repo y escribe el comando.
@@ -17,6 +17,7 @@
 | `/ig-reply` | Clasifica y responde los comentarios que recibes |
 | `/ig-dm` | DMs: leads, palabra clave, seguimientos, objeciones |
 | `/ig-repurpose` | Un contenido → reels, carrusel, historias |
+| `/ig-referentes` | Analiza cuentas ajenas: su reel más viral, por qué fallaron los flojos, y guarda lo aprendido |
 | `/ig-audit` | Auditoría completa con plan de 30 días |
 
 Los resultados se guardan en `instagram/reels/`, `instagram/carruseles/`, `instagram/plan/` e `instagram/analisis/`.

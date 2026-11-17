@@ -5,7 +5,7 @@ description: Escribe captions (descripciones) de Instagram con primera línea ga
 
 # /ig-caption — Caption
 
-Entrada: el post (tema, guion, slides o imagen descrita). Lee `instagram/marca.md`.
+Entrada: el post (tema, guion, slides o imagen descrita). Lee `instagram/marca.md`. Lee también `instagram/aprendizajes.md`: aplica los patrones ganadores, evita los errores listados y, si contradices una regla confirmada, dilo y explica por qué.
 
 ## Reglas
 - **Línea 1 (≤ 125 caracteres):** es lo único visible antes de "más". Debe abrir un hueco de curiosidad o prometer valor. No la desperdicies en "¡Hola!".
