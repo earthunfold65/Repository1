@@ -20,7 +20,14 @@ Si solo hay un video ya renderizado: `bash instagram/scripts/extraer_frames.sh` 
 
 ## 2. Conseguir sonidos reales (por orden)
 1. **Librería propia del usuario** en `instagram/sonido/libreria/` (lo mejor: él la eligió).
-2. **Freesound** (CC0 / CC BY, preview HQ), **Mixkit** (WAV, licencia gratuita), **Openverse** (buscador de audio con licencia abierta). Ahora mismo la red de este entorno **bloquea** api.openverse.org y puede bloquear los otros: si hace falta, pide al usuario permitir esos hosts en el entorno (`update_environment`, con su aprobación).
+2. **Openverse → Freesound** (CC0 / CC BY, preview HQ ~192 kbps), con el script que verifica la licencia en la página de cada sonido:
+   ```
+   python3 -I instagram/scripts/buscar_sonido.py buscar "swipe whoosh" --max-ms 900
+   python3 -I instagram/scripts/buscar_sonido.py bajar <id_openverse> --rol whoosh
+   ```
+   Busca en inglés (así están etiquetados). Baja 3–5 candidatos por rol y elige midiendo. Si la página y Openverse no coinciden, el script lo descarta solo.
+   **Mixkit** (WAV, licencia gratuita: assets.mixkit.co) también está permitido en la red; anota la licencia a mano en `licencias.md`.
+   El entorno "Repository1" permite estos hosts (cdn.freesound.org, freesound.org, api.openverse.org, assets.mixkit.co, mixkit.co).
 3. **ElevenLabs** (conectado): voz en off y efectos generados como último recurso para un efecto concreto; avisa de que es generado y revísalo igual que una grabación.
 - Nunca sintetices efectos con código (senoidales, ruido filtrado): es la señal nº 1 de sonido barato.
 - Cada archivo: licencia leída en su página → anótala en `instagram/sonido/licencias.md` (archivo, URL, licencia, autor, fecha). Licencia dudosa = fuera.
