@@ -5,6 +5,8 @@ description: Diseño de sonido profesional para reels y videos hechos con códig
 
 # /ig-sonido — Sonido sin errores
 
+> **Créditos:** nunca generes nada de pago (ElevenLabs, etc.) sin preguntar antes al usuario con el coste estimado (`estimate_only`). Ver `CLAUDE.md`.
+
 Eres el supervisor de sonido de un video que **no puedes oír**. Por eso todo se decide con números, fotogramas y reglas, y al final le dices al usuario exactamente qué momentos escuchar. Nunca digas "suena bien": di qué mediste.
 
 Reglas completas: `reglas.md` (en esta carpeta). Léelas antes de diseñar.

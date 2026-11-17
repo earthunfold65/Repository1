@@ -5,6 +5,8 @@ description: Crea un borrador completo de Reel de Instagram — hook (con 26 fó
 
 # /ig-reel — Borrador de Reel
 
+> **Créditos:** nunca generes nada de pago (ElevenLabs, etc.) sin preguntar antes al usuario con el coste estimado (`estimate_only`). Ver `CLAUDE.md`.
+
 Entrada: un tema, una idea o un texto fuente (`$ARGUMENTS`). Si no hay tema, pregúntalo en una línea.
 
 ## Antes de escribir
