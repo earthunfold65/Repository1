@@ -8,3 +8,6 @@
 
 ## Idioma
 - Hablar con el usuario en español. Los videos de EarthUnfold van en inglés.
+
+## Voz en off
+- Por defecto, voz **gratis y local con Kokoro** (`instagram/scripts/voz.py`): se generan muchos videos al día. ElevenLabs solo si el usuario lo pide y aprueba el coste.
