@@ -9,3 +9,5 @@ instagram/produccion/*/audio/*.wav
 instagram/sonido/muestras_*.mp3
 instagram/produccion/*/audio/chunks/*.wav
 instagram/produccion/*/audio/chunks/
+.claude/skills/real-sfx/vendor/venv/
+.claude/skills/real-sfx/vendor/models/
