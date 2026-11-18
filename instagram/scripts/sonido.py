@@ -153,7 +153,7 @@ def qa(d, master=None, video_master=None):
     if not d.get("voz") and not d.get("musica") and not any(s["t"] < 2 for s in sfx):
         errores.append("Nada suena en los primeros 2 s (el 100 % de las referencias tiene sonido ahí)")
     # huecos largos sin nada
-    if not d.get("musica") and dur and sfx:
+    if not d.get("musica") and not d.get("voz") and dur and sfx:
         marcas = [0] + [s["t"] for s in sfx] + [dur]
         hueco = max(b - a for a, b in zip(marcas, marcas[1:]))
         if hueco > 3.5:
