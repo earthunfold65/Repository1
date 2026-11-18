@@ -47,6 +47,12 @@ python3 -I instagram/scripts/sonido.py mezclar instagram/sonido/<slug>/diseno.js
 Hace: colocación por ancla, ducking de música bajo la voz, suma, master a −14 LUFS con limitador true-peak, mux al MP4 y **vuelve a medir el MP4** (el AAC sube los picos; si pasa de −1 dBTP baja el techo y rehace solo).
 El QA imprime OK / AVISO / ERROR. **Con un ERROR no se entrega.** Cada AVISO se corrige o se justifica por escrito.
 
+## 4b. ESCUCHAR con el oído (obligatorio)
+```
+HF_HUB_DISABLE_XET=1 ~/.venvs/chatter/bin/python -I instagram/scripts/oido.py <video.mp4> <cues.json>
+```
+Itera hasta **VEREDICTO: ENTREGAR** (cada efecto entre −45 y +75 ms de su evento y ≥ +3 dB sobre el fondo; crítica sin "needs work"). Mira `out/oido/sheet.png`. Las skills `earshot` y `real-sfx` explican cada métrica.
+
 ## 5. Revisión visual
 - Saca fotogramas del MP4 final alrededor de cada efecto (`ffmpeg -ss <t-0.1> -frames:v 1`) y confirma que el sonido coincide con el evento.
 - Comprueba que ningún efecto pisa una palabra de la voz (si hay transcripción con tiempos, compáralos).

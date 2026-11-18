@@ -69,18 +69,14 @@
    "label": "sello REAL"
   },
   {
-   "t": 10.706,
-   "kind": "whoosh_soft",
-   "label": "el triángulo desaparece (pico)"
-  },
-  {
    "t": 11.827,
    "kind": "hit",
    "label": "título NEUTRAL MORESNET"
   },
   {
    "t": 15.241,
-   "kind": "click",
+   "kind": "tick",
+   "pitch": 2,
    "label": "chip 1816"
   },
   {
@@ -90,8 +86,7 @@
   },
   {
    "t": 18.976,
-   "kind": "thunk",
-   "pitch": 2,
+   "kind": "pop",
    "label": "ficha Zn"
   },
   {
@@ -111,8 +106,9 @@
   },
   {
    "t": 24.45,
-   "kind": "tick",
+   "kind": "pop",
    "pitch": 4,
+   "gain": 2,
    "label": "contador 3,000+"
   },
   {
@@ -121,9 +117,9 @@
    "label": "sello postal cae"
   },
   {
-   "t": 27.922,
-   "kind": "click",
-   "pitch": 6,
+   "t": 27.982,
+   "kind": "pop",
+   "pitch": 3,
    "label": "Saluton!"
   },
   {
@@ -137,21 +133,45 @@
    "label": "GONE + sacudida"
   },
   {
-   "t": 34.0,
+   "t": 34.06,
    "kind": "click",
    "pitch": 2,
    "label": "YES"
   },
   {
-   "t": 34.15,
-   "kind": "click",
-   "pitch": -2,
-   "label": "NO"
-  },
-  {
-   "t": 35.887,
+   "t": 35.787,
    "kind": "whoosh_soft",
    "label": "entra la tarjeta final"
+  },
+  {
+   "t": 6.83,
+   "kind": "sub",
+   "label": "golpe CASINO + sacudida · capa grave"
+  },
+  {
+   "t": 9.626,
+   "kind": "sub",
+   "label": "sello REAL · capa grave"
+  },
+  {
+   "t": 11.827,
+   "kind": "sub",
+   "label": "título NEUTRAL MORESNET · capa grave"
+  },
+  {
+   "t": 20.543,
+   "kind": "sub",
+   "label": "sello SHARED IT · capa grave"
+  },
+  {
+   "t": 29.82,
+   "kind": "sub",
+   "label": "1920 · capa grave"
+  },
+  {
+   "t": 32.156,
+   "kind": "sub",
+   "label": "GONE + sacudida · capa grave"
   }
  ],
  "captions": [

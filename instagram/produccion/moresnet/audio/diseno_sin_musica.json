@@ -4,107 +4,136 @@
  "voz": {
   "file": "vo.wav",
   "gain_db": 0,
-  "t": 0
+  "t": 0,
+  "eq": [
+   [
+    "peak",
+    2500,
+    -2.5,
+    1.0
+   ]
+  ]
  },
  "sfx": [
   {
    "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
    "t": 0.0333,
    "anchor": "attack",
-   "gain_db": -15,
+   "gain_db": -13,
    "label": "entra NO ARMY (frame 0)"
   },
   {
    "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
    "t": 4.2,
    "anchor": "attack",
-   "gain_db": -17,
+   "gain_db": -14,
    "label": "entra NO TAXES",
    "pitch": 2
   },
   {
    "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
-   "t": 6.8333,
+   "t": 6.8667,
    "anchor": "attack",
-   "gain_db": -10,
+   "gain_db": -8,
    "label": "golpe CASINO + sacudida"
+  },
+  {
+   "file": "../../../sonido/libreria/sub/earshot_cut_hit_punch.wav",
+   "t": 6.8667,
+   "anchor": "attack",
+   "gain_db": -7,
+   "label": "golpe CASINO + sacudida · capa grave"
   },
   {
    "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
    "t": 8.5333,
    "anchor": "attack",
-   "gain_db": -11,
+   "gain_db": -10,
    "label": "sello FAKE?"
   },
   {
    "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
    "t": 9.6333,
    "anchor": "attack",
-   "gain_db": -11,
+   "gain_db": -10,
    "label": "sello REAL"
   },
   {
-   "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
-   "t": 10.7,
-   "anchor": "peak",
-   "gain_db": -17,
-   "label": "el triángulo desaparece (pico)"
+   "file": "../../../sonido/libreria/sub/earshot_cut_hit_punch.wav",
+   "t": 9.6667,
+   "anchor": "attack",
+   "gain_db": -7,
+   "label": "sello REAL · capa grave"
   },
   {
    "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
-   "t": 11.8333,
+   "t": 11.8667,
    "anchor": "attack",
-   "gain_db": -10,
+   "gain_db": -8,
    "label": "título NEUTRAL MORESNET"
   },
   {
-   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "file": "../../../sonido/libreria/sub/earshot_cut_hit_punch.wav",
+   "t": 11.8667,
+   "anchor": "attack",
+   "gain_db": -7,
+   "label": "título NEUTRAL MORESNET · capa grave"
+  },
+  {
+   "file": "../../../sonido/libreria/pop/earshot_ui_pop_step.wav",
    "t": 15.2333,
    "anchor": "attack",
-   "gain_db": -15,
-   "label": "chip 1816"
+   "gain_db": -8,
+   "label": "chip 1816",
+   "pitch": 2
   },
   {
    "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
    "t": 16.8333,
    "anchor": "peak",
-   "gain_db": -13,
+   "gain_db": -11,
    "label": "entran las coronas (pico)"
   },
   {
-   "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
+   "file": "../../../sonido/libreria/pop/earshot_ui_pop_wide.wav",
    "t": 18.9667,
    "anchor": "attack",
-   "gain_db": -17,
-   "label": "ficha Zn",
-   "pitch": 2
+   "gain_db": -8,
+   "label": "ficha Zn"
   },
   {
    "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
    "t": 20.5333,
    "anchor": "attack",
-   "gain_db": -11,
+   "gain_db": -10,
    "label": "sello SHARED IT"
   },
   {
-   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
-   "t": 21.6667,
+   "file": "../../../sonido/libreria/sub/earshot_cut_hit_punch.wav",
+   "t": 20.6,
    "anchor": "attack",
-   "gain_db": -15,
+   "gain_db": -7,
+   "label": "sello SHARED IT · capa grave"
+  },
+  {
+   "file": "../../../sonido/libreria/click/uisfx_soft_select.mp3",
+   "t": 21.6667,
+   "anchor": "peak",
+   "gain_db": -9,
    "label": "primeras personas"
   },
   {
    "file": "../../../sonido/libreria/whoosh/fs-539172_melee-combat-whoosh.mp3",
    "t": 23.5667,
    "anchor": "peak",
-   "gain_db": -15,
+   "gain_db": -13,
    "label": "llegan miles (pico)"
   },
   {
-   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "file": "../../../sonido/libreria/pop/earshot_ui_pop_wide.wav",
    "t": 24.4667,
    "anchor": "attack",
-   "gain_db": -14,
+   "gain_db": -6,
    "label": "contador 3,000+",
    "pitch": 4
   },
@@ -112,52 +141,58 @@
    "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
    "t": 25.5333,
    "anchor": "attack",
-   "gain_db": -11,
+   "gain_db": -10,
    "label": "sello postal cae"
   },
   {
-   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
-   "t": 27.9333,
+   "file": "../../../sonido/libreria/pop/earshot_ui_pop_wide.wav",
+   "t": 27.9667,
    "anchor": "attack",
-   "gain_db": -15,
+   "gain_db": -8,
    "label": "Saluton!",
-   "pitch": 6
+   "pitch": 3
   },
   {
    "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
    "t": 29.8333,
    "anchor": "attack",
-   "gain_db": -17,
+   "gain_db": -14,
    "label": "1920"
   },
   {
-   "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
-   "t": 32.1667,
+   "file": "../../../sonido/libreria/sub/earshot_cut_hit_punch.wav",
+   "t": 29.8667,
    "anchor": "attack",
-   "gain_db": -10,
+   "gain_db": -7,
+   "label": "1920 · capa grave"
+  },
+  {
+   "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
+   "t": 32.2,
+   "anchor": "attack",
+   "gain_db": -8,
    "label": "GONE + sacudida"
   },
   {
-   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
-   "t": 34.0,
+   "file": "../../../sonido/libreria/sub/earshot_cut_hit_punch.wav",
+   "t": 32.2,
    "anchor": "attack",
-   "gain_db": -15,
+   "gain_db": -7,
+   "label": "GONE + sacudida · capa grave"
+  },
+  {
+   "file": "../../../sonido/libreria/click/uisfx_soft_select.mp3",
+   "t": 34.0667,
+   "anchor": "peak",
+   "gain_db": -9,
    "label": "YES",
    "pitch": 2
   },
   {
-   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
-   "t": 34.1333,
-   "anchor": "attack",
-   "gain_db": -15,
-   "label": "NO",
-   "pitch": -2
-  },
-  {
    "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
-   "t": 35.9,
+   "t": 35.8,
    "anchor": "peak",
-   "gain_db": -17,
+   "gain_db": -10,
    "label": "entra la tarjeta final"
   }
  ],

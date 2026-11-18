@@ -180,6 +180,20 @@ def qa(d, master=None, video_master=None):
     return ok, avisos, errores
 
 
+def eq_chain(lista):
+    """[["peak", f, dB, Q] | ["low", f, dB] | ["high", f, dB], ...] → cadena de filtros ffmpeg."""
+    out = []
+    for e in lista or []:
+        tipo = e[0]
+        if tipo == "peak":
+            out.append(f"equalizer=f={e[1]}:t=q:w={e[3] if len(e) > 3 else 1}:g={e[2]}")
+        elif tipo == "low":
+            out.append(f"bass=g={e[2]}:f={e[1]}:w=0.7")
+        elif tipo == "high":
+            out.append(f"treble=g={e[2]}:f={e[1]}:w=0.7")
+    return ("," + ",".join(out)) if out else ""
+
+
 def mezclar(d):
     dur = d["duracion"]
     ins, chains, mixlabels = [], [], []
@@ -196,7 +210,7 @@ def mezclar(d):
         v = d["voz"]
         i = add_input(v["file"])
         ms = int(round(v.get("t", 0) * 1000))
-        chains.append(f"[{i}:a]aresample={SR},aformat=channel_layouts=stereo,volume={v.get('gain_db', 0)}dB,"
+        chains.append(f"[{i}:a]aresample={SR},aformat=channel_layouts=stereo,volume={v.get('gain_db', 0)}dB{eq_chain(v.get('eq'))},"
                       f"adelay={ms}:all=1,apad,atrim=0:{dur}[voz]")
         if d.get("musica") and d["musica"].get("duck_db", 0) > 0:
             chains.append("[voz]asplit=2[vozmix][vozkey]")
@@ -210,7 +224,7 @@ def mezclar(d):
         fo = m.get("fade_out", 1.5)
         c = (f"[{i}:a]aresample={SR},aformat=channel_layouts=stereo,atrim=start={m.get('offset', 0)},asetpts=PTS-STARTPTS," +
              (f"acompressor=threshold=-26dB:ratio=4:attack=300:release=2500:knee=6:makeup=4," if m.get("estable", True) else "") +
-             f"volume={m.get('gain_db', -16)}dB,apad,atrim=0:{dur}")
+             f"volume={m.get('gain_db', -16)}dB{eq_chain(m.get('eq'))},apad,atrim=0:{dur}")
         if m.get("rides"):
             pts = sorted(m["rides"])
             expr = f"{pts[0][1]}"

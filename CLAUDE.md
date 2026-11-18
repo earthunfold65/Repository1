@@ -18,3 +18,9 @@
 - Nada de contenido "plano": gancho de deseo/imposible en primera persona ("Imagine…"), sorpresa cada 3–4 s, humor, algo en juego, pregunta para comentar al final.
 - Música de nivel constante (bucle estable), ducking suave; nunca música que "sube y baja". Entregar también versión SIN música para usar audio en tendencia en la app.
 - Voz con matices: emoción alta en sorpresas, pausas dramáticas, ritmo ágil.
+
+## Oído antes de entregar (obligatorio)
+- Tras mezclar: `HF_HUB_DISABLE_XET=1 ~/.venvs/chatter/bin/python -I instagram/scripts/oido.py <video.mp4> <cues.json>` (earshot: sincronía de cada efecto, audibilidad sobre voz/música, crítica vs. 7 películas pro, hoja PNG, cómo suena cada SFX).
+- Solo se entrega con **VEREDICTO: ENTREGAR**. Efecto tarde/adelantado → moverlo; inaudible (< +3 dB) → subirlo, cambiarlo por uno que corte o quitarlo; "needs work" → arreglar lo que diga "FIX FIRST". Abrir y mirar `out/oido/sheet.png`.
+- Skills instaladas en el proyecto: `earshot`, `real-sfx` (con librería `instagram/sonido/libreria` + uisfx CC0), `real-sound`.
+- Sonidos buenos medidos: pops `pop/earshot_ui_pop_*.wav`, capa grave `sub/earshot_cut_hit_punch.wav` bajo golpes grandes, clic `click/uisfx_soft_select.mp3` (anclar por pico). Evitar `fs-488534_ui-click` (earshot: suena a tecla de teclado).

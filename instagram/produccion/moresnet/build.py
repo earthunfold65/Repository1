@@ -197,7 +197,7 @@ SCENES[k] = scene_file(k, f"""
       tl.fromTo("#rl-tri", {{ scale: 1, opacity: 1 }}, {{ scale: 1.5, opacity: 1, duration: 0.25, ease: "back.out(2)" }}, {t_real + 0.3:.3f});
       tl.to("#rl-tri", {{ opacity: 0, scale: 0.2, rotation: 90, duration: 0.6, ease: "power2.in" }}, {t_van:.3f});""")
 cues += [{"t": round(S[k] + t_real + 0.16, 3), "kind": "stamp", "label": "sello REAL"},
-         {"t": round(S[k] + t_van + 0.3, 3), "kind": "whoosh_soft", "label": "el triángulo desaparece (pico)"}]
+         ]  # whoosh del triángulo quitado: earshot lo medía inaudible (+0 dB)
 
 # ---------- 4. NEUTRAL MORESNET · 1816 (c5–c6) ----------
 k = "intro"
@@ -226,7 +226,7 @@ SCENES[k] = scene_file(k, f"""
       tl.fromTo("#in-nl, #in-pr", {{ opacity: 0, y: 20 }}, {{ opacity: 1, y: 0, duration: 0.25 }}, {t_name + 0.3:.3f});
       tl.fromTo("#in-yr", {{ opacity: 0, scale: 0.7 }}, {{ opacity: 1, scale: 1, duration: 0.22, ease: "back.out(2.5)" }}, {min(t_name + 0.45, t_1816 - 0.1):.3f});""")
 cues += [{"t": round(S[k] + 0.26, 3), "kind": "hit", "label": "título NEUTRAL MORESNET"},
-         {"t": round(S[k] + t_1816, 3), "kind": "click", "label": "chip 1816"}]
+         {"t": round(S[k] + t_1816, 3), "kind": "tick", "pitch": 2, "label": "chip 1816"}]
 
 # ---------- 5. DOS CORONAS, UNA MINA → LA COMPARTEN (c7–c8) ----------
 k = "crown"
@@ -262,7 +262,7 @@ SCENES[k] = scene_file(k, f"""
       tl.fromTo("#cr-hs", {{ opacity: 0, scale: 0.3, rotation: -15 }}, {{ opacity: 1, scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2.6)" }}, {t_shared - 0.3:.3f});
       tl.fromTo("#cr-sh", {{ opacity: 0, scale: 1.7, rotation: -10 }}, {{ opacity: 1, scale: 1, rotation: -4, duration: 0.16, ease: "power4.in" }}, {t_shared:.3f});""")
 cues += [{"t": round(S[k] + max(0.0, t_king - 0.25) + 0.25, 3), "kind": "whoosh", "label": "entran las coronas (pico)"},
-         {"t": round(S[k] + t_zinc + 0.1, 3), "kind": "thunk", "pitch": 2, "label": "ficha Zn"},
+         {"t": round(S[k] + t_zinc + 0.1, 3), "kind": "pop", "label": "ficha Zn"},
          {"t": round(S[k] + t_shared + 0.16, 3), "kind": "stamp", "label": "sello SHARED IT"}]
 
 # ---------- 6. LA GENTE LLEGA: 256 → MILES (c9) ----------
@@ -295,7 +295,7 @@ SCENES[k] = scene_file(k, f"""
 """)
 cues += [{"t": round(S[k] + 0.08, 3), "kind": "click", "label": "primeras personas"},
          {"t": round(S[k] + t_th - 0.45, 3), "kind": "whoosh2", "label": "llegan miles (pico)"},
-         {"t": round(S[k] + t_th + 0.42, 3), "kind": "tick", "pitch": 4, "label": "contador 3,000+"}]
+         {"t": round(S[k] + t_th + 0.42, 3), "kind": "pop", "pitch": 4, "gain": 2, "label": "contador 3,000+"}]
 
 # ---------- 7. SELLOS + ESPERANTO (c10) ----------
 k = "stamps"
@@ -322,7 +322,7 @@ SCENES[k] = scene_file(k, f"""
       tl.fromTo("#sp-bub", {{ opacity: 0, scale: 0.3 }}, {{ opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2.5)" }}, {t_esp - 0.1:.3f});
       tl.to("#sp-stamp", {{ rotation: -2, duration: {SLOT[k][1] - t_st:.3f}, ease: "none" }}, {t_st:.3f});""")
 cues += [{"t": round(S[k] + max(0.02, t_st - 0.35) + 0.2, 3), "kind": "stamp", "label": "sello postal cae"},
-         {"t": round(S[k] + t_esp - 0.1 + 0.05, 3), "kind": "click", "pitch": 6, "label": "Saluton!"}]
+         {"t": round(S[k] + t_esp - 0.1 + 0.11, 3), "kind": "pop", "pitch": 3, "label": "Saluton!"}]
 
 # ---------- 8. 1920: SE LO DAN A BÉLGICA. GONE. (c11) ----------
 k = "gone"
@@ -369,8 +369,8 @@ SCENES[k] = scene_file(k, f"""
       tl.fromTo("#pl-y", {{ opacity: 0, x: -500 }}, {{ opacity: 1, x: 0, duration: 0.3, ease: "back.out(1.8)" }}, 0.25);
       tl.fromTo("#pl-n", {{ opacity: 0, x: 500 }}, {{ opacity: 1, x: 0, duration: 0.3, ease: "back.out(1.8)" }}, 0.4);
       tl.to("#pl-y", {{ scale: 1.06, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }}, 0.8);""")
-cues += [{"t": round(S[k] + 0.3, 3), "kind": "click", "pitch": 2, "label": "YES"},
-         {"t": round(S[k] + 0.45, 3), "kind": "click", "pitch": -2, "label": "NO"}]
+cues += [{"t": round(S[k] + 0.36, 3), "kind": "click", "pitch": 2, "label": "YES"},
+         ]  # un solo clic para la encuesta: dos a 60 ms se emborronan
 
 # ---------- 10. CIERRE: EP. 3 (c13) ----------
 k = "end"
@@ -397,7 +397,7 @@ SCENES[k] = scene_file(k, f"""
       tl.fromTo("#en-ep", {{ opacity: 0, y: 20 }}, {{ opacity: 1, y: 0, duration: 0.25 }}, 0.2);
       tl.fromTo("#en-title", {{ opacity: 0, y: 40 }}, {{ opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }}, {max(0.3, L(k, wt('island')) - 0.1):.3f});
       tl.fromTo("#en-follow", {{ opacity: 0, scale: 0.9 }}, {{ opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }}, {L(k, wt('switches')):.3f});""")
-cues += [{"t": round(S[k] + 0.12, 3), "kind": "whoosh_soft", "label": "entra la tarjeta final"}]
+cues += [{"t": round(S[k] + 0.02, 3), "kind": "whoosh_soft", "label": "entra la tarjeta final"}]
 # ---------- captions ----------
 KEY = {"army", "taxes", "casino", "real", "vanished", "moresnet", "1816", "kingdoms", "zinc", "shared", "256",
        "thousands", "stamps", "esperanto", "1920", "belgium", "gone", "forever", "moved", "island", "six"}
@@ -501,30 +501,38 @@ for k, txt in {**SCENES, "captions": s_caps}.items():
 open(os.path.join(HERE, "index.html"), "w").write(index)
 
 LIBR = "../../../sonido/libreria"
-SFX = {
-    "whoosh": (f"{LIBR}/whoosh/fs-60007_swipe-whoosh.mp3", "peak", -13),
-    "whoosh2": (f"{LIBR}/whoosh/fs-539172_melee-combat-whoosh.mp3", "peak", -15),
-    "whoosh_soft": (f"{LIBR}/whoosh/fs-60007_swipe-whoosh.mp3", "peak", -17),
-    "click": (f"{LIBR}/click/fs-488534_ui-click.mp3", "attack", -15),
-    "tick": (f"{LIBR}/click/fs-488534_ui-click.mp3", "attack", -14),
-    "stamp": (f"{LIBR}/stamp/fs-362624_stamp.mp3", "attack", -11),
-    "thunk": (f"{LIBR}/stamp/fs-347325_thick-stamp-nosub-wav.mp3", "attack", -17),
-    "hit": (f"{LIBR}/hit/fs-377303_deep-cinematic-impact.mp3", "attack", -10),
-    "hit_soft": (f"{LIBR}/hit/fs-377303_deep-cinematic-impact.mp3", "attack", -15),
+SFX = {   # elegidos y ajustados con earshot (ver out/oido/INFORME_OIDO.md)
+    "whoosh": (f"{LIBR}/whoosh/fs-60007_swipe-whoosh.mp3", "peak", -11),
+    "whoosh2": (f"{LIBR}/whoosh/fs-539172_melee-combat-whoosh.mp3", "peak", -13),
+    "whoosh_soft": (f"{LIBR}/whoosh/fs-60007_swipe-whoosh.mp3", "peak", -10),
+    "click": (f"{LIBR}/click/uisfx_soft_select.mp3", "peak", -9),
+    "tick": (f"{LIBR}/pop/earshot_ui_pop_step.wav", "attack", -8),
+    "pop": (f"{LIBR}/pop/earshot_ui_pop_wide.wav", "attack", -8),
+    "stamp": (f"{LIBR}/stamp/fs-362624_stamp.mp3", "attack", -10),
+    "thunk": (f"{LIBR}/stamp/fs-347325_thick-stamp-nosub-wav.mp3", "attack", -14),
+    "hit": (f"{LIBR}/hit/fs-377303_deep-cinematic-impact.mp3", "attack", -8),
+    "hit_soft": (f"{LIBR}/hit/fs-377303_deep-cinematic-impact.mp3", "attack", -13),
+    "sub": (f"{LIBR}/sub/earshot_cut_hit_punch.wav", "attack", -7),
 }
+# correcciones de sincronía medidas con earshot (s): el impacto se percibía ~55 ms antes
+OFFSET = {"hit": 0.05, "sub": 0.05}
 sfx = []
+# capa grave bajo cada golpe grande (earshot: "thin bottom")
+GRAVE = ("REAL", "SHARED IT", "1920")
+cues += [{"t": c["t"], "kind": "sub", "label": c["label"] + " · capa grave"} for c in list(cues)
+         if c["kind"] == "hit" or any(g in c["label"] for g in GRAVE)]
 for c in sorted(cues, key=lambda c: c["t"]):
     f, a, gdb = SFX[c["kind"]]
-    it = {"file": f, "t": fr(c["t"]), "anchor": a, "gain_db": gdb, "label": c["label"]}
+    it = {"file": f, "t": fr(c["t"] + OFFSET.get(c["kind"], 0)), "anchor": a, "gain_db": gdb + c.get("gain", 0), "label": c["label"]}
     if c.get("pitch"):
         it["pitch"] = c["pitch"]
     sfx.append(it)
 diseno = {
     "duracion": DUR, "fps": FPS,
-    "voz": {"file": "vo.wav", "gain_db": 0, "t": 0},
+    "voz": {"file": "vo.wav", "gain_db": 0, "t": 0, "eq": [["peak", 2500, -2.5, 1.0]]},
     # bucle de misterio de nivel constante (LRA 2 LU) + ducking suave: sin "respiraciones"
     "musica": {"file": f"{LIBR}/musica/fs-446745_dilemma-2a-mystery-music-loop.mp3", "gain_db": -12, "duck_db": 5,
-               "loop": True, "offset": 0.0, "fade_in": 0.05, "fade_out": 1.2,
+               "loop": True, "offset": 0.0, "eq": [["low", 55, 7], ["low", 120, 2]], "fade_in": 0.05, "fade_out": 1.2,
                "rides": [[S["gone"] - 0.05, 0], [S["gone"] + 0.25, -9], [S["poll"] - 0.2, -9], [S["poll"] + 0.3, 0]]},
     "sfx": sfx,
     "master": {"lufs": -14, "tp": -1.5, "tp_aac": -1.0},
