@@ -4,649 +4,649 @@
 "text": "Imagine",
 "type": "word",
 "start": 0.05,
-"end": 0.479
+"end": 0.33
 },
 {
 "text": "a",
 "type": "word",
-"start": 0.479,
-"end": 0.586
+"start": 0.33,
+"end": 0.51
 },
 {
 "text": "country",
 "type": "word",
-"start": 0.586,
-"end": 1.014
+"start": 0.51,
+"end": 0.73
 },
 {
 "text": "where,",
 "type": "word",
-"start": 1.014,
-"end": 1.336
+"start": 0.73,
+"end": 1.07
 },
 {
 "text": "for",
 "type": "word",
-"start": 1.336,
-"end": 1.55
+"start": 1.17,
+"end": 1.35
 },
 {
 "text": "years,",
 "type": "word",
-"start": 1.55,
-"end": 1.872
+"start": 1.35,
+"end": 1.63
 },
 {
 "text": "nobody",
 "type": "word",
-"start": 1.872,
-"end": 2.247
+"start": 2.47,
+"end": 2.47
 },
 {
 "text": "could",
 "type": "word",
-"start": 2.247,
-"end": 2.568
+"start": 2.47,
+"end": 2.79
 },
 {
 "text": "draft",
 "type": "word",
-"start": 2.568,
-"end": 2.889
+"start": 2.79,
+"end": 3.07
 },
 {
 "text": "you",
 "type": "word",
-"start": 2.889,
-"end": 3.104
+"start": 3.07,
+"end": 3.25
 },
 {
 "text": "into",
 "type": "word",
-"start": 3.104,
-"end": 3.372
+"start": 3.25,
+"end": 3.41
 },
 {
 "text": "an",
 "type": "word",
-"start": 3.372,
-"end": 3.532
+"start": 3.41,
+"end": 3.57
 },
 {
 "text": "army.",
 "type": "word",
-"start": 3.532,
-"end": 3.8
+"start": 3.57,
+"end": 3.73
 },
 {
 "text": "Taxes?",
 "type": "word",
-"start": 4.1,
-"end": 4.518
+"start": 4.09,
+"end": 4.53
 },
 {
 "text": "Barely",
 "type": "word",
-"start": 4.518,
-"end": 5.006
+"start": 5.11,
+"end": 5.43
 },
 {
 "text": "any.",
 "type": "word",
-"start": 5.006,
-"end": 5.285
+"start": 5.43,
+"end": 5.65
 },
 {
 "text": "It",
 "type": "word",
-"start": 5.535,
-"end": 5.71
+"start": 5.91,
+"end": 6.01
 },
 {
 "text": "even",
 "type": "word",
-"start": 5.71,
-"end": 6.001
+"start": 6.01,
+"end": 6.17
 },
 {
 "text": "opened",
 "type": "word",
-"start": 6.001,
-"end": 6.409
+"start": 6.17,
+"end": 6.43
 },
 {
 "text": "its",
 "type": "word",
-"start": 6.409,
-"end": 6.642
+"start": 6.43,
+"end": 6.61
 },
 {
 "text": "own",
 "type": "word",
-"start": 6.642,
-"end": 6.875
+"start": 6.61,
+"end": 6.79
 },
 {
 "text": "casino!",
 "type": "word",
-"start": 6.875,
-"end": 7.282
+"start": 6.79,
+"end": 7.17
 },
 {
 "text": "Sounds",
 "type": "word",
-"start": 8.132,
-"end": 8.493
+"start": 8.069,
+"end": 8.369
 },
 {
 "text": "made",
 "type": "word",
-"start": 8.493,
-"end": 8.751
+"start": 8.369,
+"end": 8.549
 },
 {
 "text": "up,",
 "type": "word",
-"start": 8.751,
-"end": 8.906
+"start": 8.549,
+"end": 8.709
 },
 {
 "text": "right?",
 "type": "word",
-"start": 8.906,
-"end": 9.216
+"start": 8.749,
+"end": 8.909
 },
 {
 "text": "It",
 "type": "word",
-"start": 9.566,
-"end": 9.699
+"start": 9.266,
+"end": 9.366
 },
 {
 "text": "was",
 "type": "word",
-"start": 9.699,
-"end": 9.878
+"start": 9.366,
+"end": 9.466
 },
 {
 "text": "real...",
 "type": "word",
-"start": 9.878,
-"end": 10.101
+"start": 9.466,
+"end": 9.786
 },
 {
 "text": "and",
 "type": "word",
-"start": 10.101,
-"end": 10.279
+"start": 10.106,
+"end": 10.186
 },
 {
 "text": "then",
 "type": "word",
-"start": 10.279,
-"end": 10.502
+"start": 10.186,
+"end": 10.286
 },
 {
 "text": "it",
 "type": "word",
-"start": 10.502,
-"end": 10.636
+"start": 10.286,
+"end": 10.406
 },
 {
 "text": "vanished",
 "type": "word",
-"start": 10.636,
-"end": 11.037
+"start": 10.406,
+"end": 10.686
 },
 {
 "text": "from",
 "type": "word",
-"start": 11.037,
-"end": 11.26
+"start": 10.686,
+"end": 10.986
 },
 {
 "text": "the",
 "type": "word",
-"start": 11.26,
-"end": 11.438
+"start": 10.986,
+"end": 11.106
 },
 {
 "text": "map.",
 "type": "word",
-"start": 11.438,
-"end": 11.617
+"start": 11.106,
+"end": 11.286
 },
 {
 "text": "This",
 "type": "word",
-"start": 12.067,
-"end": 12.323
+"start": 11.633,
+"end": 11.833
 },
 {
 "text": "is",
 "type": "word",
-"start": 12.323,
-"end": 12.476
+"start": 11.833,
+"end": 12.073
 },
 {
 "text": "Neutral",
 "type": "word",
-"start": 12.476,
-"end": 12.886
+"start": 12.073,
+"end": 12.513
 },
 {
 "text": "Moresnet.",
 "type": "word",
-"start": 12.886,
-"end": 13.347
+"start": 12.513,
+"end": 12.993
 },
 {
 "text": "A",
 "type": "word",
-"start": 13.647,
-"end": 13.843
+"start": 13.36,
+"end": 13.478
 },
 {
 "text": "tiny",
 "type": "word",
-"start": 13.843,
-"end": 14.333
+"start": 13.478,
+"end": 13.772
 },
 {
 "text": "triangle",
 "type": "word",
-"start": 14.333,
-"end": 15.214
+"start": 13.772,
+"end": 14.301
 },
 {
 "text": "of",
 "type": "word",
-"start": 15.214,
-"end": 15.508
+"start": 14.301,
+"end": 14.477
 },
 {
 "text": "land,",
 "type": "word",
-"start": 15.508,
-"end": 15.998
+"start": 14.477,
+"end": 14.771
 },
 {
 "text": "born",
 "type": "word",
-"start": 15.998,
-"end": 16.488
+"start": 14.771,
+"end": 15.065
 },
 {
 "text": "in",
 "type": "word",
-"start": 16.488,
-"end": 16.782
+"start": 15.065,
+"end": 15.241
 },
 {
 "text": "1816...",
 "type": "word",
-"start": 16.782,
-"end": 17.272
+"start": 15.241,
+"end": 16.241
 },
 {
 "text": "because",
 "type": "word",
-"start": 17.522,
-"end": 17.882
+"start": 16.416,
+"end": 16.616
 },
 {
 "text": "two",
 "type": "word",
-"start": 17.882,
-"end": 18.062
+"start": 16.616,
+"end": 16.836
 },
 {
 "text": "kingdoms",
 "type": "word",
-"start": 18.062,
-"end": 18.468
+"start": 16.836,
+"end": 17.156
 },
 {
 "text": "couldn't",
 "type": "word",
-"start": 18.468,
-"end": 18.873
+"start": 17.156,
+"end": 17.556
 },
 {
 "text": "agree",
 "type": "word",
-"start": 18.873,
-"end": 19.143
+"start": 17.556,
+"end": 17.816
 },
 {
 "text": "who",
 "type": "word",
-"start": 19.143,
-"end": 19.324
+"start": 17.816,
+"end": 18.076
 },
 {
 "text": "owned",
 "type": "word",
-"start": 19.324,
-"end": 19.594
+"start": 18.076,
+"end": 18.476
 },
 {
 "text": "one",
 "type": "word",
-"start": 19.594,
-"end": 19.774
+"start": 18.476,
+"end": 18.876
 },
 {
 "text": "zinc",
 "type": "word",
-"start": 19.774,
-"end": 19.999
+"start": 18.876,
+"end": 19.156
 },
 {
 "text": "mine.",
 "type": "word",
-"start": 19.999,
-"end": 20.225
+"start": 19.156,
+"end": 19.476
 },
 {
 "text": "So",
 "type": "word",
-"start": 20.475,
-"end": 20.645
+"start": 19.783,
+"end": 19.943
 },
 {
 "text": "they",
 "type": "word",
-"start": 20.645,
-"end": 20.929
+"start": 19.943,
+"end": 20.083
 },
 {
 "text": "just...",
 "type": "word",
-"start": 20.929,
-"end": 21.213
+"start": 20.083,
+"end": 20.383
 },
 {
 "text": "shared",
 "type": "word",
-"start": 21.213,
-"end": 21.61
+"start": 20.383,
+"end": 20.903
 },
 {
 "text": "it.",
 "type": "word",
-"start": 21.61,
-"end": 21.78
+"start": 20.903,
+"end": 21.123
 },
 {
 "text": "People",
 "type": "word",
-"start": 22.18,
-"end": 22.726
+"start": 21.43,
+"end": 21.67
 },
 {
 "text": "rushed",
 "type": "word",
-"start": 22.726,
-"end": 23.271
+"start": 21.67,
+"end": 21.95
 },
 {
 "text": "in.",
 "type": "word",
-"start": 23.271,
-"end": 23.505
+"start": 21.95,
+"end": 22.31
 },
 {
 "text": "From",
 "type": "word",
-"start": 23.505,
-"end": 23.895
+"start": 22.45,
+"end": 22.65
 },
 {
 "text": "256",
 "type": "word",
-"start": 23.895,
-"end": 24.207
+"start": 22.65,
+"end": 23.13
 },
 {
 "text": "people...",
 "type": "word",
-"start": 24.207,
-"end": 24.752
+"start": 23.13,
+"end": 23.73
 },
 {
 "text": "to",
 "type": "word",
-"start": 24.752,
-"end": 24.986
+"start": 23.73,
+"end": 24.03
 },
 {
 "text": "thousands.",
 "type": "word",
-"start": 24.986,
-"end": 25.765
+"start": 24.03,
+"end": 24.45
 },
 {
 "text": "They",
 "type": "word",
-"start": 26.065,
-"end": 26.316
+"start": 24.972,
+"end": 25.092
 },
 {
 "text": "printed",
 "type": "word",
-"start": 26.316,
-"end": 26.717
+"start": 25.092,
+"end": 25.292
 },
 {
 "text": "their",
 "type": "word",
-"start": 26.717,
-"end": 27.018
+"start": 25.292,
+"end": 25.512
 },
 {
 "text": "own",
 "type": "word",
-"start": 27.018,
-"end": 27.218
+"start": 25.512,
+"end": 25.692
 },
 {
 "text": "stamps,",
 "type": "word",
-"start": 27.218,
-"end": 27.569
+"start": 25.692,
+"end": 26.092
 },
 {
 "text": "and",
 "type": "word",
-"start": 27.569,
-"end": 27.77
+"start": 26.512,
+"end": 26.672
 },
 {
 "text": "some",
 "type": "word",
-"start": 27.77,
-"end": 28.02
+"start": 26.672,
+"end": 26.892
 },
 {
 "text": "even",
 "type": "word",
-"start": 28.02,
-"end": 28.271
+"start": 26.892,
+"end": 27.232
 },
 {
 "text": "dreamed",
 "type": "word",
-"start": 28.271,
-"end": 28.672
+"start": 27.232,
+"end": 27.612
 },
 {
 "text": "of",
 "type": "word",
-"start": 28.672,
-"end": 28.822
+"start": 27.612,
+"end": 27.852
 },
 {
 "text": "an",
 "type": "word",
-"start": 28.822,
-"end": 28.973
+"start": 27.852,
+"end": 27.972
 },
 {
 "text": "Esperanto",
 "type": "word",
-"start": 28.973,
-"end": 29.474
+"start": 27.972,
+"end": 28.572
 },
 {
 "text": "state.",
 "type": "word",
-"start": 29.474,
-"end": 29.775
+"start": 28.572,
+"end": 28.852
 },
 {
 "text": "Then,",
 "type": "word",
-"start": 30.175,
-"end": 30.569
+"start": 29.276,
+"end": 29.476
 },
 {
 "text": "in",
 "type": "word",
-"start": 30.569,
-"end": 30.806
+"start": 29.656,
+"end": 29.796
 },
 {
 "text": "1920...",
 "type": "word",
-"start": 30.806,
-"end": 31.2
+"start": 29.796,
+"end": 30.316
 },
 {
 "text": "it",
 "type": "word",
-"start": 31.2,
-"end": 31.437
+"start": 30.656,
+"end": 30.676
 },
 {
 "text": "was",
 "type": "word",
-"start": 31.437,
-"end": 31.752
+"start": 30.676,
+"end": 30.776
 },
 {
 "text": "handed",
 "type": "word",
-"start": 31.752,
-"end": 32.304
+"start": 30.776,
+"end": 30.996
 },
 {
 "text": "to",
 "type": "word",
-"start": 32.304,
-"end": 32.541
+"start": 30.996,
+"end": 31.196
 },
 {
 "text": "Belgium.",
 "type": "word",
-"start": 32.541,
-"end": 33.172
+"start": 31.196,
+"end": 31.556
 },
 {
 "text": "Gone.",
 "type": "word",
-"start": 33.172,
-"end": 33.566
+"start": 32.116,
+"end": 32.356
 },
 {
 "text": "Forever.",
 "type": "word",
-"start": 33.566,
-"end": 34.197
+"start": 32.776,
+"end": 33.016
 },
 {
 "text": "Would",
 "type": "word",
-"start": 34.697,
-"end": 34.945
+"start": 33.63,
+"end": 33.77
 },
 {
 "text": "you",
 "type": "word",
-"start": 34.945,
-"end": 35.11
+"start": 33.77,
+"end": 33.91
 },
 {
 "text": "have",
 "type": "word",
-"start": 35.11,
-"end": 35.316
+"start": 33.91,
+"end": 34.01
 },
 {
 "text": "moved",
 "type": "word",
-"start": 35.316,
-"end": 35.564
+"start": 34.01,
+"end": 34.19
 },
 {
 "text": "there?",
 "type": "word",
-"start": 35.564,
-"end": 35.812
+"start": 34.19,
+"end": 34.45
 },
 {
 "text": "Next:",
 "type": "word",
-"start": 36.712,
-"end": 36.955
+"start": 35.193,
+"end": 35.493
 },
 {
 "text": "the",
 "type": "word",
-"start": 36.955,
-"end": 37.149
+"start": 35.813,
+"end": 35.933
 },
 {
 "text": "island",
 "type": "word",
-"start": 37.149,
-"end": 37.489
+"start": 35.933,
+"end": 36.173
 },
 {
 "text": "that",
 "type": "word",
-"start": 37.489,
-"end": 37.732
+"start": 36.173,
+"end": 36.373
 },
 {
 "text": "switches",
 "type": "word",
-"start": 37.732,
-"end": 38.169
+"start": 36.373,
+"end": 36.633
 },
 {
 "text": "countries",
 "type": "word",
-"start": 38.169,
-"end": 38.655
+"start": 36.633,
+"end": 37.113
 },
 {
 "text": "every",
 "type": "word",
-"start": 38.655,
-"end": 38.947
+"start": 37.113,
+"end": 37.593
 },
 {
 "text": "six",
 "type": "word",
-"start": 38.947,
-"end": 39.141
+"start": 37.593,
+"end": 37.853
 },
 {
 "text": "months.",
 "type": "word",
-"start": 39.141,
-"end": 39.481
+"start": 37.853,
+"end": 38.113
 }
 ]
 }

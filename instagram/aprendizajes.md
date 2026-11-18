@@ -18,6 +18,7 @@
 -->
 
 ## ❌ Errores a evitar (por qué fallaron los flops)
+- **[confirmada · feedback del dueño]** EP.2 v1 (Vaalserberg) rechazado: "plano y aburrido, no lo vería". Causas: tema contado como dato geográfico (tartas abstractas), voz TTS monótona (Kokoro: ±2,6 semitonos), música con ducking rápido que "respira". Regla: abrir con deseo/imposible + POV, voz expresiva (Chatterbox ±6,4 st), música estable. Revisión: 2026-11-18
 - **[hipótesis · datos propios]** Gancho lento = 49 % de skip. EP.1 Baarle (2 h, 304 views, 113 viewers): skip rate 48,7 % (por encima de lo normal), watch time medio 9 s de 40,8 s (22 %), 0 likes / 0 guardados / 0 follows, share rate 0,9 % (por encima de lo normal).
   Causas probables: (1) los primeros 1,2 s se gastan en "In this town..." sin información; la promesa llega en el 2,3 s. (2) Del 4 al 9 s hay exposición ("Baarle is split between...") sin nueva intriga: ahí se cae la retención. (3) 41 s es largo para una cuenta pequeña. (4) Ningún motivo para guardar ni pregunta que invite a comentar en la primera mitad. Revisión: 2026-11-18
 

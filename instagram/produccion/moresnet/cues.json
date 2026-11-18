@@ -2,43 +2,43 @@
  "scenes": {
   "dream": [
    0.0,
-   8.0667
+   8.0
   ],
   "fake": [
-   8.0667,
-   1.4333
+   8.0,
+   1.2
   ],
   "real": [
-   9.5,
-   2.5
+   9.2,
+   2.3667
   ],
   "intro": [
-   12.0,
-   5.4667
+   11.5667,
+   5.0
   ],
   "crown": [
-   17.4667,
-   4.6666
+   16.5667,
+   5.0333
   ],
   "people": [
-   22.1333,
-   3.8667
+   21.6,
+   3.4333
   ],
   "stamps": [
-   26.0,
-   4.1
+   25.0333,
+   4.5667
   ],
   "gone": [
-   30.1,
-   4.5333
+   29.6,
+   4.1
   ],
   "poll": [
-   34.6333,
-   2.0334
+   33.7,
+   2.0667
   ],
   "end": [
-   36.6667,
-   4.0633
+   35.7667,
+   3.5933
   ]
  },
  "cues": [
@@ -48,108 +48,108 @@
    "label": "entra NO ARMY (frame 0)"
   },
   {
-   "t": 4.22,
+   "t": 4.21,
    "kind": "thunk",
    "pitch": 2,
    "label": "entra NO TAXES"
   },
   {
-   "t": 6.915,
+   "t": 6.83,
    "kind": "hit",
    "label": "golpe CASINO + sacudida"
   },
   {
-   "t": 8.653,
+   "t": 8.529,
    "kind": "stamp",
    "label": "sello FAKE?"
   },
   {
-   "t": 10.038,
+   "t": 9.626,
    "kind": "stamp",
    "label": "sello REAL"
   },
   {
-   "t": 10.936,
+   "t": 10.706,
    "kind": "whoosh_soft",
    "label": "el triángulo desaparece (pico)"
   },
   {
-   "t": 12.906,
+   "t": 12.533,
    "kind": "hit",
    "label": "título NEUTRAL MORESNET"
   },
   {
-   "t": 16.782,
+   "t": 15.241,
    "kind": "click",
    "label": "chip 1816"
   },
   {
-   "t": 18.062,
+   "t": 16.836,
    "kind": "whoosh",
    "label": "entran las coronas (pico)"
   },
   {
-   "t": 19.874,
+   "t": 18.976,
    "kind": "thunk",
    "pitch": 2,
    "label": "ficha Zn"
   },
   {
-   "t": 21.373,
+   "t": 20.543,
    "kind": "stamp",
    "label": "sello SHARED IT"
   },
   {
-   "t": 22.213,
+   "t": 21.68,
    "kind": "click",
    "label": "primeras personas"
   },
   {
-   "t": 24.536,
+   "t": 23.58,
    "kind": "whoosh2",
    "label": "llegan miles (pico)"
   },
   {
-   "t": 25.406,
+   "t": 24.45,
    "kind": "tick",
    "pitch": 4,
    "label": "contador 3,000+"
   },
   {
-   "t": 27.068,
+   "t": 25.542,
    "kind": "stamp",
    "label": "sello postal cae"
   },
   {
-   "t": 28.923,
+   "t": 27.922,
    "kind": "click",
    "pitch": 6,
    "label": "Saluton!"
   },
   {
-   "t": 30.806,
+   "t": 29.82,
    "kind": "thunk",
    "label": "1920"
   },
   {
-   "t": 33.212,
+   "t": 32.156,
    "kind": "hit",
    "label": "GONE + sacudida"
   },
   {
-   "t": 34.933,
+   "t": 34.0,
    "kind": "click",
    "pitch": 2,
    "label": "YES"
   },
   {
-   "t": 35.083,
+   "t": 34.15,
    "kind": "click",
    "pitch": -2,
    "label": "NO"
   },
   {
-   "t": 36.787,
+   "t": 35.887,
    "kind": "whoosh_soft",
    "label": "entra la tarjeta final"
   }
@@ -158,261 +158,267 @@
   {
    "id": "cg0",
    "start": 0.1,
-   "end": 0.994,
+   "end": 0.71,
    "text": "IMAGINE A COUNTRY"
   },
   {
    "id": "cg1",
-   "start": 0.974,
-   "end": 1.316,
+   "start": 0.69,
+   "end": 1.15,
    "text": "WHERE,"
   },
   {
    "id": "cg2",
-   "start": 1.296,
-   "end": 1.852,
+   "start": 1.13,
+   "end": 2.23,
    "text": "FOR YEARS,"
   },
   {
    "id": "cg3",
-   "start": 1.832,
-   "end": 2.869,
+   "start": 2.43,
+   "end": 3.05,
    "text": "NOBODY COULD DRAFT"
   },
   {
    "id": "cg4",
-   "start": 2.849,
-   "end": 3.512,
+   "start": 3.03,
+   "end": 3.55,
    "text": "YOU INTO AN"
   },
   {
    "id": "cg5",
-   "start": 3.492,
-   "end": 4.08,
+   "start": 3.53,
+   "end": 4.07,
    "text": "ARMY."
   },
   {
    "id": "cg6",
-   "start": 4.06,
-   "end": 4.498,
+   "start": 4.05,
+   "end": 5.09,
    "text": "TAXES?"
   },
   {
    "id": "cg7",
-   "start": 4.478,
-   "end": 5.515,
+   "start": 5.07,
+   "end": 5.89,
    "text": "BARELY ANY."
   },
   {
    "id": "cg8",
-   "start": 5.495,
-   "end": 6.389,
+   "start": 5.87,
+   "end": 6.41,
    "text": "IT EVEN OPENED"
   },
   {
    "id": "cg9",
-   "start": 6.369,
-   "end": 7.882,
+   "start": 6.39,
+   "end": 7.77,
    "text": "ITS OWN CASINO!"
   },
   {
    "id": "cg10",
-   "start": 8.092,
-   "end": 8.886,
+   "start": 8.029,
+   "end": 8.729,
    "text": "SOUNDS MADE UP,"
   },
   {
    "id": "cg11",
-   "start": 8.866,
-   "end": 9.546,
+   "start": 8.709,
+   "end": 9.246,
    "text": "RIGHT?"
   },
   {
    "id": "cg12",
-   "start": 9.526,
-   "end": 10.081,
+   "start": 9.226,
+   "end": 10.086,
    "text": "IT WAS REAL..."
   },
   {
    "id": "cg13",
-   "start": 10.061,
-   "end": 10.616,
+   "start": 10.066,
+   "end": 10.386,
    "text": "AND THEN IT"
   },
   {
    "id": "cg14",
-   "start": 10.596,
-   "end": 11.418,
+   "start": 10.366,
+   "end": 11.086,
    "text": "VANISHED FROM THE"
   },
   {
    "id": "cg15",
-   "start": 11.398,
-   "end": 12.047,
+   "start": 11.066,
+   "end": 11.613,
    "text": "MAP."
   },
   {
    "id": "cg16",
-   "start": 12.027,
-   "end": 12.866,
+   "start": 11.593,
+   "end": 12.493,
    "text": "THIS IS NEUTRAL"
   },
   {
    "id": "cg17",
-   "start": 12.846,
-   "end": 13.627,
+   "start": 12.473,
+   "end": 13.34,
    "text": "MORESNET."
   },
   {
    "id": "cg18",
-   "start": 13.607,
-   "end": 15.194,
+   "start": 13.32,
+   "end": 14.281,
    "text": "A TINY TRIANGLE"
   },
   {
    "id": "cg19",
-   "start": 15.174,
-   "end": 15.978,
+   "start": 14.261,
+   "end": 14.751,
    "text": "OF LAND,"
   },
   {
    "id": "cg20",
-   "start": 15.958,
-   "end": 17.502,
+   "start": 14.731,
+   "end": 16.396,
    "text": "BORN IN 1816..."
   },
   {
    "id": "cg21",
-   "start": 17.482,
-   "end": 18.448,
+   "start": 16.376,
+   "end": 17.136,
    "text": "BECAUSE TWO KINGDOMS"
   },
   {
    "id": "cg22",
-   "start": 18.428,
-   "end": 19.304,
+   "start": 17.116,
+   "end": 18.056,
    "text": "COULDN'T AGREE WHO"
   },
   {
    "id": "cg23",
-   "start": 19.284,
-   "end": 19.979,
+   "start": 18.036,
+   "end": 19.136,
    "text": "OWNED ONE ZINC"
   },
   {
    "id": "cg24",
-   "start": 19.959,
-   "end": 20.455,
+   "start": 19.116,
+   "end": 19.763,
    "text": "MINE."
   },
   {
    "id": "cg25",
-   "start": 20.435,
-   "end": 21.193,
+   "start": 19.743,
+   "end": 20.363,
    "text": "SO THEY JUST..."
   },
   {
    "id": "cg26",
-   "start": 21.173,
-   "end": 22.16,
+   "start": 20.343,
+   "end": 21.41,
    "text": "SHARED IT."
   },
   {
    "id": "cg27",
-   "start": 22.14,
-   "end": 23.485,
+   "start": 21.39,
+   "end": 22.43,
    "text": "PEOPLE RUSHED IN."
   },
   {
    "id": "cg28",
-   "start": 23.465,
-   "end": 24.732,
+   "start": 22.41,
+   "end": 23.71,
    "text": "FROM 256 PEOPLE..."
   },
   {
    "id": "cg29",
-   "start": 24.712,
-   "end": 26.045,
+   "start": 23.69,
+   "end": 24.952,
    "text": "TO THOUSANDS."
   },
   {
    "id": "cg30",
-   "start": 26.025,
-   "end": 26.998,
+   "start": 24.932,
+   "end": 25.492,
    "text": "THEY PRINTED THEIR"
   },
   {
    "id": "cg31",
-   "start": 26.978,
-   "end": 27.549,
+   "start": 25.472,
+   "end": 26.492,
    "text": "OWN STAMPS,"
   },
   {
    "id": "cg32",
-   "start": 27.529,
-   "end": 28.251,
+   "start": 26.472,
+   "end": 27.212,
    "text": "AND SOME EVEN"
   },
   {
    "id": "cg33",
-   "start": 28.231,
-   "end": 28.953,
+   "start": 27.192,
+   "end": 27.952,
    "text": "DREAMED OF AN"
   },
   {
    "id": "cg34",
-   "start": 28.933,
-   "end": 30.155,
+   "start": 27.932,
+   "end": 29.256,
    "text": "ESPERANTO STATE."
   },
   {
    "id": "cg35",
-   "start": 30.135,
-   "end": 30.549,
+   "start": 29.236,
+   "end": 29.636,
    "text": "THEN,"
   },
   {
    "id": "cg36",
-   "start": 30.529,
-   "end": 31.18,
+   "start": 29.616,
+   "end": 30.636,
    "text": "IN 1920..."
   },
   {
    "id": "cg37",
-   "start": 31.16,
-   "end": 32.284,
+   "start": 30.616,
+   "end": 30.976,
    "text": "IT WAS HANDED"
   },
   {
    "id": "cg38",
-   "start": 32.264,
-   "end": 33.152,
+   "start": 30.956,
+   "end": 32.096,
    "text": "TO BELGIUM."
   },
   {
    "id": "cg39",
-   "start": 33.132,
-   "end": 33.546,
+   "start": 32.076,
+   "end": 32.756,
    "text": "GONE."
   },
   {
    "id": "cg40",
-   "start": 33.526,
-   "end": 34.677,
+   "start": 32.736,
+   "end": 33.61,
    "text": "FOREVER."
   },
   {
    "id": "cg41",
-   "start": 34.657,
-   "end": 35.296,
+   "start": 33.59,
+   "end": 33.99,
    "text": "WOULD YOU HAVE"
   },
   {
    "id": "cg42",
-   "start": 35.276,
-   "end": 36.062,
+   "start": 33.97,
+   "end": 35.05,
    "text": "MOVED THERE?"
+  },
+  {
+   "id": "cg43",
+   "start": 35.153,
+   "end": 35.743,
+   "text": "NEXT:"
   }
  ],
- "duration": 40.73
+ "duration": 39.36
 }

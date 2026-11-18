@@ -35,17 +35,17 @@
   <script>
     (function () {
       const tl = gsap.timeline({ paused: true });
-      tl.fromTo("#cr-cam", { scale: 1.08 }, { scale: 1.0, duration: 4.6666, ease: "none" }, 0);
-      tl.fromTo("#cr-a", { x: -400 }, { x: 0, duration: 0.3, ease: "back.out(1.8)" }, 0.345);
-      tl.fromTo("#cr-b", { x: 400 }, { x: 0, duration: 0.3, ease: "back.out(1.8)" }, 0.345);
-      tl.fromTo("#cr-vs", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(3)" }, 0.695);
-      tl.fromTo("#cr-a", { rotation: -6 }, { rotation: 6, duration: 0.18, yoyo: true, repeat: 7, ease: "sine.inOut" }, 0.895);
-      tl.fromTo("#cr-b", { rotation: 6 }, { rotation: -6, duration: 0.18, yoyo: true, repeat: 7, ease: "sine.inOut" }, 0.895);
-      tl.fromTo("#cr-zn", { opacity: 0, scale: 0.3, rotation: 20 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2.4)" }, 2.157);
+      tl.fromTo("#cr-cam", { scale: 1.08 }, { scale: 1.0, duration: 5.0333, ease: "none" }, 0);
+      tl.fromTo("#cr-a", { x: -400 }, { x: 0, duration: 0.3, ease: "back.out(1.8)" }, 0.019);
+      tl.fromTo("#cr-b", { x: 400 }, { x: 0, duration: 0.3, ease: "back.out(1.8)" }, 0.019);
+      tl.fromTo("#cr-vs", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(3)" }, 0.369);
+      tl.fromTo("#cr-a", { rotation: -6 }, { rotation: 6, duration: 0.18, yoyo: true, repeat: 7, ease: "sine.inOut" }, 0.569);
+      tl.fromTo("#cr-b", { rotation: 6 }, { rotation: -6, duration: 0.18, yoyo: true, repeat: 7, ease: "sine.inOut" }, 0.569);
+      tl.fromTo("#cr-zn", { opacity: 0, scale: 0.3, rotation: 20 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2.4)" }, 2.159);
       // "So they just... shared it."
-      tl.to("#cr-vs, #cr-a, #cr-b, #cr-zn", { opacity: 0, scale: 0.6, duration: 0.2 }, 3.296);
-      tl.fromTo("#cr-hs", { opacity: 0, scale: 0.3, rotation: -15 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2.6)" }, 3.446);
-      tl.fromTo("#cr-sh", { opacity: 0, scale: 1.7, rotation: -10 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.16, ease: "power4.in" }, 3.746);
+      tl.to("#cr-vs, #cr-a, #cr-b, #cr-zn", { opacity: 0, scale: 0.6, duration: 0.2 }, 3.366);
+      tl.fromTo("#cr-hs", { opacity: 0, scale: 0.3, rotation: -15 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2.6)" }, 3.516);
+      tl.fromTo("#cr-sh", { opacity: 0, scale: 1.7, rotation: -10 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.16, ease: "power4.in" }, 3.816);
       window.__timelines["crown"] = tl;
     })();
   </script>

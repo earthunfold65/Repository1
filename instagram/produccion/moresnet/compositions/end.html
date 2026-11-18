@@ -35,10 +35,10 @@
     (function () {
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#en-isl", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.8)" }, 0);
-      tl.fromTo("#en-ring", { rotation: 0, opacity: 0 }, { rotation: 360, opacity: 1, duration: 4.063, ease: "none" }, 0);
+      tl.fromTo("#en-ring", { rotation: 0, opacity: 0 }, { rotation: 360, opacity: 1, duration: 3.593, ease: "none" }, 0);
       tl.fromTo("#en-ep", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25 }, 0.2);
-      tl.fromTo("#en-title", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 0.382);
-      tl.fromTo("#en-follow", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 1.065);
+      tl.fromTo("#en-title", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 0.300);
+      tl.fromTo("#en-follow", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 0.606);
       window.__timelines["end"] = tl;
     })();
   </script>

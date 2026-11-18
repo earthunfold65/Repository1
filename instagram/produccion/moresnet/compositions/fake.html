@@ -22,9 +22,9 @@
   <script>
     (function () {
       const tl = gsap.timeline({ paused: true });
-      tl.fromTo("#fk-cam", { scale: 1.1 }, { scale: 1.0, duration: 1.4333, ease: "power1.out" }, 0);
+      tl.fromTo("#fk-cam", { scale: 1.1 }, { scale: 1.0, duration: 1.2, ease: "power1.out" }, 0);
       tl.fromTo("#fk-em", { scale: 0.3, rotation: -20 }, { scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2.5)" }, 0.02);
-      tl.fromTo("#fk-st", { opacity: 0, scale: 1.8, rotation: -14 }, { opacity: 1, scale: 1, rotation: -6, duration: 0.16, ease: "power4.in" }, 0.426);
+      tl.fromTo("#fk-st", { opacity: 0, scale: 1.8, rotation: -14 }, { opacity: 1, scale: 1, rotation: -6, duration: 0.16, ease: "power4.in" }, 0.369);
       window.__timelines["fake"] = tl;
     })();
   </script>

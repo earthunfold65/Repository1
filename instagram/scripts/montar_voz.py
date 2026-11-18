@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Genera la voz en off completa de un reel, frase a frase, con Kokoro (gratis) y tiempos de palabra.
 
-  python3 -I instagram/scripts/montar_voz.py <carpeta_audio> [--voz am_adam] [--vel 1.08] [--inicio 0.05] [--motor kokoro|chatterbox]
+  python3 -I instagram/scripts/montar_voz.py <carpeta_audio> [--voz am_adam] [--vel 1.08] [--inicio 0.05] [--motor kokoro|chatterbox] [--tempo 1.07] [--pausas 0.7]
   (con --motor chatterbox, antes: ~/.venvs/chatter/bin/python -I instagram/scripts/voz_chatterbox.py <carpeta_audio>)
 
 <carpeta_audio>/chunks.json = [["Frase uno.", pausa_s], ["Frase dos...", pausa_s], ...]
@@ -50,7 +50,8 @@ def main():
             sys.exit(f"Falta {raw}: genera antes las frases con voz_chatterbox.py")
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", raw, "-af",
                         "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.02,areverse,"
-                        "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.04,areverse,afade=t=in:d=0.005",
+                        "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.04,areverse,afade=t=in:d=0.005"
+                        + (f",atempo={opt('--tempo', '1.0')}" if opt("--tempo", "1.0") != "1.0" else ""),
                         "-ar", str(SR), "-ac", "1", "-c:a", "pcm_s24le", cut], check=True)
         L = dur(cut)
         toks = text.split()
@@ -62,7 +63,7 @@ def main():
             words.append({"text": x, "type": "word", "start": round(s, 3), "end": round(t + L * acc / tot, 3)})
         parts.append((cut, t))
         print(f"  {t:6.2f}  {text}")
-        t += L + float(pause)
+        t += L + float(pause) * float(opt("--pausas", "1.0"))
     ins, fl = [], []
     for k, (f, st) in enumerate(parts):
         ins += ["-i", f]
@@ -72,6 +73,7 @@ def main():
     subprocess.run(["ffmpeg", "-v", "error", "-y", *ins, "-filter_complex", ";".join(fl), "-map", "[o]",
                     "-ar", str(SR), "-c:a", "pcm_s24le", os.path.join(d, "vo.wav")], check=True)
     json.dump({"words": words}, open(os.path.join(d, "words.json"), "w"), indent=0)
+    json.dump([st for _, st in parts], open(os.path.join(d, "chunk_starts.json"), "w"))
     print(f"voz: {t:.2f} s · {len(words)} palabras → {d}/vo.wav, words.json")
 
 

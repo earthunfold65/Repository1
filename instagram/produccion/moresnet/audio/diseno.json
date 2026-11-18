@@ -1,5 +1,5 @@
 {
- "duracion": 40.73,
+ "duracion": 39.36,
  "fps": 30,
  "voz": {
   "file": "vo.wav",
@@ -16,19 +16,19 @@
   "fade_out": 1.2,
   "rides": [
    [
-    30.05,
+    29.55,
     0
    ],
    [
-    30.35,
+    29.85,
     -9
    ],
    [
-    34.433299999999996,
+    33.5,
     -9
    ],
    [
-    34.933299999999996,
+    34.0,
     0
    ]
   ]
@@ -43,7 +43,7 @@
   },
   {
    "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
-   "t": 4.2333,
+   "t": 4.2,
    "anchor": "attack",
    "gain_db": -17,
    "label": "entra NO TAXES",
@@ -51,56 +51,56 @@
   },
   {
    "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
-   "t": 6.9,
+   "t": 6.8333,
    "anchor": "attack",
    "gain_db": -10,
    "label": "golpe CASINO + sacudida"
   },
   {
    "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
-   "t": 8.6667,
+   "t": 8.5333,
    "anchor": "attack",
    "gain_db": -11,
    "label": "sello FAKE?"
   },
   {
    "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
-   "t": 10.0333,
+   "t": 9.6333,
    "anchor": "attack",
    "gain_db": -11,
    "label": "sello REAL"
   },
   {
    "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
-   "t": 10.9333,
+   "t": 10.7,
    "anchor": "peak",
    "gain_db": -17,
    "label": "el triángulo desaparece (pico)"
   },
   {
    "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
-   "t": 12.9,
+   "t": 12.5333,
    "anchor": "attack",
    "gain_db": -10,
    "label": "título NEUTRAL MORESNET"
   },
   {
    "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
-   "t": 16.7667,
+   "t": 15.2333,
    "anchor": "attack",
    "gain_db": -15,
    "label": "chip 1816"
   },
   {
    "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
-   "t": 18.0667,
+   "t": 16.8333,
    "anchor": "peak",
    "gain_db": -13,
    "label": "entran las coronas (pico)"
   },
   {
    "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
-   "t": 19.8667,
+   "t": 18.9667,
    "anchor": "attack",
    "gain_db": -17,
    "label": "ficha Zn",
@@ -108,28 +108,28 @@
   },
   {
    "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
-   "t": 21.3667,
+   "t": 20.5333,
    "anchor": "attack",
    "gain_db": -11,
    "label": "sello SHARED IT"
   },
   {
    "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
-   "t": 22.2,
+   "t": 21.6667,
    "anchor": "attack",
    "gain_db": -15,
    "label": "primeras personas"
   },
   {
    "file": "../../../sonido/libreria/whoosh/fs-539172_melee-combat-whoosh.mp3",
-   "t": 24.5333,
+   "t": 23.5667,
    "anchor": "peak",
    "gain_db": -15,
    "label": "llegan miles (pico)"
   },
   {
    "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
-   "t": 25.4,
+   "t": 24.4667,
    "anchor": "attack",
    "gain_db": -14,
    "label": "contador 3,000+",
@@ -137,14 +137,14 @@
   },
   {
    "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
-   "t": 27.0667,
+   "t": 25.5333,
    "anchor": "attack",
    "gain_db": -11,
    "label": "sello postal cae"
   },
   {
    "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
-   "t": 28.9333,
+   "t": 27.9333,
    "anchor": "attack",
    "gain_db": -15,
    "label": "Saluton!",
@@ -152,21 +152,21 @@
   },
   {
    "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
-   "t": 30.8,
+   "t": 29.8333,
    "anchor": "attack",
    "gain_db": -17,
    "label": "1920"
   },
   {
    "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
-   "t": 33.2,
+   "t": 32.1667,
    "anchor": "attack",
    "gain_db": -10,
    "label": "GONE + sacudida"
   },
   {
    "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
-   "t": 34.9333,
+   "t": 34.0,
    "anchor": "attack",
    "gain_db": -15,
    "label": "YES",
@@ -174,7 +174,7 @@
   },
   {
    "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
-   "t": 35.0667,
+   "t": 34.1333,
    "anchor": "attack",
    "gain_db": -15,
    "label": "NO",
@@ -182,7 +182,7 @@
   },
   {
    "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
-   "t": 36.8,
+   "t": 35.9,
    "anchor": "peak",
    "gain_db": -17,
    "label": "entra la tarjeta final"

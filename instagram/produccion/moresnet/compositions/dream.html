@@ -33,13 +33,13 @@
   <script>
     (function () {
       const tl = gsap.timeline({ paused: true });
-      tl.fromTo("#dr-cam", { scale: 1.0 }, { scale: 1.06, duration: 8.0667, ease: "none" }, 0);
+      tl.fromTo("#dr-cam", { scale: 1.0 }, { scale: 1.06, duration: 8.0, ease: "none" }, 0);
       // fotograma 0 = miniatura: titular y primera tarjeta YA visibles, con golpe de escala
       tl.fromTo("#dr-ttl", { scale: 1.12 }, { scale: 1, duration: 0.3, ease: "power3.out" }, 0);
       tl.fromTo("#dr-i1", { scale: 1.2, rotation: -3 }, { scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2)" }, 0);
-      tl.fromTo("#dr-i2", { x: 700, rotation: 8, opacity: 0 }, { x: 0, rotation: 0, opacity: 1, duration: 0.28, ease: "back.out(1.7)" }, 4.100);
-      tl.fromTo("#dr-i3", { scale: 2.2, opacity: 0, rotation: -6 }, { scale: 1, opacity: 1, rotation: 0, duration: 0.22, ease: "power4.in" }, 6.695);
-      tl.to("#dr-cam", { x: 14, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, 6.915);
+      tl.fromTo("#dr-i2", { x: 700, rotation: 8, opacity: 0 }, { x: 0, rotation: 0, opacity: 1, duration: 0.28, ease: "back.out(1.7)" }, 4.090);
+      tl.fromTo("#dr-i3", { scale: 2.2, opacity: 0, rotation: -6 }, { scale: 1, opacity: 1, rotation: 0, duration: 0.22, ease: "power4.in" }, 6.610);
+      tl.to("#dr-cam", { x: 14, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, 6.830);
       window.__timelines["dream"] = tl;
     })();
   </script>

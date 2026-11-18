@@ -8,3 +8,4 @@ instagram/produccion/*/audio/*.mp3
 instagram/produccion/*/audio/*.wav
 instagram/sonido/muestras_*.mp3
 instagram/produccion/*/audio/chunks/*.wav
+instagram/produccion/*/audio/chunks/
