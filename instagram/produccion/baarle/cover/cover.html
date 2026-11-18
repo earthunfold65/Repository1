@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Baarle cover</title>
+<style>
+  @font-face { font-family: 'IDB'; src: url('../assets/fonts/InterDisplay-Black.otf'); font-weight: 900; }
+  :root { --gold:#FFC83D; --orange:#FF7A1A; --ink:#F4F1EA; --navy:#0B1020; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1080px; height:1920px; overflow:hidden; background:var(--navy); }
+  #c { position:relative; width:1080px; height:1920px; overflow:hidden; font-family:'IDB','Inter Display',sans-serif;
+       background: radial-gradient(70% 45% at 50% 58%, #3a2412 0%, #170f12 45%, #070910 100%); }
+  /* country halves */
+  .half { position:absolute; top:0; height:1920px; width:540px; }
+  #be { left:0; background: linear-gradient(90deg, rgba(255,200,61,.30), rgba(255,200,61,.06) 70%, rgba(255,200,61,0)); }
+  #nl { right:0; background: linear-gradient(270deg, rgba(255,122,26,.32), rgba(255,122,26,.07) 70%, rgba(255,122,26,0)); }
+  /* light rays from the door */
+  #rays { position:absolute; left:-200px; top:420px; width:1480px; height:1500px;
+          background: conic-gradient(from 180deg at 50% 38%, rgba(255,200,61,0) 0deg, rgba(255,214,120,.14) 8deg, rgba(255,200,61,0) 16deg,
+            rgba(255,200,61,0) 30deg, rgba(255,214,120,.11) 38deg, rgba(255,200,61,0) 46deg, rgba(255,200,61,0) 314deg,
+            rgba(255,214,120,.11) 322deg, rgba(255,200,61,0) 330deg, rgba(255,200,61,0) 344deg, rgba(255,214,120,.14) 352deg, rgba(255,200,61,0) 360deg); }
+  #glow { position:absolute; left:190px; top:640px; width:700px; height:1000px; border-radius:50%;
+          background: radial-gradient(closest-side, rgba(255,190,80,.55), rgba(255,140,40,.18) 55%, rgba(0,0,0,0)); filter: blur(30px); }
+  /* the door */
+  #door { position:absolute; left:290px; top:712px; width:500px; height:800px; border-radius:26px 26px 8px 8px;
+          border:16px solid #1c1008; overflow:hidden;
+          box-shadow: 0 0 0 6px rgba(255,200,61,.55), 0 0 90px 20px rgba(255,170,60,.55), 0 60px 120px rgba(0,0,0,.7); }
+  #door .l, #door .r { position:absolute; top:0; height:100%; width:50%; }
+  #door .l { left:0; background: linear-gradient(180deg,#f2b632,#c98a14); }
+  #door .r { right:0; background: linear-gradient(180deg,#ff8a2e,#d0560c); }
+  .panel { position:absolute; border:8px solid rgba(60,25,0,.28); border-radius:10px; background: rgba(255,255,255,.08);
+           box-shadow: inset 0 0 0 3px rgba(255,255,255,.12); }
+  #knob { position:absolute; left:650px; top:1118px; width:44px; height:44px; border-radius:50%;
+          background: radial-gradient(circle at 35% 35%, #fff6d0, #ffc83d 45%, #a86b00); box-shadow: 0 0 30px rgba(255,220,120,.9); }
+  /* the border line */
+  #line { position:absolute; left:532px; top:690px; width:16px; height:1000px;
+          -webkit-mask-image: linear-gradient(180deg, #000 85%, transparent); mask-image: linear-gradient(180deg, #000 85%, transparent);
+          background: repeating-linear-gradient(180deg, #fff3c4 0 34px, rgba(0,0,0,0) 34px 56px);
+          filter: drop-shadow(0 0 10px #FFC83D) drop-shadow(0 0 28px #FFC83D); }
+  /* labels */
+  .lbl { position:absolute; top:1548px; font-family:'JetBrains Mono',monospace; font-weight:800; font-size:40px; letter-spacing:.14em;
+         padding:14px 22px; border-radius:14px; background: rgba(8,10,18,.82); }
+  #lbl-be { left:120px; color:var(--gold); border:3px solid rgba(255,200,61,.6); }
+  #lbl-nl { right:120px; color:var(--orange); border:3px solid rgba(255,122,26,.6); }
+  .flag { font-family:'Noto Color Emoji'; letter-spacing:0; }
+  /* headline */
+  #h1 { position:absolute; left:0; width:1080px; top:334px; text-align:center; color:var(--ink); font-size:168px; line-height:.92;
+        letter-spacing:-.02em; text-shadow: 0 10px 40px rgba(0,0,0,.7); }
+  #h1 .a { font-size:168px; }
+  #h1 .b { font-size:100px; color:var(--gold); margin-top:6px; text-shadow: 0 0 40px rgba(255,200,61,.5), 0 10px 40px rgba(0,0,0,.7); }
+  #h1 .g { color:var(--gold); text-shadow: 0 0 40px rgba(255,200,61,.55), 0 10px 40px rgba(0,0,0,.7); }
+  #h1 .eq { color:var(--orange); }
+  #sub { position:absolute; left:0; width:1080px; top:618px; text-align:center; }
+  #sub span { display:inline-block; font-family:'JetBrains Mono',monospace; font-weight:800; font-size:34px; letter-spacing:.16em; color:var(--ink);
+              background: rgba(8,10,18,.8); padding:10px 22px; border-radius:12px; }
+  #chip { position:absolute; left:0; width:1080px; top:262px; text-align:center; }
+  #chip span { display:inline-block; font-family:'JetBrains Mono',monospace; font-weight:800; font-size:30px; letter-spacing:.16em; color:var(--gold);
+               padding:10px 24px; border:3px solid rgba(255,200,61,.65); border-radius:999px; background: rgba(8,10,18,.75); }
+  #floor { position:absolute; left:0; top:1500px; width:1080px; height:420px;
+           background: radial-gradient(60% 45% at 50% 0%, rgba(255,170,60,.30), rgba(0,0,0,0) 70%); }
+  #refl { position:absolute; left:290px; top:1514px; width:500px; height:260px;
+          opacity:.28; filter: blur(3px); border-radius: 8px;
+          background: linear-gradient(90deg, #f2b632 0 50%, #ff8a2e 50% 100%);
+          -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,.9), rgba(0,0,0,0)); mask-image: linear-gradient(180deg, rgba(0,0,0,.9), rgba(0,0,0,0)); }
+  #vig { position:absolute; inset:0; background: radial-gradient(120% 85% at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,.7) 100%); }
+  .dust { position:absolute; width:6px; height:6px; border-radius:50%; background:#ffd98a; opacity:.5; filter: blur(1px); }
+</style>
+</head>
+<body>
+<div id="c">
+  <div id="be" class="half"></div><div id="nl" class="half"></div>
+  <div id="rays"></div>
+  <div id="glow"></div>
+  <div id="dusts"></div>
+  <div id="floor"></div><div id="refl"></div>
+  <div id="door">
+    <div class="l"></div><div class="r"></div>
+    <div class="panel" style="left:11%;top:6%;width:78%;height:39%"></div>
+    <div class="panel" style="left:11%;top:51%;width:78%;height:43%"></div>
+  </div>
+  <div id="knob"></div>
+  <div id="line"></div>
+  <div id="vig"></div>
+  <div id="chip"><span>BORDER ODDITIES · EP. 1</span></div>
+  <div id="h1"><div class="a">YOUR DOOR</div><div class="b"><span class="eq">=</span> YOUR COUNTRY</div></div>
+  <div id="sub"><span>BAARLE · BELGIUM / NETHERLANDS</span></div>
+  <div id="lbl-be" class="lbl"><span class="flag">🇧🇪</span> BELGIUM</div>
+  <div id="lbl-nl" class="lbl">NETHERLANDS <span class="flag">🇳🇱</span></div>
+</div>
+<script>
+  // deterministic dust specks
+  let s = 7; const r = () => (s = (s * 16807) % 2147483647) / 2147483647;
+  const d = document.getElementById('dusts');
+  for (let i = 0; i < 60; i++) {
+    const e = document.createElement('div'); e.className = 'dust';
+    e.style.left = (80 + r() * 920) + 'px'; e.style.top = (560 + r() * 1100) + 'px';
+    const z = 3 + r() * 7; e.style.width = e.style.height = z + 'px'; e.style.opacity = (0.15 + r() * 0.55).toFixed(2);
+    d.appendChild(e);
+  }
+</script>
+</body>
+</html>
