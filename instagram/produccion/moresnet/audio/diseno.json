@@ -8,7 +8,7 @@
  },
  "musica": {
   "file": "../../../sonido/libreria/musica/fs-446745_dilemma-2a-mystery-music-loop.mp3",
-  "gain_db": -9,
+  "gain_db": -12,
   "duck_db": 5,
   "loop": true,
   "offset": 0.0,
@@ -79,7 +79,7 @@
   },
   {
    "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
-   "t": 12.5333,
+   "t": 11.8333,
    "anchor": "attack",
    "gain_db": -10,
    "label": "título NEUTRAL MORESNET"

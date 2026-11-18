@@ -147,10 +147,13 @@ SCENES[k] = scene_file(k, f"""
       <div id="dr-i3" class="it"><span class="ic">🎰</span><span class="tx">ITS OWN CASINO</span><span class="ok">✅</span></div>
     </div>
     <div id="dr-ttl" class="big">A COUNTRY<br><span>WITH…</span></div>""",
-    f"""      tl.fromTo("#dr-cam", {{ scale: 1.0 }}, {{ scale: 1.06, duration: {SLOT[k][1]}, ease: "none" }}, 0);
+    f"""      tl.fromTo("#dr-cam", {{ scale: 1.0 }}, {{ scale: 1.12, duration: {SLOT[k][1]}, ease: "none" }}, 0);
       // fotograma 0 = miniatura: titular y primera tarjeta YA visibles, con golpe de escala
       tl.fromTo("#dr-ttl", {{ scale: 1.12 }}, {{ scale: 1, duration: 0.3, ease: "power3.out" }}, 0);
       tl.fromTo("#dr-i1", {{ scale: 1.2, rotation: -3 }}, {{ scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2)" }}, 0);
+      tl.fromTo("#dr-i1 .ok", {{ scale: 0.4, rotation: -30 }}, {{ scale: 1.25, rotation: 0, duration: 0.25, ease: "back.out(3)" }}, 1.05);
+      tl.to("#dr-i1 .ok", {{ scale: 1, duration: 0.2 }}, 1.3);
+      tl.fromTo("#dr-i1", {{ y: 0 }}, {{ y: -10, duration: 0.6, yoyo: true, repeat: 3, ease: "sine.inOut" }}, 0.4);
       tl.fromTo("#dr-i2", {{ x: 700, rotation: 8, opacity: 0 }}, {{ x: 0, rotation: 0, opacity: 1, duration: 0.28, ease: "back.out(1.7)" }}, {t2:.3f});
       tl.fromTo("#dr-i3", {{ scale: 2.2, opacity: 0, rotation: -6 }}, {{ scale: 1, opacity: 1, rotation: 0, duration: 0.22, ease: "power4.in" }}, {t3 - 0.18:.3f});
       tl.to("#dr-cam", {{ x: 14, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }}, {t3 + 0.04:.3f});""")
@@ -217,12 +220,12 @@ SCENES[k] = scene_file(k, f"""
     <div id="in-name" class="big">NEUTRAL<br><span>MORESNET</span></div>""",
     f"""      tl.fromTo("#in-cam", {{ scale: 1.2 }}, {{ scale: 1.0, duration: 0.5, ease: "power3.out" }}, 0);
       tl.to("#in-cam", {{ scale: 1.08, duration: {SLOT[k][1] - 0.5:.3f}, ease: "none" }}, 0.5);
-      tl.fromTo("#in-name", {{ opacity: 0, scale: 1.4 }}, {{ opacity: 1, scale: 1, duration: 0.22, ease: "power4.in" }}, {max(0.0, t_name - 0.2):.3f});
-      tl.fromTo("#in-tri", {{ scale: 0, rotation: -40 }}, {{ scale: 1, rotation: 0, duration: 0.45, ease: "back.out(2)" }}, {max(0.05, t_name - 0.1):.3f});
+      tl.fromTo("#in-name", {{ opacity: 0, scale: 1.4 }}, {{ opacity: 1, scale: 1, duration: 0.22, ease: "power4.in" }}, 0.04);
+      tl.fromTo("#in-tri", {{ scale: 0, rotation: -40 }}, {{ scale: 1, rotation: 0, duration: 0.45, ease: "back.out(2)" }}, 0.15);
       tl.to("#in-tri", {{ rotation: 6, duration: {SLOT[k][1] - t_name:.3f}, ease: "none" }}, {t_name + 0.35:.3f});
       tl.fromTo("#in-nl, #in-pr", {{ opacity: 0, y: 20 }}, {{ opacity: 1, y: 0, duration: 0.25 }}, {t_name + 0.3:.3f});
       tl.fromTo("#in-yr", {{ opacity: 0, scale: 0.7 }}, {{ opacity: 1, scale: 1, duration: 0.22, ease: "back.out(2.5)" }}, {min(t_name + 0.45, t_1816 - 0.1):.3f});""")
-cues += [{"t": round(S[k] + max(0.0, t_name - 0.2) + 0.22, 3), "kind": "hit", "label": "título NEUTRAL MORESNET"},
+cues += [{"t": round(S[k] + 0.26, 3), "kind": "hit", "label": "título NEUTRAL MORESNET"},
          {"t": round(S[k] + t_1816, 3), "kind": "click", "label": "chip 1816"}]
 
 # ---------- 5. DOS CORONAS, UNA MINA → LA COMPARTEN (c7–c8) ----------
@@ -282,12 +285,13 @@ SCENES[k] = scene_file(k, f"""
     f"""    <div id="pp-cam"><div id="pp-dots" data-layout-allow-overlap>{dots_html}</div>
       <div id="pp-n">256</div>
       </div>""",
-    "      tl.fromTo(\"#pp-cam\", { scale: 1.0 }, { scale: 1.04, duration: " + str(SLOT[k][1]) + ", ease: \"none\" }, 0);\n"
+    "      tl.fromTo(\"#pp-cam\", { scale: 1.0 }, { scale: 1.1, duration: " + str(SLOT[k][1]) + ", ease: \"none\" }, 0);\n"
     + "".join(f'      tl.fromTo("#pp-{n}", {{ opacity: 0, scale: 0 }}, {{ opacity: 1, scale: 1, duration: 0.12, ease: "back.out(3)" }}, {0.05 + n * 0.04:.3f});\n' for n in range(first))
     + "".join(f'      tl.fromTo("#pp-{n}", {{ opacity: 0, scale: 0 }}, {{ opacity: 1, scale: 1, duration: 0.1, ease: "back.out(3)" }}, {t_th - 0.5 + (n - first) * 0.009:.3f});\n' for n in range(first, len(dots)))
     + f"""      const pn = {{ v: 256 }}, pe = document.querySelector("#pp-n");
       tl.fromTo(pn, {{ v: 256 }}, {{ v: 3000, duration: 0.9, ease: "power2.in", onUpdate: () => {{ pe.textContent = Math.round(pn.v).toLocaleString("en-US") + (pn.v > 2990 ? "+" : ""); }} }}, {t_th - 0.5:.3f});
       tl.fromTo("#pp-n", {{ scale: 1 }}, {{ scale: 1.15, duration: 0.15, yoyo: true, repeat: 1 }}, {t_th + 0.4:.3f});
+      tl.fromTo("#pp-n", {{ rotation: -3 }}, {{ rotation: 3, duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }}, 0.4);
 """)
 cues += [{"t": round(S[k] + 0.08, 3), "kind": "click", "label": "primeras personas"},
          {"t": round(S[k] + t_th - 0.45, 3), "kind": "whoosh2", "label": "llegan miles (pico)"},
@@ -519,7 +523,7 @@ diseno = {
     "duracion": DUR, "fps": FPS,
     "voz": {"file": "vo.wav", "gain_db": 0, "t": 0},
     # bucle de misterio de nivel constante (LRA 2 LU) + ducking suave: sin "respiraciones"
-    "musica": {"file": f"{LIBR}/musica/fs-446745_dilemma-2a-mystery-music-loop.mp3", "gain_db": -9, "duck_db": 5,
+    "musica": {"file": f"{LIBR}/musica/fs-446745_dilemma-2a-mystery-music-loop.mp3", "gain_db": -12, "duck_db": 5,
                "loop": True, "offset": 0.0, "fade_in": 0.05, "fade_out": 1.2,
                "rides": [[S["gone"] - 0.05, 0], [S["gone"] + 0.25, -9], [S["poll"] - 0.2, -9], [S["poll"] + 0.3, 0]]},
     "sfx": sfx,
