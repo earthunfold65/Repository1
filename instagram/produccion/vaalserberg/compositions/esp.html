@@ -1,0 +1,40 @@
+<template>
+  <style>
+    @font-face { font-family: 'Noto Color Emoji'; src: url('assets/fonts/NotoColorEmoji.ttf'); }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .tag { position:absolute; padding: 12px 22px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 36px; letter-spacing: .1em; background: rgba(8,10,18,.85); white-space: nowrap; }
+    .stamp { position:absolute; padding: 16px 30px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 58px; background: rgba(8,10,18,.6); white-space: nowrap; }
+    .flag { font-family: 'Noto Color Emoji'; letter-spacing: 0; }
+    .big { position:absolute; left:0; width:1000px; text-align:center; font-weight:900; line-height:.95; color:#F4F1EA;
+           text-shadow: 0 8px 30px rgba(0,0,0,.6); }
+
+    #es-cam { position:absolute; inset:0; transform-origin: 540px 700px; }
+    #es-bub { position:absolute; left: 220px; top: 520px; width: 640px; height: 300px; border-radius: 60px; background: #fff;
+              color: #0b1020; text-align:center; font-weight:900; font-size: 130px; line-height: 300px; box-shadow: 0 30px 80px rgba(0,0,0,.55); transform-origin: 200px 300px; }
+    #es-tail { position:absolute; left: 300px; top: 800px; width: 0; height: 0; border-left: 40px solid transparent; border-right: 40px solid transparent; border-top: 80px solid #fff; }
+    #es-flag { position:absolute; left: 400px; top: 360px; width: 280px; height: 120px; background: #1f9d55; border-radius: 10px; }
+    #es-flag i { position:absolute; left:0; top:0; width:120px; height:120px; background:#fff; border-radius: 10px 0 0 10px; color:#1f9d55; font-style:normal; font-size: 90px; line-height:120px; text-align:center; }
+    #es-lbl { left:0; width:1000px; top: 900px; text-align:center; background:none; color:#F4F1EA; }
+    #es-lbl span { background: rgba(8,10,18,.85); padding: 12px 22px; border-radius: 12px; }
+  </style>
+  <div id="root" data-composition-id="esp" data-width="1080" data-height="1920">
+    <div id="es-cam">
+      <div id="es-flag"><i>★</i></div>
+      <div id="es-bub">Saluton!</div><div id="es-tail"></div>
+      <div id="es-lbl" class="tag"><span>"AMIKEJO" · ESPERANTO STATE?</span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#es-cam", { scale: 1 }, { scale: 1.08, duration: 2.9333, ease: "none" }, 0);
+      tl.fromTo("#es-bub, #es-tail", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.2)" }, 1.490);
+      tl.fromTo("#es-flag", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.3 }, 0.1);
+      tl.fromTo("#es-lbl", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 1.240);
+      window.__timelines["esp"] = tl;
+    })();
+  </script>
+</template>

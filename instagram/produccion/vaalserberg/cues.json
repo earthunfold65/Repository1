@@ -1,0 +1,323 @@
+{
+ "scenes": {
+  "hook": [
+   0.0,
+   8.0667
+  ],
+  "hill": [
+   8.0667,
+   4.4666
+  ],
+  "mor": [
+   12.5333,
+   5.8667
+  ],
+  "esp": [
+   18.4,
+   2.9333
+  ],
+  "erase": [
+   21.3333,
+   3.5
+  ],
+  "save": [
+   24.8333,
+   2.9667
+  ],
+  "end": [
+   27.8,
+   4.01
+  ]
+ },
+ "cues": [
+  {
+   "t": 0.03,
+   "kind": "hit_soft",
+   "label": "golpe en el fotograma 0 (gancho)"
+  },
+  {
+   "t": 2.753,
+   "kind": "whoosh",
+   "label": "3 → 4 cuñas (pico)"
+  },
+  {
+   "t": 4.942,
+   "kind": "click",
+   "label": "aparece el 4.º hueco"
+  },
+  {
+   "t": 8.367,
+   "kind": "whoosh2",
+   "label": "zoom a la colina (pico)"
+  },
+  {
+   "t": 9.869,
+   "kind": "click",
+   "pitch": 0,
+   "label": "NL"
+  },
+  {
+   "t": 10.476,
+   "kind": "click",
+   "pitch": 2,
+   "label": "BE"
+  },
+  {
+   "t": 11.083,
+   "kind": "click",
+   "pitch": 4,
+   "label": "DE"
+  },
+  {
+   "t": 13.661,
+   "kind": "stamp",
+   "label": "sello NEUTRAL MORESNET"
+  },
+  {
+   "t": 17.715,
+   "kind": "thunk",
+   "pitch": 2,
+   "label": "ficha Zn"
+  },
+  {
+   "t": 19.97,
+   "kind": "click",
+   "pitch": 6,
+   "label": "bocadillo Saluton!"
+  },
+  {
+   "t": 22.699,
+   "kind": "tick",
+   "label": "año se fija en 1920"
+  },
+  {
+   "t": 23.533,
+   "kind": "hit",
+   "label": "X: borrado del mapa"
+  },
+  {
+   "t": 25.333,
+   "kind": "thunk",
+   "pitch": 4,
+   "label": "cae el pin"
+  },
+  {
+   "t": 26.156,
+   "kind": "click",
+   "pitch": 3,
+   "label": "tarjeta guardar"
+  },
+  {
+   "t": 27.92,
+   "kind": "whoosh_soft",
+   "label": "entra la tarjeta final"
+  }
+ ],
+ "captions": [
+  {
+   "id": "cg0",
+   "start": 0.1,
+   "end": 0.704,
+   "text": "THIS SPOT IS"
+  },
+  {
+   "id": "cg1",
+   "start": 0.684,
+   "end": 1.689,
+   "text": "IN THREE COUNTRIES"
+  },
+  {
+   "id": "cg2",
+   "start": 1.669,
+   "end": 2.383,
+   "text": "AT ONCE."
+  },
+  {
+   "id": "cg3",
+   "start": 2.363,
+   "end": 3.145,
+   "text": "BUT FOR ALMOST"
+  },
+  {
+   "id": "cg4",
+   "start": 3.125,
+   "end": 4.278,
+   "text": "A HUNDRED YEARS..."
+  },
+  {
+   "id": "cg5",
+   "start": 4.258,
+   "end": 4.902,
+   "text": "IT WAS IN"
+  },
+  {
+   "id": "cg6",
+   "start": 4.882,
+   "end": 5.513,
+   "text": "FOUR."
+  },
+  {
+   "id": "cg7",
+   "start": 5.493,
+   "end": 6.272,
+   "text": "AND THAT FOURTH"
+  },
+  {
+   "id": "cg8",
+   "start": 6.252,
+   "end": 7.315,
+   "text": "COUNTRY DOESN'T EXIST"
+  },
+  {
+   "id": "cg9",
+   "start": 7.295,
+   "end": 8.115,
+   "text": "ANYMORE."
+  },
+  {
+   "id": "cg10",
+   "start": 8.095,
+   "end": 8.776,
+   "text": "THIS IS THE"
+  },
+  {
+   "id": "cg11",
+   "start": 8.756,
+   "end": 9.616,
+   "text": "VAALSERBERG."
+  },
+  {
+   "id": "cg12",
+   "start": 9.596,
+   "end": 10.426,
+   "text": "THE NETHERLANDS,"
+  },
+  {
+   "id": "cg13",
+   "start": 10.406,
+   "end": 11.438,
+   "text": "BELGIUM AND GERMANY"
+  },
+  {
+   "id": "cg14",
+   "start": 11.418,
+   "end": 12.608,
+   "text": "MEET RIGHT HERE."
+  },
+  {
+   "id": "cg15",
+   "start": 12.588,
+   "end": 13.361,
+   "text": "THE FOURTH WAS"
+  },
+  {
+   "id": "cg16",
+   "start": 13.341,
+   "end": 14.454,
+   "text": "NEUTRAL MORESNET."
+  },
+  {
+   "id": "cg17",
+   "start": 14.434,
+   "end": 15.417,
+   "text": "A TINY TERRITORY"
+  },
+  {
+   "id": "cg18",
+   "start": 15.397,
+   "end": 16.492,
+   "text": "NOBODY COULD AGREE"
+  },
+  {
+   "id": "cg19",
+   "start": 16.472,
+   "end": 16.882,
+   "text": "ON..."
+  },
+  {
+   "id": "cg20",
+   "start": 16.862,
+   "end": 17.575,
+   "text": "BECAUSE OF A"
+  },
+  {
+   "id": "cg21",
+   "start": 17.555,
+   "end": 18.469,
+   "text": "ZINC MINE."
+  },
+  {
+   "id": "cg22",
+   "start": 18.449,
+   "end": 19.269,
+   "text": "SOME EVEN TRIED"
+  },
+  {
+   "id": "cg23",
+   "start": 19.249,
+   "end": 19.819,
+   "text": "TO TURN IT"
+  },
+  {
+   "id": "cg24",
+   "start": 19.799,
+   "end": 20.72,
+   "text": "INTO AN ESPERANTO"
+  },
+  {
+   "id": "cg25",
+   "start": 20.7,
+   "end": 21.38,
+   "text": "STATE."
+  },
+  {
+   "id": "cg26",
+   "start": 21.36,
+   "end": 21.674,
+   "text": "THEN,"
+  },
+  {
+   "id": "cg27",
+   "start": 21.654,
+   "end": 23.13,
+   "text": "IN NINETEEN TWENTY..."
+  },
+  {
+   "id": "cg28",
+   "start": 23.11,
+   "end": 23.796,
+   "text": "IT WAS ERASED"
+  },
+  {
+   "id": "cg29",
+   "start": 23.776,
+   "end": 24.895,
+   "text": "FROM THE MAP."
+  },
+  {
+   "id": "cg30",
+   "start": 24.875,
+   "end": 25.619,
+   "text": "WOULD YOU STAND"
+  },
+  {
+   "id": "cg31",
+   "start": 25.599,
+   "end": 26.086,
+   "text": "HERE?"
+  },
+  {
+   "id": "cg32",
+   "start": 26.066,
+   "end": 26.709,
+   "text": "SAVE THIS FOR"
+  },
+  {
+   "id": "cg33",
+   "start": 26.689,
+   "end": 27.736,
+   "text": "YOUR EUROPE TRIP."
+  }
+ ],
+ "duration": 31.81
+}

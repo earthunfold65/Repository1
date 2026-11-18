@@ -1,0 +1,52 @@
+<template>
+  <style>
+    @font-face { font-family: 'Noto Color Emoji'; src: url('assets/fonts/NotoColorEmoji.ttf'); }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .tag { position:absolute; padding: 12px 22px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 36px; letter-spacing: .1em; background: rgba(8,10,18,.85); white-space: nowrap; }
+    .stamp { position:absolute; padding: 16px 30px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 58px; background: rgba(8,10,18,.6); white-space: nowrap; }
+    .flag { font-family: 'Noto Color Emoji'; letter-spacing: 0; }
+    .big { position:absolute; left:0; width:1000px; text-align:center; font-weight:900; line-height:.95; color:#F4F1EA;
+           text-shadow: 0 8px 30px rgba(0,0,0,.6); }
+
+    #mr-cam { position:absolute; inset:0; transform-origin: 540px 760px; }
+    #mr-pie { position:absolute; left:280px; top:510px; width:520px; height:520px; transform-origin:260px 260px; }
+    #mr-stamp { left:0; width:1000px; top: 372px; text-align:center; border:none; background:none; padding:0; transform-origin: 500px 60px; }
+    #mr-stamp span { display:inline-block; padding: 14px 26px; border: 7px solid #43D9F5; border-radius: 16px; color:#43D9F5; background: rgba(8,10,18,.75); font-size: 54px; }
+    #mr-pr { left: 110px; top: 880px; color:#F4F1EA; } #mr-nl { left: 560px; top: 880px; color:#FF7A1A; }
+    #mr-vs { left: 0; width: 1000px; top: 885px; text-align:center; background:none; color:#43D9F5; font-size: 40px; }
+    #mr-zn { position:absolute; left: 440px; top: 840px; width: 200px; height: 220px; border-radius: 18px; background: #1e2a44; border: 6px solid #43D9F5;
+             text-align:center; color:#F4F1EA; font-family:'JetBrains Mono',monospace; box-shadow: 0 20px 60px rgba(0,0,0,.6); }
+    #mr-zn b { display:block; font-family:'Inter Display'; font-size: 96px; line-height: 1; margin-top: 30px; color:#43D9F5; }
+    #mr-zn i { position:absolute; left:14px; top:10px; font-style:normal; font-size: 30px; font-weight: 800; }
+    #mr-zn u { display:block; text-decoration:none; font-size: 30px; font-weight:800; letter-spacing:.12em; margin-top: 8px; }
+  </style>
+  <div id="root" data-composition-id="mor" data-width="1080" data-height="1920">
+    <div id="mr-cam">
+      <div id="mr-pie"><svg id="mr-p" width="520" height="520" viewBox="0 0 520 520" style="overflow:visible"><path d="M260.0,260.0 L20.0,260.0 A240,240 0 0,1 380.0,52.2 Z" fill="#FF7A1A" fill-opacity=".85" stroke="#0b1020" stroke-width="5"/><text id="mr-p-t-NL" x="183.2" y="142.8" text-anchor="middle" font-family="Inter Display" font-weight="900" font-size="44" fill="#0b1020">NL</text><path d="M260.0,260.0 L380.0,52.2 A240,240 0 0,1 414.3,443.9 Z" fill="#FF4D5E" fill-opacity=".85" stroke="#0b1020" stroke-width="5"/><text id="mr-p-t-DE" x="413.0" y="262.5" text-anchor="middle" font-family="Inter Display" font-weight="900" font-size="44" fill="#0b1020">DE</text><path id="mr-p-q" d="M260.0,260.0 L414.3,443.9 A240,240 0 0,1 210.1,494.8 Z" fill="#43D9F5" fill-opacity=".9" stroke="#fff" stroke-width="4" style="transform-origin:260.0px 260.0px"/><text id="mr-p-t-q" x="301.8" y="443.5" text-anchor="middle" font-family="Inter Display" font-weight="900" font-size="44" fill="#0b1020">?</text><path d="M260.0,260.0 L210.1,494.8 A240,240 0 0,1 20.0,260.0 Z" fill="#FFC83D" fill-opacity=".85" stroke="#0b1020" stroke-width="5"/><text id="mr-p-t-BE" x="140.6" y="372.5" text-anchor="middle" font-family="Inter Display" font-weight="900" font-size="44" fill="#0b1020">BE</text><circle cx="260.0" cy="260.0" r="16" fill="#fff"/></svg></div>
+      <div id="mr-stamp" class="stamp"><span>NEUTRAL MORESNET · 1816</span></div>
+      <div id="mr-pr" class="tag">PRUSSIA</div><div id="mr-vs" class="tag">⇄</div><div id="mr-nl" class="tag">NETHERLANDS</div>
+      <div id="mr-zn"><i>30</i><b>Zn</b><u>ZINC</u></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#mr-cam", { scale: 1.1 }, { scale: 1, duration: 0.4, ease: "power3.out" }, 0);
+      tl.fromTo("#mr-p-q", { scale: 0.2, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.2)" }, 0.848);
+      tl.fromTo("#mr-p-t-q", { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      tl.fromTo("#mr-stamp", { opacity: 0, scale: 1.6, rotation: -12 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.18, ease: "power4.in" }, 0.948);
+      // "a tiny territory nobody could agree on": tira y afloja
+      tl.to("#mr-pie", { scale: 0.74, y: -70, duration: 0.4, ease: "power2.inOut" }, 1.941);
+      tl.fromTo("#mr-pr, #mr-nl, #mr-vs", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.25 }, 2.141);
+      tl.fromTo("#mr-pr", { x: 0 }, { x: -18, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }, 2.391);
+      tl.fromTo("#mr-nl", { x: 0 }, { x: 18, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }, 2.391);
+      // "because of a zinc mine"
+      tl.to("#mr-pr, #mr-nl, #mr-vs", { opacity: 0, duration: 0.15 }, 4.912);
+      tl.fromTo("#mr-zn", { opacity: 0, scale: 0.4, rotation: -10 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2.4)" }, 5.012);
+      window.__timelines["mor"] = tl;
+    })();
+  </script>
+</template>

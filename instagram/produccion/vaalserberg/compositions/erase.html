@@ -1,0 +1,41 @@
+<template>
+  <style>
+    @font-face { font-family: 'Noto Color Emoji'; src: url('assets/fonts/NotoColorEmoji.ttf'); }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .tag { position:absolute; padding: 12px 22px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 36px; letter-spacing: .1em; background: rgba(8,10,18,.85); white-space: nowrap; }
+    .stamp { position:absolute; padding: 16px 30px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 58px; background: rgba(8,10,18,.6); white-space: nowrap; }
+    .flag { font-family: 'Noto Color Emoji'; letter-spacing: 0; }
+    .big { position:absolute; left:0; width:1000px; text-align:center; font-weight:900; line-height:.95; color:#F4F1EA;
+           text-shadow: 0 8px 30px rgba(0,0,0,.6); }
+
+    #er-cam { position:absolute; inset:0; transform-origin: 540px 760px; }
+    #er-year { position:absolute; left:0; width:1000px; top: 370px; text-align:center; font-weight:900; font-size: 150px; color:#F4F1EA; line-height:1; }
+    #er-pie { position:absolute; left:330px; top:540px; width:420px; height:420px; transform-origin:210px 210px; }
+    #er-x { position:absolute; left: 470px; top: 760px; width: 180px; height: 180px; }
+    #er-stamp { left:0; width:1000px; top: 960px; text-align:center; border:none; background:none; padding:0; }
+    #er-stamp span { display:inline-block; padding: 12px 26px; border: 7px solid #FF4D5E; border-radius: 16px; color:#FF4D5E; background: rgba(8,10,18,.75); font-size: 52px; }
+  </style>
+  <div id="root" data-composition-id="erase" data-width="1080" data-height="1920">
+    <div id="er-cam">
+      <div id="er-year">1816</div>
+      <div id="er-pie"><svg id="er-p" width="420" height="420" viewBox="0 0 420 420" style="overflow:visible"><path d="M210.0,210.0 L20.0,210.0 A190,190 0 0,1 305.0,45.5 Z" fill="#FF7A1A" fill-opacity=".85" stroke="#0b1020" stroke-width="5"/><path d="M210.0,210.0 L305.0,45.5 A190,190 0 0,1 332.1,355.5 Z" fill="#FF4D5E" fill-opacity=".85" stroke="#0b1020" stroke-width="5"/><path id="er-p-q" d="M210.0,210.0 L332.1,355.5 A190,190 0 0,1 170.5,395.8 Z" fill="#43D9F5" fill-opacity=".9" stroke="#fff" stroke-width="4" style="transform-origin:210.0px 210.0px"/><path d="M210.0,210.0 L170.5,395.8 A190,190 0 0,1 20.0,210.0 Z" fill="#FFC83D" fill-opacity=".85" stroke="#0b1020" stroke-width="5"/><circle cx="210.0" cy="210.0" r="16" fill="#fff"/></svg></div>
+      <svg id="er-x" viewBox="0 0 180 180"><path id="er-x1" d="M20,20 L160,160" stroke="#FF4D5E" stroke-width="22" stroke-linecap="round"/><path id="er-x2" d="M160,20 L20,160" stroke="#FF4D5E" stroke-width="22" stroke-linecap="round"/></svg>
+      <div id="er-stamp" class="stamp"><span>ERASED · 1920</span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const y = { v: 1816 }, ye = document.querySelector("#er-year");
+      tl.fromTo(y, { v: 1816 }, { v: 1920, duration: 1.299, ease: "power2.inOut", onUpdate: () => { ye.textContent = Math.round(y.v); } }, 0.067);
+      tl.fromTo("#er-cam", { scale: 1 }, { scale: 1.1, duration: 3.5, ease: "none" }, 0);
+      tl.fromTo("#er-x", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.15, ease: "power4.in" }, 2.050);
+      tl.to("#er-p-q", { opacity: 0, duration: 0.5 }, 2.300);
+      tl.fromTo("#er-stamp", { opacity: 0, scale: 1.5, rotation: -10 }, { opacity: 1, scale: 1, rotation: -3, duration: 0.18, ease: "power4.in" }, 2.350);
+      window.__timelines["erase"] = tl;
+    })();
+  </script>
+</template>

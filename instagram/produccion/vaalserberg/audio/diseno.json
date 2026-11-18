@@ -1,0 +1,155 @@
+{
+ "duracion": 31.81,
+ "fps": 30,
+ "voz": {
+  "file": "vo.wav",
+  "gain_db": 0,
+  "t": 0
+ },
+ "musica": {
+  "file": "../../../sonido/libreria/musica/fs-631776_documentary-music-strings.mp3",
+  "gain_db": -6,
+  "duck_db": 8,
+  "offset": 20.0,
+  "fade_in": 0.2,
+  "fade_out": 1.0,
+  "rides": [
+   [
+    21.2333,
+    0
+   ],
+   [
+    21.633300000000002,
+    -8
+   ],
+   [
+    24.633300000000002,
+    -8
+   ],
+   [
+    25.133300000000002,
+    0
+   ]
+  ]
+ },
+ "sfx": [
+  {
+   "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
+   "t": 0.0333,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "golpe en el fotograma 0 (gancho)"
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
+   "t": 2.7667,
+   "anchor": "peak",
+   "gain_db": -13,
+   "label": "3 → 4 cuñas (pico)"
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 4.9333,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "aparece el 4.º hueco"
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-539172_melee-combat-whoosh.mp3",
+   "t": 8.3667,
+   "anchor": "peak",
+   "gain_db": -15,
+   "label": "zoom a la colina (pico)"
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 9.8667,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "NL"
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 10.4667,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "BE",
+   "pitch": 2
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 11.0667,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "DE",
+   "pitch": 4
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
+   "t": 13.6667,
+   "anchor": "attack",
+   "gain_db": -11,
+   "label": "sello NEUTRAL MORESNET"
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
+   "t": 17.7,
+   "anchor": "attack",
+   "gain_db": -17,
+   "label": "ficha Zn",
+   "pitch": 2
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 19.9667,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "bocadillo Saluton!",
+   "pitch": 6
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 22.7,
+   "anchor": "attack",
+   "gain_db": -14,
+   "label": "año se fija en 1920"
+  },
+  {
+   "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
+   "t": 23.5333,
+   "anchor": "attack",
+   "gain_db": -10,
+   "label": "X: borrado del mapa"
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
+   "t": 25.3333,
+   "anchor": "attack",
+   "gain_db": -17,
+   "label": "cae el pin",
+   "pitch": 4
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 26.1667,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "tarjeta guardar",
+   "pitch": 3
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
+   "t": 27.9333,
+   "anchor": "peak",
+   "gain_db": -17,
+   "label": "entra la tarjeta final"
+  }
+ ],
+ "master": {
+  "lufs": -14,
+  "tp": -1.5,
+  "tp_aac": -1.0
+ },
+ "salida": "out/audio.wav",
+ "video": "../out/vaalserberg_silent.mp4"
+}

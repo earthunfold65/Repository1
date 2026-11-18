@@ -21,5 +21,9 @@ if len(sys.argv) < 2 or sys.argv[1] == "list":
 voice, speed, out, txt = sys.argv[1], float(sys.argv[2]), sys.argv[3], sys.argv[4]
 samples, sr = k.create(open(txt, encoding="utf-8").read(), voice=voice, speed=speed,
                        lang="en-us" if voice[0] == "a" else "en-gb")
-sf.write(out, samples, sr)
+import numpy as np
+peak = float(np.max(np.abs(samples))) if len(samples) else 0.0
+if peak > 0.891:  # Kokoro puede salir a fondo de escala: deja 1 dB de margen para no recortar
+    samples = samples * (0.891 / peak)
+sf.write(out, samples, sr, subtype="PCM_24")
 print(out, round(len(samples) / sr, 2), "s")

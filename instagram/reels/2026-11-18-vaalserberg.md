@@ -46,3 +46,61 @@
 | 16–19 | La cuña se tacha y desaparece | ERASED · 1920 | golpe grave, música baja |
 | 19–23 | Pin del lugar real + tarjeta guardar | SAVE FOR YOUR EUROPE TRIP 🔖 | clic |
 | 23–28 | Tarjeta final: isla partida FR/ES con flecha que gira | EP. 3 · THE ISLAND THAT CHANGES COUNTRY EVERY 6 MONTHS | campanita (si hay licencia) |
+
+## Producción
+- Voz: Kokoro `am_adam` (gratis, local), velocidad 1.08, montada frase a frase (`instagram/scripts/montar_voz.py`).
+- Video: `instagram/produccion/vaalserberg/out/vaalserberg_silent_sonido.mp4` · Portada: `instagram/produccion/vaalserberg/cover/`
+
+## Textos por plataforma (listos para pegar)
+
+**Créditos (en TODAS):**
+```
+Sound: "Documentary Music Strings" by tyops, "Deep Cinematic Impact" by MeijstroAudio, "Melee Combat Whoosh" by EminYILDIRIM, "thick-stamp-nosub.wav" by newagesoup (Freesound.org, CC BY 4.0, edited). Other sounds CC0. Voice: AI (Kokoro).
+```
+
+### Instagram Reels
+```
+This spot is in 3 countries at once… but for almost 100 years it was in 4. 🇳🇱🇧🇪🇩🇪❓
+
+The 4th was Neutral Moresnet: a tiny territory created in 1816 over a zinc mine nobody could agree on. Some even tried to turn it into an Esperanto state. In 1920 it was erased from the map.
+
+Would you stand here? 👇 Save this for your Europe trip 🔖
+Part 3: the island that changes country every 6 months.
+
+#geography #history #europe #travel #didyouknow
+```
+
+### YouTube Shorts
+Título: `This Spot Was in 4 Countries… One No Longer Exists 🤯 #Shorts`
+```
+At the top of the Vaalserberg, the Netherlands, Belgium and Germany meet. But from 1830 to 1919 it was a four-country point: the fourth was Neutral Moresnet, a tiny territory born in 1816 because of a zinc mine. In 1920 it became part of Belgium.
+
+Next: the island that changes country every six months. Subscribe so you don't miss it.
+
+Border Oddities · EP. 2
+#Shorts #geography #history #europe #facts
+```
+Comentario fijado: `Would you stand on all 3 countries at once? 🇳🇱🇧🇪🇩🇪`
+
+### Facebook Reels
+```
+This spot is in 3 countries at once… and it used to be 4 🤯
+
+The 4th country vanished from the map in 1920. Its name? Neutral Moresnet.
+
+Would you visit? Tag someone you'd go with 👇
+
+#geography #history #europe
+```
+
+### TikTok
+```
+this spot used to be in 4 countries… one doesn't exist anymore 🤯 part 3: the island that changes country every 6 months
+
+#geography #history #europe #didyouknow #fyp
+```
+(Créditos como primer comentario.)
+
+### Al subir
+- Marcar voz/contenido generado por IA en cada plataforma.
+- Portada: `cover_1080x1920.png` (3 COUNTRIES …OR 4?).

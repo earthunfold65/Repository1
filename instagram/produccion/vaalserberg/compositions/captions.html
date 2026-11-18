@@ -1,0 +1,204 @@
+<template>
+  <style>
+    @font-face { font-family: 'Noto Color Emoji'; src: url('assets/fonts/NotoColorEmoji.ttf'); }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .tag { position:absolute; padding: 12px 22px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 36px; letter-spacing: .1em; background: rgba(8,10,18,.85); white-space: nowrap; }
+    .stamp { position:absolute; padding: 16px 30px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 58px; background: rgba(8,10,18,.6); white-space: nowrap; }
+    .flag { font-family: 'Noto Color Emoji'; letter-spacing: 0; }
+    .big { position:absolute; left:0; width:1000px; text-align:center; font-weight:900; line-height:.95; color:#F4F1EA;
+           text-shadow: 0 8px 30px rgba(0,0,0,.6); }
+
+    .cg { position:absolute; left:0; top: 1070px; width: 1000px; text-align:center; font-family:'Inter Display'; font-weight: 900;
+          line-height: 1.05; overflow: visible; visibility: hidden; transform-origin: 500px 60px; }
+    .cg .in { -webkit-text-stroke: 8px rgba(5,6,12,.95); paint-order: stroke fill; text-shadow: 0 6px 18px rgba(0,0,0,.6); }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1080" data-height="1920">
+    <div id="cg0" class="cg"><span class="in"><span style="color:#F4F1EA">THIS</span> <span style="color:#F4F1EA">SPOT</span> <span style="color:#F4F1EA">IS</span></span></div>
+    <div id="cg1" class="cg"><span class="in"><span style="color:#F4F1EA">IN</span> <span style="color:#FFC83D">THREE</span> <span style="color:#F4F1EA">COUNTRIES</span></span></div>
+    <div id="cg2" class="cg"><span class="in"><span style="color:#F4F1EA">AT</span> <span style="color:#F4F1EA">ONCE.</span></span></div>
+    <div id="cg3" class="cg"><span class="in"><span style="color:#F4F1EA">BUT</span> <span style="color:#F4F1EA">FOR</span> <span style="color:#F4F1EA">ALMOST</span></span></div>
+    <div id="cg4" class="cg"><span class="in"><span style="color:#F4F1EA">A</span> <span style="color:#F4F1EA">HUNDRED</span> <span style="color:#F4F1EA">YEARS...</span></span></div>
+    <div id="cg5" class="cg"><span class="in"><span style="color:#F4F1EA">IT</span> <span style="color:#F4F1EA">WAS</span> <span style="color:#F4F1EA">IN</span></span></div>
+    <div id="cg6" class="cg"><span class="in"><span style="color:#FFC83D">FOUR.</span></span></div>
+    <div id="cg7" class="cg"><span class="in"><span style="color:#F4F1EA">AND</span> <span style="color:#F4F1EA">THAT</span> <span style="color:#FFC83D">FOURTH</span></span></div>
+    <div id="cg8" class="cg"><span class="in"><span style="color:#F4F1EA">COUNTRY</span> <span style="color:#F4F1EA">DOESN'T</span> <span style="color:#F4F1EA">EXIST</span></span></div>
+    <div id="cg9" class="cg"><span class="in"><span style="color:#F4F1EA">ANYMORE.</span></span></div>
+    <div id="cg10" class="cg"><span class="in"><span style="color:#F4F1EA">THIS</span> <span style="color:#F4F1EA">IS</span> <span style="color:#F4F1EA">THE</span></span></div>
+    <div id="cg11" class="cg"><span class="in"><span style="color:#FFC83D">VAALSERBERG.</span></span></div>
+    <div id="cg12" class="cg"><span class="in"><span style="color:#F4F1EA">THE</span> <span style="color:#FFC83D">NETHERLANDS</span></span></div>
+    <div id="cg13" class="cg"><span class="in"><span style="color:#FFC83D">BELGIUM</span> <span style="color:#F4F1EA">AND</span> <span style="color:#FFC83D">GERMANY</span></span></div>
+    <div id="cg14" class="cg"><span class="in"><span style="color:#F4F1EA">MEET</span> <span style="color:#F4F1EA">RIGHT</span> <span style="color:#F4F1EA">HERE.</span></span></div>
+    <div id="cg15" class="cg"><span class="in"><span style="color:#F4F1EA">THE</span> <span style="color:#FFC83D">FOURTH</span> <span style="color:#F4F1EA">WAS</span></span></div>
+    <div id="cg16" class="cg"><span class="in"><span style="color:#F4F1EA">NEUTRAL</span> <span style="color:#FFC83D">MORESNET.</span></span></div>
+    <div id="cg17" class="cg"><span class="in"><span style="color:#F4F1EA">A</span> <span style="color:#F4F1EA">TINY</span> <span style="color:#F4F1EA">TERRITORY</span></span></div>
+    <div id="cg18" class="cg"><span class="in"><span style="color:#F4F1EA">NOBODY</span> <span style="color:#F4F1EA">COULD</span> <span style="color:#F4F1EA">AGREE</span></span></div>
+    <div id="cg19" class="cg"><span class="in"><span style="color:#F4F1EA">ON...</span></span></div>
+    <div id="cg20" class="cg"><span class="in"><span style="color:#F4F1EA">BECAUSE</span> <span style="color:#F4F1EA">OF</span> <span style="color:#F4F1EA">A</span></span></div>
+    <div id="cg21" class="cg"><span class="in"><span style="color:#FFC83D">ZINC</span> <span style="color:#F4F1EA">MINE.</span></span></div>
+    <div id="cg22" class="cg"><span class="in"><span style="color:#F4F1EA">SOME</span> <span style="color:#F4F1EA">EVEN</span> <span style="color:#F4F1EA">TRIED</span></span></div>
+    <div id="cg23" class="cg"><span class="in"><span style="color:#F4F1EA">TO</span> <span style="color:#F4F1EA">TURN</span> <span style="color:#F4F1EA">IT</span></span></div>
+    <div id="cg24" class="cg"><span class="in"><span style="color:#F4F1EA">INTO</span> <span style="color:#F4F1EA">AN</span> <span style="color:#FFC83D">ESPERANTO</span></span></div>
+    <div id="cg25" class="cg"><span class="in"><span style="color:#F4F1EA">STATE.</span></span></div>
+    <div id="cg26" class="cg"><span class="in"><span style="color:#F4F1EA">THEN</span></span></div>
+    <div id="cg27" class="cg"><span class="in"><span style="color:#F4F1EA">IN</span> <span style="color:#F4F1EA">19</span> <span style="color:#FFC83D">20...</span></span></div>
+    <div id="cg28" class="cg"><span class="in"><span style="color:#F4F1EA">IT</span> <span style="color:#F4F1EA">WAS</span> <span style="color:#FFC83D">ERASED</span></span></div>
+    <div id="cg29" class="cg"><span class="in"><span style="color:#F4F1EA">FROM</span> <span style="color:#F4F1EA">THE</span> <span style="color:#F4F1EA">MAP.</span></span></div>
+    <div id="cg30" class="cg"><span class="in"><span style="color:#F4F1EA">WOULD</span> <span style="color:#F4F1EA">YOU</span> <span style="color:#F4F1EA">STAND</span></span></div>
+    <div id="cg31" class="cg"><span class="in"><span style="color:#F4F1EA">HERE?</span></span></div>
+    <div id="cg32" class="cg"><span class="in"><span style="color:#FFC83D">SAVE</span> <span style="color:#F4F1EA">THIS</span> <span style="color:#F4F1EA">FOR</span></span></div>
+    <div id="cg33" class="cg"><span class="in"><span style="color:#F4F1EA">YOUR</span> <span style="color:#F4F1EA">EUROPE</span> <span style="color:#F4F1EA">TRIP.</span></span></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const fit = (sel, text) => {
+        let fs = 96;
+        const r = window.__hyperframes && window.__hyperframes.fitTextFontSize
+          ? window.__hyperframes.fitTextFontSize(text, { fontFamily: "Inter Display", fontWeight: 900, maxWidth: 760, fontSize: 96, minFontSize: 54 })
+          : null;
+        if (r && r.fontSize) fs = Math.min(96, r.fontSize);
+        document.querySelector(sel).style.fontSize = fs + "px";
+      };
+      fit("#cg0", "THIS SPOT IS");
+      tl.fromTo("#cg0", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 0.1);
+      tl.to("#cg0", { opacity: 0, duration: 0.07, ease: "power2.in" }, 0.634);
+      tl.set("#cg0", { visibility: "hidden" }, 0.704);
+      fit("#cg1", "IN THREE COUNTRIES");
+      tl.fromTo("#cg1", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 0.684);
+      tl.to("#cg1", { opacity: 0, duration: 0.07, ease: "power2.in" }, 1.619);
+      tl.set("#cg1", { visibility: "hidden" }, 1.689);
+      fit("#cg2", "AT ONCE.");
+      tl.fromTo("#cg2", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 1.669);
+      tl.to("#cg2", { opacity: 0, duration: 0.07, ease: "power2.in" }, 2.313);
+      tl.set("#cg2", { visibility: "hidden" }, 2.383);
+      fit("#cg3", "BUT FOR ALMOST");
+      tl.fromTo("#cg3", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 2.363);
+      tl.to("#cg3", { opacity: 0, duration: 0.07, ease: "power2.in" }, 3.075);
+      tl.set("#cg3", { visibility: "hidden" }, 3.145);
+      fit("#cg4", "A HUNDRED YEARS...");
+      tl.fromTo("#cg4", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 3.125);
+      tl.to("#cg4", { opacity: 0, duration: 0.07, ease: "power2.in" }, 4.208);
+      tl.set("#cg4", { visibility: "hidden" }, 4.278);
+      fit("#cg5", "IT WAS IN");
+      tl.fromTo("#cg5", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 4.258);
+      tl.to("#cg5", { opacity: 0, duration: 0.07, ease: "power2.in" }, 4.832);
+      tl.set("#cg5", { visibility: "hidden" }, 4.902);
+      fit("#cg6", "FOUR.");
+      tl.fromTo("#cg6", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 4.882);
+      tl.to("#cg6", { opacity: 0, duration: 0.07, ease: "power2.in" }, 5.443);
+      tl.set("#cg6", { visibility: "hidden" }, 5.513);
+      fit("#cg7", "AND THAT FOURTH");
+      tl.fromTo("#cg7", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 5.493);
+      tl.to("#cg7", { opacity: 0, duration: 0.07, ease: "power2.in" }, 6.202);
+      tl.set("#cg7", { visibility: "hidden" }, 6.272);
+      fit("#cg8", "COUNTRY DOESN'T EXIST");
+      tl.fromTo("#cg8", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 6.252);
+      tl.to("#cg8", { opacity: 0, duration: 0.07, ease: "power2.in" }, 7.245);
+      tl.set("#cg8", { visibility: "hidden" }, 7.315);
+      fit("#cg9", "ANYMORE.");
+      tl.fromTo("#cg9", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 7.295);
+      tl.to("#cg9", { opacity: 0, duration: 0.07, ease: "power2.in" }, 8.045);
+      tl.set("#cg9", { visibility: "hidden" }, 8.115);
+      fit("#cg10", "THIS IS THE");
+      tl.fromTo("#cg10", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 8.095);
+      tl.to("#cg10", { opacity: 0, duration: 0.07, ease: "power2.in" }, 8.706);
+      tl.set("#cg10", { visibility: "hidden" }, 8.776);
+      fit("#cg11", "VAALSERBERG.");
+      tl.fromTo("#cg11", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 8.756);
+      tl.to("#cg11", { opacity: 0, duration: 0.07, ease: "power2.in" }, 9.546);
+      tl.set("#cg11", { visibility: "hidden" }, 9.616);
+      fit("#cg12", "THE NETHERLANDS,");
+      tl.fromTo("#cg12", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 9.596);
+      tl.to("#cg12", { opacity: 0, duration: 0.07, ease: "power2.in" }, 10.356);
+      tl.set("#cg12", { visibility: "hidden" }, 10.426);
+      fit("#cg13", "BELGIUM AND GERMANY");
+      tl.fromTo("#cg13", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 10.406);
+      tl.to("#cg13", { opacity: 0, duration: 0.07, ease: "power2.in" }, 11.368);
+      tl.set("#cg13", { visibility: "hidden" }, 11.438);
+      fit("#cg14", "MEET RIGHT HERE.");
+      tl.fromTo("#cg14", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 11.418);
+      tl.to("#cg14", { opacity: 0, duration: 0.07, ease: "power2.in" }, 12.538);
+      tl.set("#cg14", { visibility: "hidden" }, 12.608);
+      fit("#cg15", "THE FOURTH WAS");
+      tl.fromTo("#cg15", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 12.588);
+      tl.to("#cg15", { opacity: 0, duration: 0.07, ease: "power2.in" }, 13.291);
+      tl.set("#cg15", { visibility: "hidden" }, 13.361);
+      fit("#cg16", "NEUTRAL MORESNET.");
+      tl.fromTo("#cg16", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 13.341);
+      tl.to("#cg16", { opacity: 0, duration: 0.07, ease: "power2.in" }, 14.384);
+      tl.set("#cg16", { visibility: "hidden" }, 14.454);
+      fit("#cg17", "A TINY TERRITORY");
+      tl.fromTo("#cg17", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 14.434);
+      tl.to("#cg17", { opacity: 0, duration: 0.07, ease: "power2.in" }, 15.347);
+      tl.set("#cg17", { visibility: "hidden" }, 15.417);
+      fit("#cg18", "NOBODY COULD AGREE");
+      tl.fromTo("#cg18", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 15.397);
+      tl.to("#cg18", { opacity: 0, duration: 0.07, ease: "power2.in" }, 16.422);
+      tl.set("#cg18", { visibility: "hidden" }, 16.492);
+      fit("#cg19", "ON...");
+      tl.fromTo("#cg19", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 16.472);
+      tl.to("#cg19", { opacity: 0, duration: 0.07, ease: "power2.in" }, 16.812);
+      tl.set("#cg19", { visibility: "hidden" }, 16.882);
+      fit("#cg20", "BECAUSE OF A");
+      tl.fromTo("#cg20", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 16.862);
+      tl.to("#cg20", { opacity: 0, duration: 0.07, ease: "power2.in" }, 17.505);
+      tl.set("#cg20", { visibility: "hidden" }, 17.575);
+      fit("#cg21", "ZINC MINE.");
+      tl.fromTo("#cg21", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 17.555);
+      tl.to("#cg21", { opacity: 0, duration: 0.07, ease: "power2.in" }, 18.399);
+      tl.set("#cg21", { visibility: "hidden" }, 18.469);
+      fit("#cg22", "SOME EVEN TRIED");
+      tl.fromTo("#cg22", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 18.449);
+      tl.to("#cg22", { opacity: 0, duration: 0.07, ease: "power2.in" }, 19.199);
+      tl.set("#cg22", { visibility: "hidden" }, 19.269);
+      fit("#cg23", "TO TURN IT");
+      tl.fromTo("#cg23", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 19.249);
+      tl.to("#cg23", { opacity: 0, duration: 0.07, ease: "power2.in" }, 19.749);
+      tl.set("#cg23", { visibility: "hidden" }, 19.819);
+      fit("#cg24", "INTO AN ESPERANTO");
+      tl.fromTo("#cg24", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 19.799);
+      tl.to("#cg24", { opacity: 0, duration: 0.07, ease: "power2.in" }, 20.65);
+      tl.set("#cg24", { visibility: "hidden" }, 20.72);
+      fit("#cg25", "STATE.");
+      tl.fromTo("#cg25", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 20.7);
+      tl.to("#cg25", { opacity: 0, duration: 0.07, ease: "power2.in" }, 21.31);
+      tl.set("#cg25", { visibility: "hidden" }, 21.38);
+      fit("#cg26", "THEN,");
+      tl.fromTo("#cg26", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 21.36);
+      tl.to("#cg26", { opacity: 0, duration: 0.07, ease: "power2.in" }, 21.604);
+      tl.set("#cg26", { visibility: "hidden" }, 21.674);
+      fit("#cg27", "IN NINETEEN TWENTY...");
+      tl.fromTo("#cg27", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 21.654);
+      tl.to("#cg27", { opacity: 0, duration: 0.07, ease: "power2.in" }, 23.06);
+      tl.set("#cg27", { visibility: "hidden" }, 23.13);
+      fit("#cg28", "IT WAS ERASED");
+      tl.fromTo("#cg28", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 23.11);
+      tl.to("#cg28", { opacity: 0, duration: 0.07, ease: "power2.in" }, 23.726);
+      tl.set("#cg28", { visibility: "hidden" }, 23.796);
+      fit("#cg29", "FROM THE MAP.");
+      tl.fromTo("#cg29", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 23.776);
+      tl.to("#cg29", { opacity: 0, duration: 0.07, ease: "power2.in" }, 24.825);
+      tl.set("#cg29", { visibility: "hidden" }, 24.895);
+      fit("#cg30", "WOULD YOU STAND");
+      tl.fromTo("#cg30", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 24.875);
+      tl.to("#cg30", { opacity: 0, duration: 0.07, ease: "power2.in" }, 25.549);
+      tl.set("#cg30", { visibility: "hidden" }, 25.619);
+      fit("#cg31", "HERE?");
+      tl.fromTo("#cg31", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 25.599);
+      tl.to("#cg31", { opacity: 0, duration: 0.07, ease: "power2.in" }, 26.016);
+      tl.set("#cg31", { visibility: "hidden" }, 26.086);
+      fit("#cg32", "SAVE THIS FOR");
+      tl.fromTo("#cg32", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 26.066);
+      tl.to("#cg32", { opacity: 0, duration: 0.07, ease: "power2.in" }, 26.639);
+      tl.set("#cg32", { visibility: "hidden" }, 26.709);
+      fit("#cg33", "YOUR EUROPE TRIP.");
+      tl.fromTo("#cg33", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 26.689);
+      tl.to("#cg33", { opacity: 0, duration: 0.07, ease: "power2.in" }, 27.666);
+      tl.set("#cg33", { visibility: "hidden" }, 27.736);
+      window.__timelines["captions"] = tl;
+    })();
+  </script>
+</template>

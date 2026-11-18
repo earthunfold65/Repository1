@@ -1,0 +1,45 @@
+<template>
+  <style>
+    @font-face { font-family: 'Noto Color Emoji'; src: url('assets/fonts/NotoColorEmoji.ttf'); }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .tag { position:absolute; padding: 12px 22px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 36px; letter-spacing: .1em; background: rgba(8,10,18,.85); white-space: nowrap; }
+    .stamp { position:absolute; padding: 16px 30px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 58px; background: rgba(8,10,18,.6); white-space: nowrap; }
+    .flag { font-family: 'Noto Color Emoji'; letter-spacing: 0; }
+    .big { position:absolute; left:0; width:1000px; text-align:center; font-weight:900; line-height:.95; color:#F4F1EA;
+           text-shadow: 0 8px 30px rgba(0,0,0,.6); }
+
+    #hl-cam { position:absolute; inset:0; transform-origin: 540px 800px; }
+    #hl-hill { position:absolute; left:0; top:560px; width:1080px; height:480px; }
+    #hl-pin { position:absolute; left:430px; top:600px; width:220px; height:220px; transform-origin:110px 110px; }
+    #hl-name { left: 0; width: 1080px; top: 470px; text-align:center; background:none; color:#F4F1EA; font-size: 40px; }
+    #hl-name span { background: rgba(8,10,18,.85); padding: 10px 22px; border-radius: 12px; border: 3px solid rgba(255,255,255,.35); }
+    #hl-nl { left: 120px; top: 392px; color:#FF7A1A; font-size: 32px; } #hl-de { left: 560px; top: 392px; color:#FF4D5E; font-size: 32px; } #hl-be { left: 130px; top: 880px; color:#FFC83D; }
+  </style>
+  <div id="root" data-composition-id="hill" data-width="1080" data-height="1920">
+    <div id="hl-cam">
+      <svg id="hl-hill" viewBox="0 0 1080 480"><path d="M0,480 L0,330 C160,300 300,180 440,110 C500,80 580,80 640,110 C780,180 920,290 1080,320 L1080,480 Z" fill="#1b2438" stroke="#3a4766" stroke-width="5"/>
+        <path d="M0,480 L0,400 C200,370 380,300 540,290 C700,300 880,370 1080,390 L1080,480 Z" fill="#141b2c"/></svg>
+      <div id="hl-pin"><svg id="hl-p" width="220" height="220" viewBox="0 0 220 220" style="overflow:visible"><path d="M110.0,110.0 L10.0,110.0 A100,100 0 0,1 160.0,23.4 Z" fill="#FF7A1A" fill-opacity=".85" stroke="#0b1020" stroke-width="5"/><path d="M110.0,110.0 L160.0,23.4 A100,100 0 0,1 160.0,196.6 Z" fill="#FF4D5E" fill-opacity=".85" stroke="#0b1020" stroke-width="5"/><path d="M110.0,110.0 L160.0,196.6 A100,100 0 0,1 10.0,110.0 Z" fill="#FFC83D" fill-opacity=".85" stroke="#0b1020" stroke-width="5"/><circle cx="110.0" cy="110.0" r="16" fill="#fff"/></svg></div>
+      <div id="hl-name" class="tag"><span>VAALSERBERG</span></div>
+      <div id="hl-nl" class="tag"><span class="flag">🇳🇱</span> NETHERLANDS</div>
+      <div id="hl-de" class="tag"><span class="flag">🇩🇪</span> GERMANY</div>
+      <div id="hl-be" class="tag"><span class="flag">🇧🇪</span> BELGIUM</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#hl-cam", { scale: 1.25, y: 80 }, { scale: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0);
+      tl.to("#hl-cam", { scale: 1.07, duration: 3.967, ease: "none" }, 0.5);
+      tl.fromTo("#hl-pin", { scale: 0, rotation: -90 }, { scale: 1, rotation: 0, duration: 0.4, ease: "back.out(2)" }, 0.25);
+      tl.fromTo("#hl-name", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25 }, 0.35);
+      tl.fromTo("#hl-nl", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2.5)" }, 1.772);
+      tl.fromTo("#hl-be", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2.5)" }, 2.379);
+      tl.fromTo("#hl-de", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2.5)" }, 2.986);
+      window.__timelines["hill"] = tl;
+    })();
+  </script>
+</template>

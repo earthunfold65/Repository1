@@ -1,0 +1,43 @@
+<template>
+  <style>
+    @font-face { font-family: 'Noto Color Emoji'; src: url('assets/fonts/NotoColorEmoji.ttf'); }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .tag { position:absolute; padding: 12px 22px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 36px; letter-spacing: .1em; background: rgba(8,10,18,.85); white-space: nowrap; }
+    .stamp { position:absolute; padding: 16px 30px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 58px; background: rgba(8,10,18,.6); white-space: nowrap; }
+    .flag { font-family: 'Noto Color Emoji'; letter-spacing: 0; }
+    .big { position:absolute; left:0; width:1000px; text-align:center; font-weight:900; line-height:.95; color:#F4F1EA;
+           text-shadow: 0 8px 30px rgba(0,0,0,.6); }
+
+    #sv-cam { position:absolute; inset:0; transform-origin: 540px 700px; }
+    #sv-q { top: 350px; font-size: 92px; }
+    #sv-q span { color:#FFC83D; }
+    #sv-pin { position:absolute; left: 460px; top: 590px; width: 160px; height: 200px; }
+    #sv-place { left:0; width:1000px; top: 780px; text-align:center; background:none; color:#F4F1EA; font-size: 34px; }
+    #sv-place span { background: rgba(8,10,18,.85); padding: 10px 20px; border-radius: 12px; }
+    #sv-card { position:absolute; left: 170px; top: 880px; width: 660px; height: 130px; border-radius: 26px; background:#FFC83D;
+               color:#0b1020; font-weight:900; font-size: 52px; line-height:130px; text-align:center; box-shadow: 0 20px 60px rgba(0,0,0,.5); transform-origin: 330px 65px; }
+  </style>
+  <div id="root" data-composition-id="save" data-width="1080" data-height="1920">
+    <div id="sv-cam">
+      <svg id="sv-pin" viewBox="0 0 160 200"><path d="M80,195 C80,195 10,110 10,70 A70,70 0 0,1 150,70 C150,110 80,195 80,195 Z" fill="#FF4D5E" stroke="#fff" stroke-width="6"/><circle cx="80" cy="70" r="26" fill="#fff"/></svg>
+      <div id="sv-place" class="tag"><span>DRIELANDENPUNT · VAALS <span class="flag">🇳🇱</span></span></div>
+      <div id="sv-card">🔖 SAVE FOR YOUR TRIP</div>
+    </div>
+    <div id="sv-q" class="big">WOULD YOU<br><span>STAND HERE?</span></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#sv-cam", { scale: 1.1 }, { scale: 1.0, duration: 2.9667, ease: "none" }, 0);
+      tl.fromTo("#sv-q", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, 0.05);
+      tl.fromTo("#sv-pin", { opacity: 0, y: -120 }, { opacity: 1, y: 0, duration: 0.4, ease: "bounce.out" }, 0.15);
+      tl.fromTo("#sv-place", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 0.45);
+      tl.fromTo("#sv-card", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.5)" }, 1.273);
+      tl.to("#sv-card", { scale: 1.05, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, 1.773);
+      window.__timelines["save"] = tl;
+    })();
+  </script>
+</template>
