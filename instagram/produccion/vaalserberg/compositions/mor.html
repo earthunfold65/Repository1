@@ -35,6 +35,8 @@
     (function () {
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#mr-cam", { scale: 1.1 }, { scale: 1, duration: 0.4, ease: "power3.out" }, 0);
+      tl.to("#mr-cam", { scale: 1.08, duration: 5.467, ease: "none" }, 0.4);
+      tl.fromTo("#mr-pie", { rotation: -6 }, { rotation: 8, duration: 5.867, ease: "none" }, 0);
       tl.fromTo("#mr-p-q", { scale: 0.2, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.2)" }, 0.848);
       tl.fromTo("#mr-p-t-q", { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
       tl.fromTo("#mr-stamp", { opacity: 0, scale: 1.6, rotation: -12 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.18, ease: "power4.in" }, 0.948);

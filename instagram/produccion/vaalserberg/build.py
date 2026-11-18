@@ -144,13 +144,14 @@ s_hook = scene_file(h, f"""
     <div id="hk-t2" class="big ttl" style="opacity:0">ONCE IT WAS<br><span class="c">4 COUNTRIES</span></div>
     <div id="hk-t3" class="big ttl" style="opacity:0">ONE OF THEM<br><span class="c">VANISHED</span></div>""",
     f"""      tl.fromTo("#hk-cam", {{ scale: 1.16 }}, {{ scale: 1, duration: 0.4, ease: "power3.out" }}, 0);
-      tl.to("#hk-cam", {{ scale: 1.06, duration: {SLOT[h][1] - 0.4:.3f}, ease: "none" }}, 0.4);
+      tl.to("#hk-cam", {{ scale: 1.1, duration: {SLOT[h][1] - 0.4:.3f}, ease: "none" }}, 0.4);
       tl.fromTo("#hk-pie3", {{ rotation: -8 }}, {{ rotation: 0, duration: {t_but:.3f}, ease: "none" }}, 0);
       // "But for almost a hundred years... it was in four"
       tl.to("#hk-pie3", {{ opacity: 0, rotation: 25, duration: 0.3, ease: "power2.in" }}, {t_but:.3f});
       tl.fromTo("#hk-pie4", {{ opacity: 0, rotation: -25, scale: 0.9 }}, {{ opacity: 1, rotation: 0, scale: 1, duration: 0.45, ease: "back.out(1.6)" }}, {t_but + 0.15:.3f});
       tl.to("#hk-t1", {{ opacity: 0, y: -30, duration: 0.2 }}, {t_but:.3f});
       tl.fromTo("#hk-t2", {{ opacity: 0, y: 30 }}, {{ opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }}, {t_but + 0.15:.3f});
+      tl.to("#hk-pie4", {{ rotation: 14, duration: {SLOT[h][1] - t_but - 0.6:.3f}, ease: "none" }}, {t_but + 0.6:.3f});
       tl.fromTo("#hk-p4-q", {{ scale: 1 }}, {{ scale: 1.18, duration: 0.18, yoyo: true, repeat: 3, ease: "power1.inOut" }}, {t_four:.3f});
       // "that fourth country doesn't exist anymore": parpadea
       tl.to("#hk-t2", {{ opacity: 0, y: -30, duration: 0.2 }}, {t_and:.3f});
@@ -211,6 +212,8 @@ s_mor = scene_file(m, f"""
       <div id="mr-zn"><i>30</i><b>Zn</b><u>ZINC</u></div>
     </div>""",
     f"""      tl.fromTo("#mr-cam", {{ scale: 1.1 }}, {{ scale: 1, duration: 0.4, ease: "power3.out" }}, 0);
+      tl.to("#mr-cam", {{ scale: 1.08, duration: {SLOT[m][1] - 0.4:.3f}, ease: "none" }}, 0.4);
+      tl.fromTo("#mr-pie", {{ rotation: -6 }}, {{ rotation: 8, duration: {SLOT[m][1]:.3f}, ease: "none" }}, 0);
       tl.fromTo("#mr-p-q", {{ scale: 0.2, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.2)" }}, {t_neu:.3f});
       tl.fromTo("#mr-p-t-q", {{ opacity: 0 }}, {{ opacity: 0, duration: 0.01 }}, 0);
       tl.fromTo("#mr-stamp", {{ opacity: 0, scale: 1.6, rotation: -12 }}, {{ opacity: 1, scale: 1, rotation: -4, duration: 0.18, ease: "power4.in" }}, {t_neu + 0.1:.3f});
@@ -242,7 +245,7 @@ s_esp = scene_file(e, f"""
       <div id="es-bub">Saluton!</div><div id="es-tail"></div>
       <div id="es-lbl" class="tag"><span>"AMIKEJO" · ESPERANTO STATE?</span></div>
     </div>""",
-    f"""      tl.fromTo("#es-cam", {{ scale: 1 }}, {{ scale: 1.08, duration: {SLOT[e][1]}, ease: "none" }}, 0);
+    f"""      tl.fromTo("#es-cam", {{ scale: 1 }}, {{ scale: 1.16, duration: {SLOT[e][1]}, ease: "none" }}, 0);
       tl.fromTo("#es-bub, #es-tail", {{ opacity: 0, scale: 0.3 }}, {{ opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.2)" }}, {max(0.05, t_esp - 0.35):.3f});
       tl.fromTo("#es-flag", {{ opacity: 0, y: -30 }}, {{ opacity: 1, y: 0, duration: 0.3 }}, 0.1);
       tl.fromTo("#es-lbl", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.25 }}, {max(0.1, t_esp - 0.6):.3f});""")
