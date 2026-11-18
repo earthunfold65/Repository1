@@ -31,9 +31,10 @@
     (function () {
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#es-cam", { scale: 1 }, { scale: 1.16, duration: 2.9333, ease: "none" }, 0);
-      tl.fromTo("#es-bub, #es-tail", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.2)" }, 1.490);
-      tl.fromTo("#es-flag", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.3 }, 0.1);
-      tl.fromTo("#es-lbl", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 1.240);
+      tl.fromTo("#es-bub, #es-tail", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.2)" }, 0.12);
+      tl.fromTo("#es-flag", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.3 }, 0.05);
+      tl.fromTo("#es-bub", { rotation: -3 }, { rotation: 3, duration: 0.6, yoyo: true, repeat: 3, ease: "sine.inOut" }, 0.45);
+      tl.fromTo("#es-lbl", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 0.45);
       window.__timelines["esp"] = tl;
     })();
   </script>

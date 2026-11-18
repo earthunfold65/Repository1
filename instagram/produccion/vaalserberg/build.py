@@ -246,10 +246,11 @@ s_esp = scene_file(e, f"""
       <div id="es-lbl" class="tag"><span>"AMIKEJO" · ESPERANTO STATE?</span></div>
     </div>""",
     f"""      tl.fromTo("#es-cam", {{ scale: 1 }}, {{ scale: 1.16, duration: {SLOT[e][1]}, ease: "none" }}, 0);
-      tl.fromTo("#es-bub, #es-tail", {{ opacity: 0, scale: 0.3 }}, {{ opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.2)" }}, {max(0.05, t_esp - 0.35):.3f});
-      tl.fromTo("#es-flag", {{ opacity: 0, y: -30 }}, {{ opacity: 1, y: 0, duration: 0.3 }}, 0.1);
-      tl.fromTo("#es-lbl", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.25 }}, {max(0.1, t_esp - 0.6):.3f});""")
-cues += [{"t": round(S[e] + max(0.05, t_esp - 0.35) + 0.08, 3), "kind": "click", "pitch": 6, "label": "bocadillo Saluton!"}]
+      tl.fromTo("#es-bub, #es-tail", {{ opacity: 0, scale: 0.3 }}, {{ opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.2)" }}, 0.12);
+      tl.fromTo("#es-flag", {{ opacity: 0, y: -30 }}, {{ opacity: 1, y: 0, duration: 0.3 }}, 0.05);
+      tl.fromTo("#es-bub", {{ rotation: -3 }}, {{ rotation: 3, duration: 0.6, yoyo: true, repeat: 3, ease: "sine.inOut" }}, 0.45);
+      tl.fromTo("#es-lbl", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.25 }}, 0.45);""")
+cues += [{"t": round(S[e] + 0.2, 3), "kind": "click", "pitch": 6, "label": "bocadillo Saluton!"}]
 
 # ---------- 5. BORRADO (c10 → c12) ----------
 x_ = "erase"
