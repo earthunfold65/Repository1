@@ -1,0 +1,418 @@
+{
+ "scenes": {
+  "dream": [
+   0.0,
+   8.0667
+  ],
+  "fake": [
+   8.0667,
+   1.4333
+  ],
+  "real": [
+   9.5,
+   2.5
+  ],
+  "intro": [
+   12.0,
+   5.4667
+  ],
+  "crown": [
+   17.4667,
+   4.6666
+  ],
+  "people": [
+   22.1333,
+   3.8667
+  ],
+  "stamps": [
+   26.0,
+   4.1
+  ],
+  "gone": [
+   30.1,
+   4.5333
+  ],
+  "poll": [
+   34.6333,
+   2.0334
+  ],
+  "end": [
+   36.6667,
+   4.0633
+  ]
+ },
+ "cues": [
+  {
+   "t": 0.03,
+   "kind": "hit_soft",
+   "label": "entra NO ARMY (frame 0)"
+  },
+  {
+   "t": 4.22,
+   "kind": "thunk",
+   "pitch": 2,
+   "label": "entra NO TAXES"
+  },
+  {
+   "t": 6.915,
+   "kind": "hit",
+   "label": "golpe CASINO + sacudida"
+  },
+  {
+   "t": 8.653,
+   "kind": "stamp",
+   "label": "sello FAKE?"
+  },
+  {
+   "t": 10.038,
+   "kind": "stamp",
+   "label": "sello REAL"
+  },
+  {
+   "t": 10.936,
+   "kind": "whoosh_soft",
+   "label": "el triángulo desaparece (pico)"
+  },
+  {
+   "t": 12.906,
+   "kind": "hit",
+   "label": "título NEUTRAL MORESNET"
+  },
+  {
+   "t": 16.782,
+   "kind": "click",
+   "label": "chip 1816"
+  },
+  {
+   "t": 18.062,
+   "kind": "whoosh",
+   "label": "entran las coronas (pico)"
+  },
+  {
+   "t": 19.874,
+   "kind": "thunk",
+   "pitch": 2,
+   "label": "ficha Zn"
+  },
+  {
+   "t": 21.373,
+   "kind": "stamp",
+   "label": "sello SHARED IT"
+  },
+  {
+   "t": 22.213,
+   "kind": "click",
+   "label": "primeras personas"
+  },
+  {
+   "t": 24.536,
+   "kind": "whoosh2",
+   "label": "llegan miles (pico)"
+  },
+  {
+   "t": 25.406,
+   "kind": "tick",
+   "pitch": 4,
+   "label": "contador 3,000+"
+  },
+  {
+   "t": 27.068,
+   "kind": "stamp",
+   "label": "sello postal cae"
+  },
+  {
+   "t": 28.923,
+   "kind": "click",
+   "pitch": 6,
+   "label": "Saluton!"
+  },
+  {
+   "t": 30.806,
+   "kind": "thunk",
+   "label": "1920"
+  },
+  {
+   "t": 33.212,
+   "kind": "hit",
+   "label": "GONE + sacudida"
+  },
+  {
+   "t": 34.933,
+   "kind": "click",
+   "pitch": 2,
+   "label": "YES"
+  },
+  {
+   "t": 35.083,
+   "kind": "click",
+   "pitch": -2,
+   "label": "NO"
+  },
+  {
+   "t": 36.787,
+   "kind": "whoosh_soft",
+   "label": "entra la tarjeta final"
+  }
+ ],
+ "captions": [
+  {
+   "id": "cg0",
+   "start": 0.1,
+   "end": 0.994,
+   "text": "IMAGINE A COUNTRY"
+  },
+  {
+   "id": "cg1",
+   "start": 0.974,
+   "end": 1.316,
+   "text": "WHERE,"
+  },
+  {
+   "id": "cg2",
+   "start": 1.296,
+   "end": 1.852,
+   "text": "FOR YEARS,"
+  },
+  {
+   "id": "cg3",
+   "start": 1.832,
+   "end": 2.869,
+   "text": "NOBODY COULD DRAFT"
+  },
+  {
+   "id": "cg4",
+   "start": 2.849,
+   "end": 3.512,
+   "text": "YOU INTO AN"
+  },
+  {
+   "id": "cg5",
+   "start": 3.492,
+   "end": 4.08,
+   "text": "ARMY."
+  },
+  {
+   "id": "cg6",
+   "start": 4.06,
+   "end": 4.498,
+   "text": "TAXES?"
+  },
+  {
+   "id": "cg7",
+   "start": 4.478,
+   "end": 5.515,
+   "text": "BARELY ANY."
+  },
+  {
+   "id": "cg8",
+   "start": 5.495,
+   "end": 6.389,
+   "text": "IT EVEN OPENED"
+  },
+  {
+   "id": "cg9",
+   "start": 6.369,
+   "end": 7.882,
+   "text": "ITS OWN CASINO!"
+  },
+  {
+   "id": "cg10",
+   "start": 8.092,
+   "end": 8.886,
+   "text": "SOUNDS MADE UP,"
+  },
+  {
+   "id": "cg11",
+   "start": 8.866,
+   "end": 9.546,
+   "text": "RIGHT?"
+  },
+  {
+   "id": "cg12",
+   "start": 9.526,
+   "end": 10.081,
+   "text": "IT WAS REAL..."
+  },
+  {
+   "id": "cg13",
+   "start": 10.061,
+   "end": 10.616,
+   "text": "AND THEN IT"
+  },
+  {
+   "id": "cg14",
+   "start": 10.596,
+   "end": 11.418,
+   "text": "VANISHED FROM THE"
+  },
+  {
+   "id": "cg15",
+   "start": 11.398,
+   "end": 12.047,
+   "text": "MAP."
+  },
+  {
+   "id": "cg16",
+   "start": 12.027,
+   "end": 12.866,
+   "text": "THIS IS NEUTRAL"
+  },
+  {
+   "id": "cg17",
+   "start": 12.846,
+   "end": 13.627,
+   "text": "MORESNET."
+  },
+  {
+   "id": "cg18",
+   "start": 13.607,
+   "end": 15.194,
+   "text": "A TINY TRIANGLE"
+  },
+  {
+   "id": "cg19",
+   "start": 15.174,
+   "end": 15.978,
+   "text": "OF LAND,"
+  },
+  {
+   "id": "cg20",
+   "start": 15.958,
+   "end": 17.502,
+   "text": "BORN IN 1816..."
+  },
+  {
+   "id": "cg21",
+   "start": 17.482,
+   "end": 18.448,
+   "text": "BECAUSE TWO KINGDOMS"
+  },
+  {
+   "id": "cg22",
+   "start": 18.428,
+   "end": 19.304,
+   "text": "COULDN'T AGREE WHO"
+  },
+  {
+   "id": "cg23",
+   "start": 19.284,
+   "end": 19.979,
+   "text": "OWNED ONE ZINC"
+  },
+  {
+   "id": "cg24",
+   "start": 19.959,
+   "end": 20.455,
+   "text": "MINE."
+  },
+  {
+   "id": "cg25",
+   "start": 20.435,
+   "end": 21.193,
+   "text": "SO THEY JUST..."
+  },
+  {
+   "id": "cg26",
+   "start": 21.173,
+   "end": 22.16,
+   "text": "SHARED IT."
+  },
+  {
+   "id": "cg27",
+   "start": 22.14,
+   "end": 23.485,
+   "text": "PEOPLE RUSHED IN."
+  },
+  {
+   "id": "cg28",
+   "start": 23.465,
+   "end": 24.732,
+   "text": "FROM 256 PEOPLE..."
+  },
+  {
+   "id": "cg29",
+   "start": 24.712,
+   "end": 26.045,
+   "text": "TO THOUSANDS."
+  },
+  {
+   "id": "cg30",
+   "start": 26.025,
+   "end": 26.998,
+   "text": "THEY PRINTED THEIR"
+  },
+  {
+   "id": "cg31",
+   "start": 26.978,
+   "end": 27.549,
+   "text": "OWN STAMPS,"
+  },
+  {
+   "id": "cg32",
+   "start": 27.529,
+   "end": 28.251,
+   "text": "AND SOME EVEN"
+  },
+  {
+   "id": "cg33",
+   "start": 28.231,
+   "end": 28.953,
+   "text": "DREAMED OF AN"
+  },
+  {
+   "id": "cg34",
+   "start": 28.933,
+   "end": 30.155,
+   "text": "ESPERANTO STATE."
+  },
+  {
+   "id": "cg35",
+   "start": 30.135,
+   "end": 30.549,
+   "text": "THEN,"
+  },
+  {
+   "id": "cg36",
+   "start": 30.529,
+   "end": 31.18,
+   "text": "IN 1920..."
+  },
+  {
+   "id": "cg37",
+   "start": 31.16,
+   "end": 32.284,
+   "text": "IT WAS HANDED"
+  },
+  {
+   "id": "cg38",
+   "start": 32.264,
+   "end": 33.152,
+   "text": "TO BELGIUM."
+  },
+  {
+   "id": "cg39",
+   "start": 33.132,
+   "end": 33.546,
+   "text": "GONE."
+  },
+  {
+   "id": "cg40",
+   "start": 33.526,
+   "end": 34.677,
+   "text": "FOREVER."
+  },
+  {
+   "id": "cg41",
+   "start": 34.657,
+   "end": 35.296,
+   "text": "WOULD YOU HAVE"
+  },
+  {
+   "id": "cg42",
+   "start": 35.276,
+   "end": 36.062,
+   "text": "MOVED THERE?"
+  }
+ ],
+ "duration": 40.73
+}

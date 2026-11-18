@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: 'Inter Display'; font-weight: 900; src: url('assets/fonts/InterDisplay-Black.otf'); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0B1020; }
+      #bg-base { position:absolute; inset:0; z-index:0; background: radial-gradient(120% 80% at 50% 35%, #1a1f33 0%, #0B1020 60%, #05070d 100%); }
+      #bg-warm { position:absolute; inset:0; z-index:1; background: radial-gradient(90% 60% at 50% 40%, rgba(255,160,60,.18), rgba(0,0,0,0) 70%); }
+      #bg-night { position:absolute; inset:0; z-index:2; background: radial-gradient(100% 70% at 50% 40%, #0d2a5c 0%, #06122b 70%); opacity: 0; }
+      #vignette { position:absolute; inset:0; z-index: 50; pointer-events:none; background: radial-gradient(130% 95% at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,.65) 100%); }
+      #chip { position:absolute; left: 0; width: 1080px; top: 276px; text-align:center; z-index: 60; }
+      #chip span { display:inline-block; font-family:'JetBrains Mono',monospace; font-weight: 800; font-size: 28px; letter-spacing:.14em;
+                   color:#FFC83D; padding: 10px 22px; border: 3px solid rgba(255,200,61,.6); border-radius: 999px; background: rgba(8,10,18,.7); }
+      #hud { position:absolute; left: 0; width: 1080px; top: 222px; text-align:center; z-index: 60; }
+      #hud span { display:inline-block; font-family:'JetBrains Mono',monospace; font-weight: 800; font-size: 26px; letter-spacing:.12em; color:#43D9F5; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="40.73" data-width="1080" data-height="1920">
+      <div id="bg-base" class="clip" data-start="0" data-duration="40.73" data-track-index="0"></div>
+      <div id="bg-warm" class="clip" data-start="0" data-duration="40.73" data-track-index="5"></div>
+      <div id="bg-night" class="clip" data-start="0" data-duration="40.73" data-track-index="6"></div>
+      <div id="dream" data-composition-id="dream" data-composition-src="compositions/dream.html" data-start="0.0" data-duration="8.0667" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="fake" data-composition-id="fake" data-composition-src="compositions/fake.html" data-start="8.0667" data-duration="1.4333" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="real" data-composition-id="real" data-composition-src="compositions/real.html" data-start="9.5" data-duration="2.5" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="intro" data-composition-id="intro" data-composition-src="compositions/intro.html" data-start="12.0" data-duration="5.4667" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="crown" data-composition-id="crown" data-composition-src="compositions/crown.html" data-start="17.4667" data-duration="4.6666" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="people" data-composition-id="people" data-composition-src="compositions/people.html" data-start="22.1333" data-duration="3.8667" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="stamps" data-composition-id="stamps" data-composition-src="compositions/stamps.html" data-start="26.0" data-duration="4.1" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="gone" data-composition-id="gone" data-composition-src="compositions/gone.html" data-start="30.1" data-duration="4.5333" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="poll" data-composition-id="poll" data-composition-src="compositions/poll.html" data-start="34.6333" data-duration="2.0334" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="end" data-composition-id="end" data-composition-src="compositions/end.html" data-start="36.6667" data-duration="4.0633" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" data-duration="36.6667" data-track-index="2" data-track-kind="captions" data-width="1080" data-height="1920" style="z-index:30"></div>
+      <div id="chip" class="clip" data-start="0" data-duration="36.6667" data-track-index="3"><span>BORDER ODDITIES · EP. 2</span></div>
+      <div id="vignette" class="clip" data-start="0" data-duration="40.73" data-track-index="4" data-layout-ignore></div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.to("#bg-night", { opacity: 1, duration: 0.4 }, 30.1);
+      tl.to("#bg-warm", { opacity: 0, duration: 0.4 }, 30.1);
+      tl.to("#bg-night", { opacity: 0, duration: 0.4 }, 34.6333);
+      tl.to("#bg-warm", { opacity: 1, duration: 0.4 }, 34.6333);
+      tl.to("#bg-night", { opacity: 0.5, duration: 0.5 }, 36.6667);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

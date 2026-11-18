@@ -1,0 +1,46 @@
+<template>
+  <style>
+    @font-face { font-family: 'Noto Color Emoji'; src: url('assets/fonts/NotoColorEmoji.ttf'); }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .tag { position:absolute; padding: 12px 22px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 36px; letter-spacing: .1em; background: rgba(8,10,18,.85); white-space: nowrap; }
+    .stamp { position:absolute; padding: 16px 30px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 58px; background: rgba(8,10,18,.6); white-space: nowrap; }
+    .flag { font-family: 'Noto Color Emoji'; letter-spacing: 0; }
+    .big { position:absolute; left:0; width:1000px; text-align:center; font-weight:900; line-height:.95; color:#F4F1EA;
+           text-shadow: 0 8px 30px rgba(0,0,0,.6); }
+
+    #dr-cam { position:absolute; inset:0; transform-origin: 540px 640px; }
+    #dr-ttl { top: 350px; font-size: 84px; }
+    #dr-ttl span { color:#FFC83D; }
+    .it { position:absolute; left: 150px; width: 730px; height: 150px; border-radius: 28px; background: rgba(14,18,32,.92);
+          border: 5px solid rgba(255,255,255,.14); display:flex; align-items:center; gap: 26px; padding: 0 30px;
+          box-shadow: 0 20px 50px rgba(0,0,0,.5); transform-origin: 400px 75px; }
+    .it .ic { font-family:'Noto Color Emoji'; font-size: 84px; line-height: 1; }
+    .it .tx { font-weight: 900; font-size: 58px; color:#F4F1EA; flex: 1; }
+    .it .ok { font-family:'Noto Color Emoji'; font-size: 70px; }
+    #dr-i1 { top: 560px; } #dr-i2 { top: 730px; } #dr-i3 { top: 900px; border-color: #FFC83D; }
+  </style>
+  <div id="root" data-composition-id="dream" data-width="1080" data-height="1920">
+    <div id="dr-cam">
+      <div id="dr-i1" class="it"><span class="ic">🪖</span><span class="tx">NO ARMY DRAFT</span><span class="ok">✅</span></div>
+      <div id="dr-i2" class="it"><span class="ic">💸</span><span class="tx">ALMOST NO TAXES</span><span class="ok">✅</span></div>
+      <div id="dr-i3" class="it"><span class="ic">🎰</span><span class="tx">ITS OWN CASINO</span><span class="ok">✅</span></div>
+    </div>
+    <div id="dr-ttl" class="big">A COUNTRY<br><span>WITH…</span></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#dr-cam", { scale: 1.0 }, { scale: 1.06, duration: 8.0667, ease: "none" }, 0);
+      // fotograma 0 = miniatura: titular y primera tarjeta YA visibles, con golpe de escala
+      tl.fromTo("#dr-ttl", { scale: 1.12 }, { scale: 1, duration: 0.3, ease: "power3.out" }, 0);
+      tl.fromTo("#dr-i1", { scale: 1.2, rotation: -3 }, { scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2)" }, 0);
+      tl.fromTo("#dr-i2", { x: 700, rotation: 8, opacity: 0 }, { x: 0, rotation: 0, opacity: 1, duration: 0.28, ease: "back.out(1.7)" }, 4.100);
+      tl.fromTo("#dr-i3", { scale: 2.2, opacity: 0, rotation: -6 }, { scale: 1, opacity: 1, rotation: 0, duration: 0.22, ease: "power4.in" }, 6.695);
+      tl.to("#dr-cam", { x: 14, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, 6.915);
+      window.__timelines["dream"] = tl;
+    })();
+  </script>
+</template>

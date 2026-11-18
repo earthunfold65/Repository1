@@ -102,6 +102,8 @@ def cargar(dpath):
     d["salida"] = p(d.get("salida", "audio.wav"))
     if d.get("video"):
         d["video"] = p(d["video"])
+    if d.get("video_salida"):
+        d["video_salida"] = p(d["video_salida"])
     return d
 
 
@@ -182,9 +184,12 @@ def mezclar(d):
     dur = d["duracion"]
     ins, chains, mixlabels = [], [], []
 
-    def add_input(f):
-        ins.extend(["-i", f])
-        return len(ins) // 2 - 1
+    n_in = [0]
+
+    def add_input(f, loop=False):
+        ins.extend((["-stream_loop", "-1"] if loop else []) + ["-i", f])
+        n_in[0] += 1
+        return n_in[0] - 1
 
     voz_lbl = None
     if d.get("voz"):
@@ -201,9 +206,10 @@ def mezclar(d):
         mixlabels.append(f"[{voz_lbl}]")
     if d.get("musica"):
         m = d["musica"]
-        i = add_input(m["file"])
+        i = add_input(m["file"], loop=m.get("loop", False))
         fo = m.get("fade_out", 1.5)
-        c = (f"[{i}:a]aresample={SR},aformat=channel_layouts=stereo,atrim=start={m.get('offset', 0)},asetpts=PTS-STARTPTS,"
+        c = (f"[{i}:a]aresample={SR},aformat=channel_layouts=stereo,atrim=start={m.get('offset', 0)},asetpts=PTS-STARTPTS," +
+             (f"acompressor=threshold=-26dB:ratio=4:attack=300:release=2500:knee=6:makeup=4," if m.get("estable", True) else "") +
              f"volume={m.get('gain_db', -16)}dB,apad,atrim=0:{dur}")
         if m.get("rides"):
             pts = sorted(m["rides"])
@@ -217,9 +223,10 @@ def mezclar(d):
             c += f",afade=t=out:st={max(0, dur - fo)}:d={fo}"
         if voz_lbl == "vozmix":
             # ducking: la música baja ~duck_db cuando habla la voz
-            ratio = min(20, max(2, m["duck_db"] / 2))
+            # ducking SUAVE: ataque y liberación lentos para que la música no "respire" entre palabras
+            ratio = min(3.0, max(1.5, m["duck_db"] / 3))
             chains.append(c + "[mus]")
-            chains.append(f"[mus][vozkey]sidechaincompress=threshold=0.02:ratio={ratio}:attack=15:release=350:makeup=1[musd]")
+            chains.append(f"[mus][vozkey]sidechaincompress=threshold=0.05:ratio={ratio}:attack=250:release=1800:knee=6:makeup=1[musd]")
             mixlabels.append("[musd]")
         else:
             chains.append(c + "[musd]")
@@ -268,7 +275,7 @@ def mezclar(d):
         if not d.get("video"):
             break
         root, _ = os.path.splitext(d["video"])
-        vout = root + "_sonido.mp4"
+        vout = d.get("video_salida") or (root + "_sonido.mp4")
         run(["ffmpeg", "-v", "error", "-y", "-i", d["video"], "-i", d["salida"], "-map", "0:v:0", "-map", "1:a:0",
              "-c:v", "copy", "-c:a", "aac", "-b:a", "256k", "-ar", str(SR), "-shortest", "-movflags", "+faststart", vout])
         vm = medir(vout)

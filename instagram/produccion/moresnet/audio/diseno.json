@@ -1,0 +1,199 @@
+{
+ "duracion": 40.73,
+ "fps": 30,
+ "voz": {
+  "file": "vo.wav",
+  "gain_db": 0,
+  "t": 0
+ },
+ "musica": {
+  "file": "../../../sonido/libreria/musica/fs-446745_dilemma-2a-mystery-music-loop.mp3",
+  "gain_db": -9,
+  "duck_db": 5,
+  "loop": true,
+  "offset": 0.0,
+  "fade_in": 0.05,
+  "fade_out": 1.2,
+  "rides": [
+   [
+    30.05,
+    0
+   ],
+   [
+    30.35,
+    -9
+   ],
+   [
+    34.433299999999996,
+    -9
+   ],
+   [
+    34.933299999999996,
+    0
+   ]
+  ]
+ },
+ "sfx": [
+  {
+   "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
+   "t": 0.0333,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "entra NO ARMY (frame 0)"
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
+   "t": 4.2333,
+   "anchor": "attack",
+   "gain_db": -17,
+   "label": "entra NO TAXES",
+   "pitch": 2
+  },
+  {
+   "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
+   "t": 6.9,
+   "anchor": "attack",
+   "gain_db": -10,
+   "label": "golpe CASINO + sacudida"
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
+   "t": 8.6667,
+   "anchor": "attack",
+   "gain_db": -11,
+   "label": "sello FAKE?"
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
+   "t": 10.0333,
+   "anchor": "attack",
+   "gain_db": -11,
+   "label": "sello REAL"
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
+   "t": 10.9333,
+   "anchor": "peak",
+   "gain_db": -17,
+   "label": "el triángulo desaparece (pico)"
+  },
+  {
+   "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
+   "t": 12.9,
+   "anchor": "attack",
+   "gain_db": -10,
+   "label": "título NEUTRAL MORESNET"
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 16.7667,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "chip 1816"
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
+   "t": 18.0667,
+   "anchor": "peak",
+   "gain_db": -13,
+   "label": "entran las coronas (pico)"
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
+   "t": 19.8667,
+   "anchor": "attack",
+   "gain_db": -17,
+   "label": "ficha Zn",
+   "pitch": 2
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
+   "t": 21.3667,
+   "anchor": "attack",
+   "gain_db": -11,
+   "label": "sello SHARED IT"
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 22.2,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "primeras personas"
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-539172_melee-combat-whoosh.mp3",
+   "t": 24.5333,
+   "anchor": "peak",
+   "gain_db": -15,
+   "label": "llegan miles (pico)"
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 25.4,
+   "anchor": "attack",
+   "gain_db": -14,
+   "label": "contador 3,000+",
+   "pitch": 4
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
+   "t": 27.0667,
+   "anchor": "attack",
+   "gain_db": -11,
+   "label": "sello postal cae"
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 28.9333,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "Saluton!",
+   "pitch": 6
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
+   "t": 30.8,
+   "anchor": "attack",
+   "gain_db": -17,
+   "label": "1920"
+  },
+  {
+   "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
+   "t": 33.2,
+   "anchor": "attack",
+   "gain_db": -10,
+   "label": "GONE + sacudida"
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 34.9333,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "YES",
+   "pitch": 2
+  },
+  {
+   "file": "../../../sonido/libreria/click/fs-488534_ui-click.mp3",
+   "t": 35.0667,
+   "anchor": "attack",
+   "gain_db": -15,
+   "label": "NO",
+   "pitch": -2
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
+   "t": 36.8,
+   "anchor": "peak",
+   "gain_db": -17,
+   "label": "entra la tarjeta final"
+  }
+ ],
+ "master": {
+  "lufs": -14,
+  "tp": -1.5,
+  "tp_aac": -1.0
+ },
+ "salida": "out/audio.wav",
+ "video": "../out/moresnet_silent.mp4",
+ "video_salida": "../out/moresnet_CON_MUSICA.mp4"
+}
