@@ -24,3 +24,7 @@
 - Solo se entrega con **VEREDICTO: ENTREGAR**. Efecto tarde/adelantado → moverlo; inaudible (< +3 dB) → subirlo, cambiarlo por uno que corte o quitarlo; "needs work" → arreglar lo que diga "FIX FIRST". Abrir y mirar `out/oido/sheet.png`.
 - Skills instaladas en el proyecto: `earshot`, `real-sfx` (con librería `instagram/sonido/libreria` + uisfx CC0), `real-sound`.
 - Sonidos buenos medidos: pops `pop/earshot_ui_pop_*.wav`, capa grave `sub/earshot_cut_hit_punch.wav` bajo golpes grandes, clic `click/uisfx_soft_select.mp3` (anclar por pico). Evitar `fs-488534_ui-click` (earshot: suena a tecla de teclado).
+
+## Skills y playbook (leer antes de crear)
+- Antes de idear/guionizar/editar un video: leer `instagram/playbook_viralidad.md` y `.agents/product-marketing.md`.
+- Skills instaladas en `.claude/skills/` (find-skills de Vercel + marketing de coreyhaines31 + Remotion oficial + diseño de Anthropic + Vercel guidelines). Instalar más con `npx -y skills add <owner/repo> --skill <nombre> -a claude-code -y` (skills.sh está bloqueado; GitHub sí funciona) y **revisar su contenido antes de usarlas**.
