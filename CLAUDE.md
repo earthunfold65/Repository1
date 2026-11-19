@@ -30,3 +30,7 @@
 - Skills instaladas en `.claude/skills/` (find-skills de Vercel + marketing de coreyhaines31 + Remotion oficial + diseño de Anthropic + Vercel guidelines). Instalar más con `npx -y skills add <owner/repo> --skill <nombre> -a claude-code -y` (skills.sh está bloqueado; GitHub sí funciona) y **revisar su contenido antes de usarlas**.
 - Voz del canal: `instagram/voice.md` + skill `/eu-voice`. Ningún gancho < 50 en `hookscore.py`; ningún caption sin `caption.py` READY y `detect.py` ≥ 70.
 - Remocn (932 componentes Remotion, MIT): skills `remocn`, `remocn-video`, `remocn-add`, `remocn-setup`, `remocn-changelog` (renombradas para no pisar `video` de marketing). Ojo al instalar skills: `npx skills add` sobrescribe carpetas con el mismo nombre.
+
+## Predictor de retención (obligatorio antes de entregar)
+- `~/.venvs/chatter/bin/python -I instagram/scripts/predictor.py <video.mp4> --words … --cues …` → mirar `curva.png` y arreglar las zonas de peligro y los segundos congelados. Comparar con EP1/EP2 (`instagram/predictor/README.md`).
+- Cada video publicado: añadir sus métricas de 48 h a `instagram/predictor/metricas.csv` y correr `--calibrar`.
