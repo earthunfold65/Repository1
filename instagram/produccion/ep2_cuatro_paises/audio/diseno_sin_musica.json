@@ -1,0 +1,249 @@
+{
+ "duracion": 42.74,
+ "fps": 30,
+ "voz": {
+  "file": "vo.wav",
+  "gain_db": 0,
+  "t": 0,
+  "eq": [
+   [
+    "peak",
+    2500,
+    -2.5,
+    1.0
+   ]
+  ]
+ },
+ "sfx": [
+  {
+   "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
+   "t": 0.0333,
+   "anchor": "attack",
+   "gain_db": -13,
+   "label": "gancho frame 0"
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
+   "t": 2.6,
+   "anchor": "peak",
+   "gain_db": -11,
+   "label": "3 → 4 cuñas (pico)"
+  },
+  {
+   "file": "../../../sonido/libreria/pop/earshot_ui_pop_wide.wav",
+   "t": 2.9,
+   "anchor": "attack",
+   "gain_db": -8,
+   "label": "hueco del 4.º país"
+  },
+  {
+   "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
+   "t": 4.3333,
+   "anchor": "attack",
+   "gain_db": -8,
+   "label": "🤯 insane"
+  },
+  {
+   "file": "../../../sonido/libreria/sub/earshot_cut_hit_punch.wav",
+   "t": 4.3333,
+   "anchor": "attack",
+   "gain_db": -7,
+   "label": "🤯 insane · capa grave"
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-539172_melee-combat-whoosh.mp3",
+   "t": 5.6,
+   "anchor": "peak",
+   "gain_db": -13,
+   "label": "entra el laberinto (pico)"
+  },
+  {
+   "file": "../../../sonido/libreria/pop/earshot_ui_pop_wide.wav",
+   "t": 9.1,
+   "anchor": "attack",
+   "gain_db": -8,
+   "label": "etiqueta laberinto",
+   "pitch": 2
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
+   "t": 11.8333,
+   "anchor": "attack",
+   "gain_db": -10,
+   "label": "título NEUTRAL MORESNET"
+  },
+  {
+   "file": "../../../sonido/libreria/pop/earshot_ui_pop_wide.wav",
+   "t": 14.2667,
+   "anchor": "attack",
+   "gain_db": -8,
+   "label": "ficha Zn"
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
+   "t": 15.1,
+   "anchor": "peak",
+   "gain_db": -11,
+   "label": "entran las coronas (pico)"
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
+   "t": 17.2333,
+   "anchor": "attack",
+   "gain_db": -10,
+   "label": "sello SHARED IT"
+  },
+  {
+   "file": "../../../sonido/libreria/sub/earshot_cut_hit_punch.wav",
+   "t": 17.2667,
+   "anchor": "attack",
+   "gain_db": -7,
+   "label": "sello SHARED IT · capa grave"
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
+   "t": 18.3333,
+   "anchor": "attack",
+   "gain_db": -14,
+   "label": "cae el pasaporte",
+   "pitch": 2
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
+   "t": 19.7333,
+   "anchor": "attack",
+   "gain_db": -10,
+   "label": "sello NONE"
+  },
+  {
+   "file": "../../../sonido/libreria/pop/earshot_ui_pop_wide.wav",
+   "t": 20.8333,
+   "anchor": "attack",
+   "gain_db": -8,
+   "label": "sin ejército",
+   "pitch": -2
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
+   "t": 22.9,
+   "anchor": "attack",
+   "gain_db": -10,
+   "label": "sello GAMBLING BANNED"
+  },
+  {
+   "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
+   "t": 24.4,
+   "anchor": "attack",
+   "gain_db": -8,
+   "label": "OPEN! casino"
+  },
+  {
+   "file": "../../../sonido/libreria/sub/earshot_cut_hit_punch.wav",
+   "t": 24.4,
+   "anchor": "attack",
+   "gain_db": -7,
+   "label": "OPEN! casino · capa grave"
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
+   "t": 25.1667,
+   "anchor": "peak",
+   "gain_db": -10,
+   "label": "reloj gira (pico)"
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
+   "t": 26.3667,
+   "anchor": "attack",
+   "gain_db": -14,
+   "label": "cae la bandera",
+   "pitch": 3
+  },
+  {
+   "file": "../../../sonido/libreria/pop/earshot_ui_pop_wide.wav",
+   "t": 29.0333,
+   "anchor": "attack",
+   "gain_db": -8,
+   "label": "corona",
+   "pitch": 4
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-362624_stamp.mp3",
+   "t": 29.6,
+   "anchor": "attack",
+   "gain_db": -10,
+   "label": "sello WORLD CAPITAL"
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-539172_melee-combat-whoosh.mp3",
+   "t": 31.1333,
+   "anchor": "peak",
+   "gain_db": -13,
+   "label": "entra la pregunta (pico)"
+  },
+  {
+   "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
+   "t": 32.7333,
+   "anchor": "attack",
+   "gain_db": -8,
+   "label": "WORLD WAR I"
+  },
+  {
+   "file": "../../../sonido/libreria/sub/earshot_cut_hit_punch.wav",
+   "t": 32.7333,
+   "anchor": "attack",
+   "gain_db": -7,
+   "label": "WORLD WAR I · capa grave"
+  },
+  {
+   "file": "../../../sonido/libreria/stamp/fs-347325_thick-stamp-nosub-wav.mp3",
+   "t": 33.1667,
+   "anchor": "attack",
+   "gain_db": -14,
+   "label": "1920"
+  },
+  {
+   "file": "../../../sonido/libreria/sub/earshot_cut_hit_punch.wav",
+   "t": 33.2333,
+   "anchor": "attack",
+   "gain_db": -7,
+   "label": "1920 · capa grave"
+  },
+  {
+   "file": "../../../sonido/libreria/hit/fs-377303_deep-cinematic-impact.mp3",
+   "t": 35.6667,
+   "anchor": "attack",
+   "gain_db": -8,
+   "label": "GONE + sacudida"
+  },
+  {
+   "file": "../../../sonido/libreria/sub/earshot_cut_hit_punch.wav",
+   "t": 35.6667,
+   "anchor": "attack",
+   "gain_db": -7,
+   "label": "GONE + sacudida · capa grave"
+  },
+  {
+   "file": "../../../sonido/libreria/pop/earshot_ui_pop_wide.wav",
+   "t": 37.2,
+   "anchor": "attack",
+   "gain_db": -8,
+   "label": "botones 1–5"
+  },
+  {
+   "file": "../../../sonido/libreria/whoosh/fs-60007_swipe-whoosh.mp3",
+   "t": 39.5,
+   "anchor": "peak",
+   "gain_db": -10,
+   "label": "entra la tarjeta final"
+  }
+ ],
+ "master": {
+  "lufs": -14,
+  "tp": -1.5,
+  "tp_aac": -1.0
+ },
+ "salida": "out/audio_sin_musica.wav",
+ "video": "../out/ep2_silent.mp4",
+ "video_salida": "../out/EP2_SIN_MUSICA.mp4"
+}

@@ -1,0 +1,521 @@
+{
+ "scenes": {
+  "hook": [
+   0.0,
+   5.4667
+  ],
+  "maze": [
+   5.4667,
+   6.1
+  ],
+  "crown": [
+   11.5667,
+   6.5666
+  ],
+  "nonat": [
+   18.1333,
+   3.3
+  ],
+  "casino": [
+   21.4333,
+   4.6334
+  ],
+  "esp": [
+   26.0667,
+   4.9333
+  ],
+  "what": [
+   31.0,
+   1.4667
+  ],
+  "gone": [
+   32.4667,
+   4.4333
+  ],
+  "poll": [
+   36.9,
+   2.5667
+  ],
+  "end": [
+   39.4667,
+   3.2733
+  ]
+ },
+ "cues": [
+  {
+   "t": 11.827,
+   "kind": "stamp",
+   "label": "título NEUTRAL MORESNET"
+  },
+  {
+   "t": 15.092,
+   "kind": "whoosh",
+   "label": "entran las coronas (pico)"
+  },
+  {
+   "t": 14.251,
+   "kind": "pop",
+   "label": "ficha Zn"
+  },
+  {
+   "t": 17.232,
+   "kind": "stamp",
+   "label": "sello SHARED IT"
+  },
+  {
+   "t": 32.697,
+   "kind": "hit",
+   "label": "WORLD WAR I"
+  },
+  {
+   "t": 33.171,
+   "kind": "thunk",
+   "label": "1920"
+  },
+  {
+   "t": 35.633,
+   "kind": "hit",
+   "label": "GONE + sacudida"
+  },
+  {
+   "t": 39.487,
+   "kind": "whoosh_soft",
+   "label": "entra la tarjeta final"
+  },
+  {
+   "t": 0.03,
+   "kind": "hit_soft",
+   "label": "gancho frame 0"
+  },
+  {
+   "t": 2.615,
+   "kind": "whoosh",
+   "label": "3 → 4 cuñas (pico)"
+  },
+  {
+   "t": 2.905,
+   "kind": "pop",
+   "label": "hueco del 4.º país"
+  },
+  {
+   "t": 4.285,
+   "kind": "hit",
+   "label": "🤯 insane"
+  },
+  {
+   "t": 5.587,
+   "kind": "whoosh2",
+   "label": "entra el laberinto (pico)"
+  },
+  {
+   "t": 9.084,
+   "kind": "pop",
+   "pitch": 2,
+   "label": "etiqueta laberinto"
+  },
+  {
+   "t": 18.333,
+   "kind": "thunk",
+   "pitch": 2,
+   "label": "cae el pasaporte"
+  },
+  {
+   "t": 19.726,
+   "kind": "stamp",
+   "label": "sello NONE"
+  },
+  {
+   "t": 20.836,
+   "kind": "pop",
+   "pitch": -2,
+   "label": "sin ejército"
+  },
+  {
+   "t": 22.901,
+   "kind": "stamp",
+   "label": "sello GAMBLING BANNED"
+  },
+  {
+   "t": 24.341,
+   "kind": "hit",
+   "label": "OPEN! casino"
+  },
+  {
+   "t": 25.151,
+   "kind": "whoosh_soft",
+   "label": "reloj gira (pico)"
+  },
+  {
+   "t": 26.367,
+   "kind": "thunk",
+   "pitch": 3,
+   "label": "cae la bandera"
+  },
+  {
+   "t": 29.036,
+   "kind": "pop",
+   "pitch": 4,
+   "label": "corona"
+  },
+  {
+   "t": 29.598,
+   "kind": "stamp",
+   "label": "sello WORLD CAPITAL"
+  },
+  {
+   "t": 31.15,
+   "kind": "whoosh2",
+   "label": "entra la pregunta (pico)"
+  },
+  {
+   "t": 37.2,
+   "kind": "pop",
+   "label": "botones 1–5"
+  },
+  {
+   "t": 17.232,
+   "kind": "sub",
+   "label": "sello SHARED IT · capa grave"
+  },
+  {
+   "t": 32.697,
+   "kind": "sub",
+   "label": "WORLD WAR I · capa grave"
+  },
+  {
+   "t": 33.171,
+   "kind": "sub",
+   "label": "1920 · capa grave"
+  },
+  {
+   "t": 35.633,
+   "kind": "sub",
+   "label": "GONE + sacudida · capa grave"
+  },
+  {
+   "t": 4.285,
+   "kind": "sub",
+   "label": "🤯 insane · capa grave"
+  },
+  {
+   "t": 24.341,
+   "kind": "sub",
+   "label": "OPEN! casino · capa grave"
+  }
+ ],
+ "captions": [
+  {
+   "id": "cg0",
+   "start": 0.1,
+   "end": 0.81,
+   "text": "THIS HILL IS"
+  },
+  {
+   "id": "cg1",
+   "start": 0.79,
+   "end": 1.55,
+   "text": "IN THREE COUNTRIES"
+  },
+  {
+   "id": "cg2",
+   "start": 1.53,
+   "end": 2.295,
+   "text": "AT ONCE."
+  },
+  {
+   "id": "cg3",
+   "start": 2.275,
+   "end": 2.595,
+   "text": "BUT IT USED"
+  },
+  {
+   "id": "cg4",
+   "start": 2.575,
+   "end": 3.495,
+   "text": "TO BE FOUR..."
+  },
+  {
+   "id": "cg5",
+   "start": 3.475,
+   "end": 3.875,
+   "text": "AND THE FOURTH"
+  },
+  {
+   "id": "cg6",
+   "start": 3.855,
+   "end": 5.522,
+   "text": "ONE WAS INSANE."
+  },
+  {
+   "id": "cg7",
+   "start": 5.502,
+   "end": 6.262,
+   "text": "FACT ONE:"
+  },
+  {
+   "id": "cg8",
+   "start": 6.242,
+   "end": 6.562,
+   "text": "YOU CAN GET"
+  },
+  {
+   "id": "cg9",
+   "start": 6.542,
+   "end": 7.242,
+   "text": "LOST IN THREE"
+  },
+  {
+   "id": "cg10",
+   "start": 7.222,
+   "end": 8.334,
+   "text": "COUNTRIES AT ONCE."
+  },
+  {
+   "id": "cg11",
+   "start": 8.314,
+   "end": 9.374,
+   "text": "EUROPE'S BIGGEST OUTDOOR"
+  },
+  {
+   "id": "cg12",
+   "start": 9.354,
+   "end": 10.194,
+   "text": "HEDGE MAZE SITS"
+  },
+  {
+   "id": "cg13",
+   "start": 10.174,
+   "end": 11.034,
+   "text": "RIGHT ON THE"
+  },
+  {
+   "id": "cg14",
+   "start": 11.014,
+   "end": 11.611,
+   "text": "BORDER."
+  },
+  {
+   "id": "cg15",
+   "start": 11.591,
+   "end": 12.371,
+   "text": "FACT TWO:"
+  },
+  {
+   "id": "cg16",
+   "start": 12.351,
+   "end": 13.011,
+   "text": "THE FOURTH COUNTRY"
+  },
+  {
+   "id": "cg17",
+   "start": 12.991,
+   "end": 13.391,
+   "text": "EXISTED..."
+  },
+  {
+   "id": "cg18",
+   "start": 13.371,
+   "end": 14.131,
+   "text": "BECAUSE OF A"
+  },
+  {
+   "id": "cg19",
+   "start": 14.111,
+   "end": 14.912,
+   "text": "ZINC MINE."
+  },
+  {
+   "id": "cg20",
+   "start": 14.892,
+   "end": 15.652,
+   "text": "TWO KINGDOMS COULDN'T"
+  },
+  {
+   "id": "cg21",
+   "start": 15.632,
+   "end": 16.172,
+   "text": "AGREE WHO OWNED"
+  },
+  {
+   "id": "cg22",
+   "start": 16.152,
+   "end": 16.432,
+   "text": "IT."
+  },
+  {
+   "id": "cg23",
+   "start": 16.412,
+   "end": 17.052,
+   "text": "SO THEY JUST..."
+  },
+  {
+   "id": "cg24",
+   "start": 17.032,
+   "end": 18.186,
+   "text": "SHARED IT."
+  },
+  {
+   "id": "cg25",
+   "start": 18.166,
+   "end": 18.966,
+   "text": "FACT THREE:"
+  },
+  {
+   "id": "cg26",
+   "start": 18.946,
+   "end": 19.486,
+   "text": "ITS PEOPLE HAD"
+  },
+  {
+   "id": "cg27",
+   "start": 19.466,
+   "end": 20.086,
+   "text": "NO NATIONALITY."
+  },
+  {
+   "id": "cg28",
+   "start": 20.066,
+   "end": 21.461,
+   "text": "AND NO ARMY."
+  },
+  {
+   "id": "cg29",
+   "start": 21.441,
+   "end": 22.381,
+   "text": "FACT FOUR:"
+  },
+  {
+   "id": "cg30",
+   "start": 22.361,
+   "end": 23.181,
+   "text": "WHEN BELGIUM BANNED"
+  },
+  {
+   "id": "cg31",
+   "start": 23.161,
+   "end": 24.021,
+   "text": "GAMBLING..."
+  },
+  {
+   "id": "cg32",
+   "start": 24.001,
+   "end": 24.421,
+   "text": "IT OPENED A"
+  },
+  {
+   "id": "cg33",
+   "start": 24.401,
+   "end": 24.741,
+   "text": "CASINO."
+  },
+  {
+   "id": "cg34",
+   "start": 24.721,
+   "end": 26.113,
+   "text": "ALMOST OVERNIGHT."
+  },
+  {
+   "id": "cg35",
+   "start": 26.093,
+   "end": 26.66,
+   "text": "FACT FIVE:"
+  },
+  {
+   "id": "cg36",
+   "start": 26.64,
+   "end": 27.808,
+   "text": "IN 1908,"
+  },
+  {
+   "id": "cg37",
+   "start": 27.788,
+   "end": 28.519,
+   "text": "IT WAS NAMED"
+  },
+  {
+   "id": "cg38",
+   "start": 28.499,
+   "end": 29.503,
+   "text": "THE WORLD CAPITAL"
+  },
+  {
+   "id": "cg39",
+   "start": 29.483,
+   "end": 30.494,
+   "text": "OF ESPERANTO."
+  },
+  {
+   "id": "cg40",
+   "start": 30.474,
+   "end": 31.294,
+   "text": "SO WHAT HAPPENED"
+  },
+  {
+   "id": "cg41",
+   "start": 31.274,
+   "end": 31.91,
+   "text": "TO IT?"
+  },
+  {
+   "id": "cg42",
+   "start": 31.89,
+   "end": 32.737,
+   "text": "WORLD WAR ONE."
+  },
+  {
+   "id": "cg43",
+   "start": 32.717,
+   "end": 34.096,
+   "text": "AND IN 1920..."
+  },
+  {
+   "id": "cg44",
+   "start": 34.076,
+   "end": 34.923,
+   "text": "IT WAS HANDED"
+  },
+  {
+   "id": "cg45",
+   "start": 34.903,
+   "end": 35.573,
+   "text": "TO BELGIUM."
+  },
+  {
+   "id": "cg46",
+   "start": 35.553,
+   "end": 36.183,
+   "text": "GONE."
+  },
+  {
+   "id": "cg47",
+   "start": 36.163,
+   "end": 36.943,
+   "text": "WHICH FACT GOT"
+  },
+  {
+   "id": "cg48",
+   "start": 36.923,
+   "end": 37.503,
+   "text": "YOU?"
+  },
+  {
+   "id": "cg49",
+   "start": 37.483,
+   "end": 38.347,
+   "text": "TELL ME BELOW."
+  },
+  {
+   "id": "cg50",
+   "start": 38.327,
+   "end": 39.147,
+   "text": "NEXT:"
+  },
+  {
+   "id": "cg51",
+   "start": 39.127,
+   "end": 39.447,
+   "text": "THE ISLAND"
+  }
+ ],
+ "duration": 42.74
+}

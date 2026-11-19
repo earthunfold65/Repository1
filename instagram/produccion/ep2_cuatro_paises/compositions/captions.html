@@ -1,0 +1,294 @@
+<template>
+  <style>
+    @font-face { font-family: 'Noto Color Emoji'; src: url('assets/fonts/NotoColorEmoji.ttf'); }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .tag { position:absolute; padding: 12px 22px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 36px; letter-spacing: .1em; background: rgba(8,10,18,.85); white-space: nowrap; }
+    .stamp { position:absolute; padding: 16px 30px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 58px; background: rgba(8,10,18,.6); white-space: nowrap; }
+    .flag { font-family: 'Noto Color Emoji'; letter-spacing: 0; }
+    .big { position:absolute; left:0; width:1000px; text-align:center; font-weight:900; line-height:.95; color:#F4F1EA;
+           text-shadow: 0 8px 30px rgba(0,0,0,.6); }
+
+    .cg { position:absolute; left:0; top: 1070px; width: 1000px; text-align:center; font-family:'Inter Display'; font-weight: 900;
+          line-height: 1.05; overflow: visible; visibility: hidden; transform-origin: 500px 60px; }
+    .cg .in { -webkit-text-stroke: 8px rgba(5,6,12,.95); paint-order: stroke fill; text-shadow: 0 6px 18px rgba(0,0,0,.6); }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1080" data-height="1920">
+    <div id="cg0" class="cg"><span class="in"><span style="color:#F4F1EA">THIS</span> <span style="color:#F4F1EA">HILL</span> <span style="color:#F4F1EA">IS</span></span></div>
+    <div id="cg1" class="cg"><span class="in"><span style="color:#F4F1EA">IN</span> <span style="color:#FFC83D">THREE</span> <span style="color:#F4F1EA">COUNTRIES</span></span></div>
+    <div id="cg2" class="cg"><span class="in"><span style="color:#F4F1EA">AT</span> <span style="color:#F4F1EA">ONCE.</span></span></div>
+    <div id="cg3" class="cg"><span class="in"><span style="color:#F4F1EA">BUT</span> <span style="color:#F4F1EA">IT</span> <span style="color:#F4F1EA">USED</span></span></div>
+    <div id="cg4" class="cg"><span class="in"><span style="color:#F4F1EA">TO</span> <span style="color:#F4F1EA">BE</span> <span style="color:#FFC83D">FOUR...</span></span></div>
+    <div id="cg5" class="cg"><span class="in"><span style="color:#F4F1EA">AND</span> <span style="color:#F4F1EA">THE</span> <span style="color:#F4F1EA">FOURTH</span></span></div>
+    <div id="cg6" class="cg"><span class="in"><span style="color:#F4F1EA">ONE</span> <span style="color:#F4F1EA">WAS</span> <span style="color:#FFC83D">INSANE.</span></span></div>
+    <div id="cg7" class="cg"><span class="in"><span style="color:#FFC83D">FACT</span> <span style="color:#F4F1EA">ONE</span></span></div>
+    <div id="cg8" class="cg"><span class="in"><span style="color:#F4F1EA">YOU</span> <span style="color:#F4F1EA">CAN</span> <span style="color:#F4F1EA">GET</span></span></div>
+    <div id="cg9" class="cg"><span class="in"><span style="color:#FFC83D">LOST</span> <span style="color:#F4F1EA">IN</span> <span style="color:#FFC83D">THREE</span></span></div>
+    <div id="cg10" class="cg"><span class="in"><span style="color:#F4F1EA">COUNTRIES</span> <span style="color:#F4F1EA">AT</span> <span style="color:#F4F1EA">ONCE.</span></span></div>
+    <div id="cg11" class="cg"><span class="in"><span style="color:#F4F1EA">EUROPE'S</span> <span style="color:#F4F1EA">BIGGEST</span> <span style="color:#F4F1EA">OUTDOOR</span></span></div>
+    <div id="cg12" class="cg"><span class="in"><span style="color:#F4F1EA">HEDGE</span> <span style="color:#FFC83D">MAZE</span> <span style="color:#F4F1EA">SITS</span></span></div>
+    <div id="cg13" class="cg"><span class="in"><span style="color:#F4F1EA">RIGHT</span> <span style="color:#F4F1EA">ON</span> <span style="color:#F4F1EA">THE</span></span></div>
+    <div id="cg14" class="cg"><span class="in"><span style="color:#FFC83D">BORDER.</span></span></div>
+    <div id="cg15" class="cg"><span class="in"><span style="color:#FFC83D">FACT</span> <span style="color:#F4F1EA">TWO</span></span></div>
+    <div id="cg16" class="cg"><span class="in"><span style="color:#F4F1EA">THE</span> <span style="color:#F4F1EA">FOURTH</span> <span style="color:#F4F1EA">COUNTRY</span></span></div>
+    <div id="cg17" class="cg"><span class="in"><span style="color:#F4F1EA">EXISTED...</span></span></div>
+    <div id="cg18" class="cg"><span class="in"><span style="color:#F4F1EA">BECAUSE</span> <span style="color:#F4F1EA">OF</span> <span style="color:#F4F1EA">A</span></span></div>
+    <div id="cg19" class="cg"><span class="in"><span style="color:#FFC83D">ZINC</span> <span style="color:#F4F1EA">MINE.</span></span></div>
+    <div id="cg20" class="cg"><span class="in"><span style="color:#F4F1EA">TWO</span> <span style="color:#FFC83D">KINGDOMS</span> <span style="color:#F4F1EA">COULDN'T</span></span></div>
+    <div id="cg21" class="cg"><span class="in"><span style="color:#F4F1EA">AGREE</span> <span style="color:#F4F1EA">WHO</span> <span style="color:#F4F1EA">OWNED</span></span></div>
+    <div id="cg22" class="cg"><span class="in"><span style="color:#F4F1EA">IT.</span></span></div>
+    <div id="cg23" class="cg"><span class="in"><span style="color:#F4F1EA">SO</span> <span style="color:#F4F1EA">THEY</span> <span style="color:#F4F1EA">JUST...</span></span></div>
+    <div id="cg24" class="cg"><span class="in"><span style="color:#FFC83D">SHARED</span> <span style="color:#F4F1EA">IT.</span></span></div>
+    <div id="cg25" class="cg"><span class="in"><span style="color:#FFC83D">FACT</span> <span style="color:#FFC83D">THREE</span></span></div>
+    <div id="cg26" class="cg"><span class="in"><span style="color:#F4F1EA">ITS</span> <span style="color:#F4F1EA">PEOPLE</span> <span style="color:#F4F1EA">HAD</span></span></div>
+    <div id="cg27" class="cg"><span class="in"><span style="color:#F4F1EA">NO</span> <span style="color:#FFC83D">NATIONALITY.</span></span></div>
+    <div id="cg28" class="cg"><span class="in"><span style="color:#F4F1EA">AND</span> <span style="color:#F4F1EA">NO</span> <span style="color:#FFC83D">ARMY.</span></span></div>
+    <div id="cg29" class="cg"><span class="in"><span style="color:#FFC83D">FACT</span> <span style="color:#FFC83D">FOUR</span></span></div>
+    <div id="cg30" class="cg"><span class="in"><span style="color:#F4F1EA">WHEN</span> <span style="color:#FFC83D">BELGIUM</span> <span style="color:#FFC83D">BANNED</span></span></div>
+    <div id="cg31" class="cg"><span class="in"><span style="color:#F4F1EA">GAMBLING...</span></span></div>
+    <div id="cg32" class="cg"><span class="in"><span style="color:#F4F1EA">IT</span> <span style="color:#F4F1EA">OPENED</span> <span style="color:#F4F1EA">A</span></span></div>
+    <div id="cg33" class="cg"><span class="in"><span style="color:#FFC83D">CASINO.</span></span></div>
+    <div id="cg34" class="cg"><span class="in"><span style="color:#F4F1EA">ALMOST</span> <span style="color:#FFC83D">OVERNIGHT.</span></span></div>
+    <div id="cg35" class="cg"><span class="in"><span style="color:#FFC83D">FACT</span> <span style="color:#F4F1EA">FIVE</span></span></div>
+    <div id="cg36" class="cg"><span class="in"><span style="color:#F4F1EA">IN</span> <span style="color:#FFC83D">1908</span></span></div>
+    <div id="cg37" class="cg"><span class="in"><span style="color:#F4F1EA">IT</span> <span style="color:#F4F1EA">WAS</span> <span style="color:#F4F1EA">NAMED</span></span></div>
+    <div id="cg38" class="cg"><span class="in"><span style="color:#F4F1EA">THE</span> <span style="color:#F4F1EA">WORLD</span> <span style="color:#FFC83D">CAPITAL</span></span></div>
+    <div id="cg39" class="cg"><span class="in"><span style="color:#F4F1EA">OF</span> <span style="color:#FFC83D">ESPERANTO.</span></span></div>
+    <div id="cg40" class="cg"><span class="in"><span style="color:#F4F1EA">SO</span> <span style="color:#F4F1EA">WHAT</span> <span style="color:#FFC83D">HAPPENED</span></span></div>
+    <div id="cg41" class="cg"><span class="in"><span style="color:#F4F1EA">TO</span> <span style="color:#F4F1EA">IT?</span></span></div>
+    <div id="cg42" class="cg"><span class="in"><span style="color:#F4F1EA">WORLD</span> <span style="color:#F4F1EA">WAR</span> <span style="color:#F4F1EA">ONE.</span></span></div>
+    <div id="cg43" class="cg"><span class="in"><span style="color:#F4F1EA">AND</span> <span style="color:#F4F1EA">IN</span> <span style="color:#FFC83D">1920...</span></span></div>
+    <div id="cg44" class="cg"><span class="in"><span style="color:#F4F1EA">IT</span> <span style="color:#F4F1EA">WAS</span> <span style="color:#F4F1EA">HANDED</span></span></div>
+    <div id="cg45" class="cg"><span class="in"><span style="color:#F4F1EA">TO</span> <span style="color:#FFC83D">BELGIUM.</span></span></div>
+    <div id="cg46" class="cg"><span class="in"><span style="color:#FFC83D">GONE.</span></span></div>
+    <div id="cg47" class="cg"><span class="in"><span style="color:#F4F1EA">WHICH</span> <span style="color:#FFC83D">FACT</span> <span style="color:#F4F1EA">GOT</span></span></div>
+    <div id="cg48" class="cg"><span class="in"><span style="color:#F4F1EA">YOU?</span></span></div>
+    <div id="cg49" class="cg"><span class="in"><span style="color:#F4F1EA">TELL</span> <span style="color:#F4F1EA">ME</span> <span style="color:#F4F1EA">BELOW.</span></span></div>
+    <div id="cg50" class="cg"><span class="in"><span style="color:#F4F1EA">NEXT</span></span></div>
+    <div id="cg51" class="cg"><span class="in"><span style="color:#F4F1EA">THE</span> <span style="color:#FFC83D">ISLAND</span></span></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const fit = (sel, text) => {
+        let fs = 96;
+        const r = window.__hyperframes && window.__hyperframes.fitTextFontSize
+          ? window.__hyperframes.fitTextFontSize(text, { fontFamily: "Inter Display", fontWeight: 900, maxWidth: 760, fontSize: 96, minFontSize: 54 })
+          : null;
+        if (r && r.fontSize) fs = Math.min(96, r.fontSize);
+        document.querySelector(sel).style.fontSize = fs + "px";
+      };
+      fit("#cg0", "THIS HILL IS");
+      tl.fromTo("#cg0", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 0.1);
+      tl.to("#cg0", { opacity: 0, duration: 0.07, ease: "power2.in" }, 0.74);
+      tl.set("#cg0", { visibility: "hidden" }, 0.81);
+      fit("#cg1", "IN THREE COUNTRIES");
+      tl.fromTo("#cg1", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 0.79);
+      tl.to("#cg1", { opacity: 0, duration: 0.07, ease: "power2.in" }, 1.48);
+      tl.set("#cg1", { visibility: "hidden" }, 1.55);
+      fit("#cg2", "AT ONCE.");
+      tl.fromTo("#cg2", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 1.53);
+      tl.to("#cg2", { opacity: 0, duration: 0.07, ease: "power2.in" }, 2.225);
+      tl.set("#cg2", { visibility: "hidden" }, 2.295);
+      fit("#cg3", "BUT IT USED");
+      tl.fromTo("#cg3", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 2.275);
+      tl.to("#cg3", { opacity: 0, duration: 0.07, ease: "power2.in" }, 2.525);
+      tl.set("#cg3", { visibility: "hidden" }, 2.595);
+      fit("#cg4", "TO BE FOUR...");
+      tl.fromTo("#cg4", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 2.575);
+      tl.to("#cg4", { opacity: 0, duration: 0.07, ease: "power2.in" }, 3.425);
+      tl.set("#cg4", { visibility: "hidden" }, 3.495);
+      fit("#cg5", "AND THE FOURTH");
+      tl.fromTo("#cg5", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 3.475);
+      tl.to("#cg5", { opacity: 0, duration: 0.07, ease: "power2.in" }, 3.805);
+      tl.set("#cg5", { visibility: "hidden" }, 3.875);
+      fit("#cg6", "ONE WAS INSANE.");
+      tl.fromTo("#cg6", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 3.855);
+      tl.to("#cg6", { opacity: 0, duration: 0.07, ease: "power2.in" }, 5.452);
+      tl.set("#cg6", { visibility: "hidden" }, 5.522);
+      fit("#cg7", "FACT ONE:");
+      tl.fromTo("#cg7", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 5.502);
+      tl.to("#cg7", { opacity: 0, duration: 0.07, ease: "power2.in" }, 6.192);
+      tl.set("#cg7", { visibility: "hidden" }, 6.262);
+      fit("#cg8", "YOU CAN GET");
+      tl.fromTo("#cg8", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 6.242);
+      tl.to("#cg8", { opacity: 0, duration: 0.07, ease: "power2.in" }, 6.492);
+      tl.set("#cg8", { visibility: "hidden" }, 6.562);
+      fit("#cg9", "LOST IN THREE");
+      tl.fromTo("#cg9", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 6.542);
+      tl.to("#cg9", { opacity: 0, duration: 0.07, ease: "power2.in" }, 7.172);
+      tl.set("#cg9", { visibility: "hidden" }, 7.242);
+      fit("#cg10", "COUNTRIES AT ONCE.");
+      tl.fromTo("#cg10", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 7.222);
+      tl.to("#cg10", { opacity: 0, duration: 0.07, ease: "power2.in" }, 8.264);
+      tl.set("#cg10", { visibility: "hidden" }, 8.334);
+      fit("#cg11", "EUROPE'S BIGGEST OUTDOOR");
+      tl.fromTo("#cg11", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 8.314);
+      tl.to("#cg11", { opacity: 0, duration: 0.07, ease: "power2.in" }, 9.304);
+      tl.set("#cg11", { visibility: "hidden" }, 9.374);
+      fit("#cg12", "HEDGE MAZE SITS");
+      tl.fromTo("#cg12", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 9.354);
+      tl.to("#cg12", { opacity: 0, duration: 0.07, ease: "power2.in" }, 10.124);
+      tl.set("#cg12", { visibility: "hidden" }, 10.194);
+      fit("#cg13", "RIGHT ON THE");
+      tl.fromTo("#cg13", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 10.174);
+      tl.to("#cg13", { opacity: 0, duration: 0.07, ease: "power2.in" }, 10.964);
+      tl.set("#cg13", { visibility: "hidden" }, 11.034);
+      fit("#cg14", "BORDER.");
+      tl.fromTo("#cg14", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 11.014);
+      tl.to("#cg14", { opacity: 0, duration: 0.07, ease: "power2.in" }, 11.541);
+      tl.set("#cg14", { visibility: "hidden" }, 11.611);
+      fit("#cg15", "FACT TWO:");
+      tl.fromTo("#cg15", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 11.591);
+      tl.to("#cg15", { opacity: 0, duration: 0.07, ease: "power2.in" }, 12.301);
+      tl.set("#cg15", { visibility: "hidden" }, 12.371);
+      fit("#cg16", "THE FOURTH COUNTRY");
+      tl.fromTo("#cg16", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 12.351);
+      tl.to("#cg16", { opacity: 0, duration: 0.07, ease: "power2.in" }, 12.941);
+      tl.set("#cg16", { visibility: "hidden" }, 13.011);
+      fit("#cg17", "EXISTED...");
+      tl.fromTo("#cg17", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 12.991);
+      tl.to("#cg17", { opacity: 0, duration: 0.07, ease: "power2.in" }, 13.321);
+      tl.set("#cg17", { visibility: "hidden" }, 13.391);
+      fit("#cg18", "BECAUSE OF A");
+      tl.fromTo("#cg18", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 13.371);
+      tl.to("#cg18", { opacity: 0, duration: 0.07, ease: "power2.in" }, 14.061);
+      tl.set("#cg18", { visibility: "hidden" }, 14.131);
+      fit("#cg19", "ZINC MINE.");
+      tl.fromTo("#cg19", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 14.111);
+      tl.to("#cg19", { opacity: 0, duration: 0.07, ease: "power2.in" }, 14.842);
+      tl.set("#cg19", { visibility: "hidden" }, 14.912);
+      fit("#cg20", "TWO KINGDOMS COULDN'T");
+      tl.fromTo("#cg20", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 14.892);
+      tl.to("#cg20", { opacity: 0, duration: 0.07, ease: "power2.in" }, 15.582);
+      tl.set("#cg20", { visibility: "hidden" }, 15.652);
+      fit("#cg21", "AGREE WHO OWNED");
+      tl.fromTo("#cg21", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 15.632);
+      tl.to("#cg21", { opacity: 0, duration: 0.07, ease: "power2.in" }, 16.102);
+      tl.set("#cg21", { visibility: "hidden" }, 16.172);
+      fit("#cg22", "IT.");
+      tl.fromTo("#cg22", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 16.152);
+      tl.to("#cg22", { opacity: 0, duration: 0.07, ease: "power2.in" }, 16.362);
+      tl.set("#cg22", { visibility: "hidden" }, 16.432);
+      fit("#cg23", "SO THEY JUST...");
+      tl.fromTo("#cg23", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 16.412);
+      tl.to("#cg23", { opacity: 0, duration: 0.07, ease: "power2.in" }, 16.982);
+      tl.set("#cg23", { visibility: "hidden" }, 17.052);
+      fit("#cg24", "SHARED IT.");
+      tl.fromTo("#cg24", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 17.032);
+      tl.to("#cg24", { opacity: 0, duration: 0.07, ease: "power2.in" }, 18.116);
+      tl.set("#cg24", { visibility: "hidden" }, 18.186);
+      fit("#cg25", "FACT THREE:");
+      tl.fromTo("#cg25", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 18.166);
+      tl.to("#cg25", { opacity: 0, duration: 0.07, ease: "power2.in" }, 18.896);
+      tl.set("#cg25", { visibility: "hidden" }, 18.966);
+      fit("#cg26", "ITS PEOPLE HAD");
+      tl.fromTo("#cg26", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 18.946);
+      tl.to("#cg26", { opacity: 0, duration: 0.07, ease: "power2.in" }, 19.416);
+      tl.set("#cg26", { visibility: "hidden" }, 19.486);
+      fit("#cg27", "NO NATIONALITY.");
+      tl.fromTo("#cg27", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 19.466);
+      tl.to("#cg27", { opacity: 0, duration: 0.07, ease: "power2.in" }, 20.016);
+      tl.set("#cg27", { visibility: "hidden" }, 20.086);
+      fit("#cg28", "AND NO ARMY.");
+      tl.fromTo("#cg28", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 20.066);
+      tl.to("#cg28", { opacity: 0, duration: 0.07, ease: "power2.in" }, 21.391);
+      tl.set("#cg28", { visibility: "hidden" }, 21.461);
+      fit("#cg29", "FACT FOUR:");
+      tl.fromTo("#cg29", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 21.441);
+      tl.to("#cg29", { opacity: 0, duration: 0.07, ease: "power2.in" }, 22.311);
+      tl.set("#cg29", { visibility: "hidden" }, 22.381);
+      fit("#cg30", "WHEN BELGIUM BANNED");
+      tl.fromTo("#cg30", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 22.361);
+      tl.to("#cg30", { opacity: 0, duration: 0.07, ease: "power2.in" }, 23.111);
+      tl.set("#cg30", { visibility: "hidden" }, 23.181);
+      fit("#cg31", "GAMBLING...");
+      tl.fromTo("#cg31", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 23.161);
+      tl.to("#cg31", { opacity: 0, duration: 0.07, ease: "power2.in" }, 23.951);
+      tl.set("#cg31", { visibility: "hidden" }, 24.021);
+      fit("#cg32", "IT OPENED A");
+      tl.fromTo("#cg32", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 24.001);
+      tl.to("#cg32", { opacity: 0, duration: 0.07, ease: "power2.in" }, 24.351);
+      tl.set("#cg32", { visibility: "hidden" }, 24.421);
+      fit("#cg33", "CASINO.");
+      tl.fromTo("#cg33", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 24.401);
+      tl.to("#cg33", { opacity: 0, duration: 0.07, ease: "power2.in" }, 24.671);
+      tl.set("#cg33", { visibility: "hidden" }, 24.741);
+      fit("#cg34", "ALMOST OVERNIGHT.");
+      tl.fromTo("#cg34", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 24.721);
+      tl.to("#cg34", { opacity: 0, duration: 0.07, ease: "power2.in" }, 26.043);
+      tl.set("#cg34", { visibility: "hidden" }, 26.113);
+      fit("#cg35", "FACT FIVE:");
+      tl.fromTo("#cg35", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 26.093);
+      tl.to("#cg35", { opacity: 0, duration: 0.07, ease: "power2.in" }, 26.59);
+      tl.set("#cg35", { visibility: "hidden" }, 26.66);
+      fit("#cg36", "IN 1908,");
+      tl.fromTo("#cg36", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 26.64);
+      tl.to("#cg36", { opacity: 0, duration: 0.07, ease: "power2.in" }, 27.738);
+      tl.set("#cg36", { visibility: "hidden" }, 27.808);
+      fit("#cg37", "IT WAS NAMED");
+      tl.fromTo("#cg37", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 27.788);
+      tl.to("#cg37", { opacity: 0, duration: 0.07, ease: "power2.in" }, 28.449);
+      tl.set("#cg37", { visibility: "hidden" }, 28.519);
+      fit("#cg38", "THE WORLD CAPITAL");
+      tl.fromTo("#cg38", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 28.499);
+      tl.to("#cg38", { opacity: 0, duration: 0.07, ease: "power2.in" }, 29.433);
+      tl.set("#cg38", { visibility: "hidden" }, 29.503);
+      fit("#cg39", "OF ESPERANTO.");
+      tl.fromTo("#cg39", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 29.483);
+      tl.to("#cg39", { opacity: 0, duration: 0.07, ease: "power2.in" }, 30.424);
+      tl.set("#cg39", { visibility: "hidden" }, 30.494);
+      fit("#cg40", "SO WHAT HAPPENED");
+      tl.fromTo("#cg40", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 30.474);
+      tl.to("#cg40", { opacity: 0, duration: 0.07, ease: "power2.in" }, 31.224);
+      tl.set("#cg40", { visibility: "hidden" }, 31.294);
+      fit("#cg41", "TO IT?");
+      tl.fromTo("#cg41", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 31.274);
+      tl.to("#cg41", { opacity: 0, duration: 0.07, ease: "power2.in" }, 31.84);
+      tl.set("#cg41", { visibility: "hidden" }, 31.91);
+      fit("#cg42", "WORLD WAR ONE.");
+      tl.fromTo("#cg42", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 31.89);
+      tl.to("#cg42", { opacity: 0, duration: 0.07, ease: "power2.in" }, 32.667);
+      tl.set("#cg42", { visibility: "hidden" }, 32.737);
+      fit("#cg43", "AND IN 1920...");
+      tl.fromTo("#cg43", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 32.717);
+      tl.to("#cg43", { opacity: 0, duration: 0.07, ease: "power2.in" }, 34.026);
+      tl.set("#cg43", { visibility: "hidden" }, 34.096);
+      fit("#cg44", "IT WAS HANDED");
+      tl.fromTo("#cg44", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 34.076);
+      tl.to("#cg44", { opacity: 0, duration: 0.07, ease: "power2.in" }, 34.853);
+      tl.set("#cg44", { visibility: "hidden" }, 34.923);
+      fit("#cg45", "TO BELGIUM.");
+      tl.fromTo("#cg45", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 34.903);
+      tl.to("#cg45", { opacity: 0, duration: 0.07, ease: "power2.in" }, 35.503);
+      tl.set("#cg45", { visibility: "hidden" }, 35.573);
+      fit("#cg46", "GONE.");
+      tl.fromTo("#cg46", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 35.553);
+      tl.to("#cg46", { opacity: 0, duration: 0.07, ease: "power2.in" }, 36.113);
+      tl.set("#cg46", { visibility: "hidden" }, 36.183);
+      fit("#cg47", "WHICH FACT GOT");
+      tl.fromTo("#cg47", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 36.163);
+      tl.to("#cg47", { opacity: 0, duration: 0.07, ease: "power2.in" }, 36.873);
+      tl.set("#cg47", { visibility: "hidden" }, 36.943);
+      fit("#cg48", "YOU?");
+      tl.fromTo("#cg48", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 36.923);
+      tl.to("#cg48", { opacity: 0, duration: 0.07, ease: "power2.in" }, 37.433);
+      tl.set("#cg48", { visibility: "hidden" }, 37.503);
+      fit("#cg49", "TELL ME BELOW.");
+      tl.fromTo("#cg49", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 37.483);
+      tl.to("#cg49", { opacity: 0, duration: 0.07, ease: "power2.in" }, 38.277);
+      tl.set("#cg49", { visibility: "hidden" }, 38.347);
+      fit("#cg50", "NEXT:");
+      tl.fromTo("#cg50", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 38.327);
+      tl.to("#cg50", { opacity: 0, duration: 0.07, ease: "power2.in" }, 39.077);
+      tl.set("#cg50", { visibility: "hidden" }, 39.147);
+      fit("#cg51", "THE ISLAND");
+      tl.fromTo("#cg51", { opacity: 0, scale: 1.12, visibility: "hidden" }, { opacity: 1, scale: 1, visibility: "visible", duration: 0.14, ease: "back.out(2)" }, 39.127);
+      tl.to("#cg51", { opacity: 0, duration: 0.07, ease: "power2.in" }, 39.377);
+      tl.set("#cg51", { visibility: "hidden" }, 39.447);
+      window.__timelines["captions"] = tl;
+    })();
+  </script>
+</template>

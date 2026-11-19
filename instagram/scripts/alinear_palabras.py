@@ -11,7 +11,7 @@ import json, os, re, subprocess, sys
 import numpy as np
 from faster_whisper import WhisperModel
 
-NUM = {("eighteen", "sixteen"): "1816", ("nineteen", "twenty"): "1920"}
+NUM = {("eighteen", "sixteen"): "1816", ("nineteen", "twenty"): "1920", ("nineteen", "oh", "eight"): "1908"}
 
 
 def load(f):
@@ -47,11 +47,17 @@ def main():
     # números con letras → cifra en los subtítulos
     j, res = 0, []
     while j < len(out):
-        pair = (clean(out[j]["text"]), clean(out[j + 1]["text"])) if j + 1 < len(out) else None
-        if pair in NUM:
-            tail = re.sub(r"^[A-Za-z']+", "", out[j + 1]["text"])
-            res.append({**out[j], "text": NUM[pair] + tail, "end": out[j + 1]["end"]})
-            j += 2
+        hit = None
+        for n in (3, 2):
+            key = tuple(clean(x["text"]) for x in out[j:j + n])
+            if len(key) == n and key in NUM:
+                hit = n
+                break
+        if hit:
+            last = out[j + hit - 1]
+            tail = re.sub(r"^[A-Za-z']+", "", last["text"])
+            res.append({**out[j], "text": NUM[key] + tail, "end": last["end"]})
+            j += hit
         else:
             res.append(out[j]); j += 1
     json.dump({"words": res}, open(os.path.join(d, "words.json"), "w"), indent=0)

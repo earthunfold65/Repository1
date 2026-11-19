@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: 'Inter Display'; font-weight: 900; src: url('assets/fonts/InterDisplay-Black.otf'); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0B1020; }
+      #bg-base { position:absolute; inset:0; z-index:0; background: radial-gradient(120% 80% at 50% 35%, #1a1f33 0%, #0B1020 60%, #05070d 100%); }
+      #bg-warm { position:absolute; inset:0; z-index:1; background: radial-gradient(90% 60% at 50% 40%, rgba(255,160,60,.18), rgba(0,0,0,0) 70%); }
+      #bg-night { position:absolute; inset:0; z-index:2; background: radial-gradient(100% 70% at 50% 40%, #0d2a5c 0%, #06122b 70%); opacity: 0; }
+      #vignette { position:absolute; inset:0; z-index: 50; pointer-events:none; background: radial-gradient(130% 95% at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,.65) 100%); }
+      #chip { position:absolute; left: 0; width: 1080px; top: 276px; text-align:center; z-index: 60; }
+      #chip span { display:inline-block; font-family:'JetBrains Mono',monospace; font-weight: 800; font-size: 28px; letter-spacing:.14em;
+                   color:#FFC83D; padding: 10px 22px; border: 3px solid rgba(255,200,61,.6); border-radius: 999px; background: rgba(8,10,18,.7); }
+      .hud { position:absolute; left: 0; width: 1080px; top: 342px; text-align:center; z-index: 61; }
+      .hud b { display:inline-block; font-family:'Inter Display'; font-weight: 900; font-size: 40px; color:#0b1020; background:#FFC83D; padding: 4px 18px; border-radius: 10px; vertical-align: middle; }
+      .hud span { display:inline-block; margin-left: 16px; vertical-align: middle; }
+      .hud i { display:inline-block; width: 18px; height: 18px; border-radius: 50%; margin: 0 5px; background: rgba(255,255,255,.25); }
+      .hud i.on { background:#FFC83D; box-shadow: 0 0 12px #FFC83D; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="42.74" data-width="1080" data-height="1920">
+      <div id="bg-base" class="clip" data-start="0" data-duration="42.74" data-track-index="0"></div>
+      <div id="bg-warm" class="clip" data-start="0" data-duration="42.74" data-track-index="5"></div>
+      <div id="bg-night" class="clip" data-start="0" data-duration="42.74" data-track-index="6"></div>
+      <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html" data-start="0.0" data-duration="5.4667" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="maze" data-composition-id="maze" data-composition-src="compositions/maze.html" data-start="5.4667" data-duration="6.1" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="crown" data-composition-id="crown" data-composition-src="compositions/crown.html" data-start="11.5667" data-duration="6.5666" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="nonat" data-composition-id="nonat" data-composition-src="compositions/nonat.html" data-start="18.1333" data-duration="3.3" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="casino" data-composition-id="casino" data-composition-src="compositions/casino.html" data-start="21.4333" data-duration="4.6334" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="esp" data-composition-id="esp" data-composition-src="compositions/esp.html" data-start="26.0667" data-duration="4.9333" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="what" data-composition-id="what" data-composition-src="compositions/what.html" data-start="31.0" data-duration="1.4667" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="gone" data-composition-id="gone" data-composition-src="compositions/gone.html" data-start="32.4667" data-duration="4.4333" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="poll" data-composition-id="poll" data-composition-src="compositions/poll.html" data-start="36.9" data-duration="2.5667" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="end" data-composition-id="end" data-composition-src="compositions/end.html" data-start="39.4667" data-duration="3.2733" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:10"></div>
+      <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" data-duration="39.4667" data-track-index="2" data-track-kind="captions" data-width="1080" data-height="1920" style="z-index:30"></div>
+      <div id="chip" class="clip" data-start="0" data-duration="39.4667" data-track-index="3"><span>BORDER ODDITIES · EP. 2</span></div>
+      <div id="hud1" class="clip hud" data-start="5.4667" data-duration="6.1" data-track-index="7"><b>FACT 1/5</b><span><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+      <div id="hud2" class="clip hud" data-start="11.5667" data-duration="6.5666" data-track-index="7"><b>FACT 2/5</b><span><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+      <div id="hud3" class="clip hud" data-start="18.1333" data-duration="3.3" data-track-index="7"><b>FACT 3/5</b><span><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></div>
+      <div id="hud4" class="clip hud" data-start="21.4333" data-duration="4.6334" data-track-index="7"><b>FACT 4/5</b><span><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></div>
+      <div id="hud5" class="clip hud" data-start="26.0667" data-duration="4.9333" data-track-index="7"><b>FACT 5/5</b><span><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+      <div id="vignette" class="clip" data-start="0" data-duration="42.74" data-track-index="4" data-layout-ignore></div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.to("#bg-night", { opacity: 1, duration: 0.4 }, 32.4667);
+      tl.to("#bg-warm", { opacity: 0, duration: 0.4 }, 32.4667);
+      tl.to("#bg-night", { opacity: 0, duration: 0.4 }, 36.9);
+      tl.to("#bg-warm", { opacity: 1, duration: 0.4 }, 36.9);
+      tl.to("#bg-night", { opacity: 0.5, duration: 0.5 }, 39.4667);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

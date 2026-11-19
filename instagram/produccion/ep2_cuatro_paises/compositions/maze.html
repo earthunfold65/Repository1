@@ -1,0 +1,47 @@
+<template>
+  <style>
+    @font-face { font-family: 'Noto Color Emoji'; src: url('assets/fonts/NotoColorEmoji.ttf'); }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .tag { position:absolute; padding: 12px 22px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 36px; letter-spacing: .1em; background: rgba(8,10,18,.85); white-space: nowrap; }
+    .stamp { position:absolute; padding: 16px 30px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 58px; background: rgba(8,10,18,.6); white-space: nowrap; }
+    .flag { font-family: 'Noto Color Emoji'; letter-spacing: 0; }
+    .big { position:absolute; left:0; width:1000px; text-align:center; font-weight:900; line-height:.95; color:#F4F1EA;
+           text-shadow: 0 8px 30px rgba(0,0,0,.6); }
+
+    #mz-cam { position:absolute; inset:0; transform-origin: 540px 706px; }
+    #mz-svg { position:absolute; left:0; top:0; width:1080px; height:1100px; }
+    #mz-tag { left:0; width:1000px; top: 1090px; text-align:center; background:none; color:#F4F1EA; font-size: 30px; display:none; }
+    #mz-me { position:absolute; left: 287px; top: 451px; font-family:'Noto Color Emoji'; font-size: 52px; line-height:1; }
+    #mz-lbl { left:0; width:1000px; top: 1000px; font-size: 30px; text-align:center; background:none; color:#FFC83D; font-size: 34px; }
+    #mz-lbl span { background: rgba(8,10,18,.88); padding: 10px 22px; border-radius: 12px; border: 3px solid rgba(255,200,61,.6); }
+  </style>
+  <div id="root" data-composition-id="maze" data-width="1080" data-height="1920">
+    <div id="mz-cam">
+      <svg id="mz-svg" viewBox="0 0 1080 1100" data-layout-allow-overlap>
+        <path d="M540.0,706.0 L80.0,706.0 A460,460 0 0,1 770.0,307.6 Z" fill="rgba(255,122,26,.22)" clip-path="url(#mzc)"/>
+        <path d="M540.0,706.0 L770.0,307.6 A460,460 0 0,1 770.0,1104.4 Z" fill="rgba(255,77,94,.22)" clip-path="url(#mzc)"/>
+        <path d="M540.0,706.0 L770.0,1104.4 A460,460 0 0,1 80.0,706.0 Z" fill="rgba(255,200,61,.22)" clip-path="url(#mzc)"/>
+        <clipPath id="mzc"><rect x="279" y="445" width="522" height="522"/></clipPath>
+        <path id="mz-walls" d="M337,793 v58 M569,851 h58 M627,677 h58 M337,619 h58 M511,677 h58 M569,561 h58 M511,735 v58 M395,561 h58 M511,793 h58 M685,503 h58 M395,677 h58 M453,619 v58 M685,735 h58 M685,851 h58 M337,909 h58 M627,445 v58 M453,735 v58 M685,793 v58 M569,619 h58 M337,445 v58 M569,909 v58 M743,503 h58 M511,561 h58 M685,909 h58 M743,851 h58 M337,677 h58 M627,851 v58 M627,619 h58 M685,619 h58 M337,793 h58 M511,619 h58 M569,677 v58 M743,619 v58 M453,561 v58 M395,851 h58 M743,735 v58 M453,677 v58 M569,851 v58 M627,735 v58 M337,735 v58 M279,909 h58 M511,503 h58 M511,793 v58 M685,561 h58 M627,561 h58 M627,793 h58 M395,735 h58 M627,503 v58 M627,909 h58 M453,503 v58 M395,793 v58 M569,677 h58 M511,851 v58 M337,503 v58 M279,677 h58 M569,793 h58 M685,677 v58 M453,503 h58 M743,677 v58 M395,909 h58 M453,619 h58 M337,561 v58 M453,851 h58 M337,503 h58 M279,445 h522 v522 h-522 Z" stroke="#3fae5a" stroke-width="14" stroke-linecap="round" fill="none"/>
+        <text x="370" y="515" font-family="Inter Display" font-weight="900" font-size="46" fill="#FF7A1A">NL</text>
+        <text x="680" y="766" font-family="Inter Display" font-weight="900" font-size="46" fill="#FF4D5E">DE</text>
+        <text x="310" y="927" font-family="Inter Display" font-weight="900" font-size="46" fill="#FFC83D">BE</text>
+      </svg>
+      <div id="mz-me">🧍</div>
+    </div>
+    <div id="mz-lbl" class="tag"><span>EUROPE'S BIGGEST OUTDOOR HEDGE MAZE</span></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#mz-cam", { scale: 0.6, rotation: -8, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }, 0);
+      tl.to("#mz-cam", { scale: 1.12, rotation: 3, duration: 5.650, ease: "none" }, 0.45);
+      tl.fromTo("#mz-me", { x: 0, y: 0 }, { x: 221, y: 231, duration: 3.052, ease: "steps(8)" }, 1.115);
+      tl.fromTo("#mz-lbl", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25, ease: "back.out(2)" }, 3.567);
+      window.__timelines["maze"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,41 @@
+<template>
+  <style>
+    @font-face { font-family: 'Noto Color Emoji'; src: url('assets/fonts/NotoColorEmoji.ttf'); }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .tag { position:absolute; padding: 12px 22px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 36px; letter-spacing: .1em; background: rgba(8,10,18,.85); white-space: nowrap; }
+    .stamp { position:absolute; padding: 16px 30px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 58px; background: rgba(8,10,18,.6); white-space: nowrap; }
+    .flag { font-family: 'Noto Color Emoji'; letter-spacing: 0; }
+    .big { position:absolute; left:0; width:1000px; text-align:center; font-weight:900; line-height:.95; color:#F4F1EA;
+           text-shadow: 0 8px 30px rgba(0,0,0,.6); }
+
+    #nn-cam { position:absolute; inset:0; transform-origin: 540px 700px; }
+    #nn-pass { position:absolute; left: 190px; top: 450px; width: 700px; height: 440px; border-radius: 26px; background: linear-gradient(160deg,#1f3b6e,#142647);
+               border: 6px solid #c9a646; box-shadow: 0 30px 70px rgba(0,0,0,.6); color: #e9d9a6; font-family:'JetBrains Mono',monospace; transform-origin: 350px 220px; }
+    #nn-pass h3 { font-family:'Inter Display'; font-weight:900; font-size: 46px; letter-spacing:.12em; text-align:center; margin-top: 30px; }
+    #nn-pass p { font-size: 34px; font-weight: 800; margin: 26px 0 0 50px; }
+    #nn-pass b { color:#fff; }
+    #nn-none { left: 380px; top: 640px; border-color: #FF4D5E; color: #FF4D5E; font-size: 80px; transform-origin: 160px 50px; }
+    #nn-army { position:absolute; left: 0; width: 1000px; top: 930px; text-align:center; font-family:'Noto Color Emoji'; font-size: 110px; line-height:1; }
+  </style>
+  <div id="root" data-composition-id="nonat" data-width="1080" data-height="1920">
+    <div id="nn-cam">
+      <div id="nn-pass"><h3>PASSPORT</h3><p>STATE: <b>NEUTRAL MORESNET</b></p><p>NATIONALITY: <b>_______</b></p><p>ARMY: <b>_______</b></p></div>
+      <div id="nn-none" class="stamp" data-layout-allow-overlap>NONE</div>
+      <div id="nn-army">🪖🚫</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#nn-cam", { scale: 1.08 }, { scale: 1.0, duration: 3.3, ease: "none" }, 0);
+      tl.fromTo("#nn-pass", { opacity: 0, y: 160, rotation: 6 }, { opacity: 1, y: 0, rotation: -2, duration: 0.4, ease: "back.out(1.6)" }, 0.02);
+      tl.fromTo("#nn-none", { opacity: 0, scale: 2.2, rotation: -20 }, { opacity: 1, scale: 1, rotation: -10, duration: 0.16, ease: "power4.in" }, 1.433);
+      tl.to("#nn-cam", { x: 14, duration: 0.05, yoyo: true, repeat: 3, ease: "none" }, 1.603);
+      tl.fromTo("#nn-army", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2.6)" }, 2.603);
+      window.__timelines["nonat"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,48 @@
+<template>
+  <style>
+    @font-face { font-family: 'Noto Color Emoji'; src: url('assets/fonts/NotoColorEmoji.ttf'); }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: 'Inter Display', 'Inter', sans-serif; }
+    #root * { box-sizing: border-box; }
+    .tag { position:absolute; padding: 12px 22px; border-radius: 14px; font-family:'JetBrains Mono',monospace;
+           font-weight: 800; font-size: 36px; letter-spacing: .1em; background: rgba(8,10,18,.85); white-space: nowrap; }
+    .stamp { position:absolute; padding: 16px 30px; border: 7px solid #FFC83D; border-radius: 16px; color: #FFC83D;
+             font-weight: 900; font-size: 58px; background: rgba(8,10,18,.6); white-space: nowrap; }
+    .flag { font-family: 'Noto Color Emoji'; letter-spacing: 0; }
+    .big { position:absolute; left:0; width:1000px; text-align:center; font-weight:900; line-height:.95; color:#F4F1EA;
+           text-shadow: 0 8px 30px rgba(0,0,0,.6); }
+
+    #gn-cam { position:absolute; inset:0; transform-origin: 540px 700px; }
+    #gn-ww { top: 430px; font-size: 104px; color:#FF4D5E; } #gn-ww .e { font-family:'Noto Color Emoji'; font-size: 150px; }
+    #gn-yr { position:absolute; left:0; width:1000px; top: 372px; text-align:center; font-weight:900; font-size: 150px; color:#F4F1EA; line-height: 1; }
+    #gn-map { opacity: 0; position:absolute; left: 240px; top: 560px; width: 600px; height: 420px; }
+    #gn-st { left:0; width:1000px; top: 760px; text-align:center; border:none; background:none; padding:0; transform-origin: 500px 60px; }
+    #gn-st span { display:inline-block; padding: 14px 34px; border: 8px solid #FF4D5E; border-radius: 18px; color:#FF4D5E; font-size: 110px; background: rgba(8,10,18,.7); }
+  </style>
+  <div id="root" data-composition-id="gone" data-width="1080" data-height="1920">
+    <div id="gn-cam">
+      <div id="gn-yr">1920</div>
+      <div id="gn-ww" class="big" data-layout-allow-overlap><span class="e">⚔️</span><br>WORLD WAR I</div>
+      <svg id="gn-map" viewBox="0 0 600 420">
+        <path id="gn-be" d="M40,120 L560,80 L520,380 L70,360 Z" fill="rgba(255,200,61,.75)" stroke="#0b1020" stroke-width="6"/>
+        <text x="300" y="300" text-anchor="middle" font-family="Inter Display" font-weight="900" font-size="56" fill="#0b1020">BELGIUM</text>
+        <path id="gn-tri" d="M250,90 L370,110 L300,200 Z" fill="#43D9F5" stroke="#fff" stroke-width="5" style="transform-origin:306px 133px"/>
+      </svg>
+      <div id="gn-st" class="stamp" data-layout-allow-overlap><span>GONE</span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#gn-cam", { scale: 1.0 }, { scale: 1.12, duration: 4.4333, ease: "none" }, 0);
+      tl.fromTo("#gn-ww", { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.2, ease: "power4.in" }, 0.03);
+      tl.to("#gn-ww", { opacity: 0, scale: 0.8, duration: 0.15 }, 0.554);
+      tl.fromTo("#gn-yr", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.2, ease: "power4.in" }, 0.504);
+      tl.fromTo("#gn-map", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.3 }, 0.704);
+      tl.to("#gn-tri", { fill: "#FFC83D", y: 60, scale: 0.85, duration: 0.5, ease: "power2.inOut" }, 2.353);
+      tl.to("#gn-tri", { opacity: 0, duration: 0.3 }, 2.903);
+      tl.fromTo("#gn-st", { opacity: 0, scale: 2, rotation: -16 }, { opacity: 1, scale: 1, rotation: -6, duration: 0.16, ease: "power4.in" }, 3.006);
+      tl.to("#gn-cam", { x: 16, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, 3.176);
+      window.__timelines["gone"] = tl;
+    })();
+  </script>
+</template>
