@@ -15,12 +15,26 @@
       "skillPath": "skills/ad-creative/SKILL.md",
       "computedHash": "fef5df74b2887cf8e054accdfbdb01a489c6193f9ff99dbcce66b6a6f630eb25"
     },
+    "add": {
+      "source": "Remocn/remocn",
+      "commit": "cf4fa254915e858e0bed31b5795b9d2b508f47e4",
+      "sourceType": "github",
+      "skillPath": "plugins/remocn/skills/add/SKILL.md",
+      "computedHash": "13c0a595fd1daaf1420d7a26e72536b9b890c0f40f0bb3db1c0ae7415f9480ba"
+    },
     "canvas-design": {
       "source": "anthropics/skills",
       "commit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
       "sourceType": "github",
       "skillPath": "skills/canvas-design/SKILL.md",
       "computedHash": "1866477474e694f562261008bb6a817e53f027b6347b062fbd1e2ee2eb83f20d"
+    },
+    "changelog": {
+      "source": "Remocn/remocn",
+      "commit": "cf4fa254915e858e0bed31b5795b9d2b508f47e4",
+      "sourceType": "github",
+      "skillPath": "plugins/remocn/skills/changelog/SKILL.md",
+      "computedHash": "962f4eb3df7b80f497e981dcfcceeec4a5a5bb819cd7db3423c8c8ed4d46dff8"
     },
     "community-marketing": {
       "source": "coreyhaines31/marketingskills",
@@ -120,6 +134,13 @@
       "skillPath": "skills/product-marketing/SKILL.md",
       "computedHash": "2b7f80ab415280e3e0a0bcc112af8e24059169642c70fb36e18e44a79f80f505"
     },
+    "remocn": {
+      "source": "Remocn/remocn",
+      "commit": "cf4fa254915e858e0bed31b5795b9d2b508f47e4",
+      "sourceType": "github",
+      "skillPath": "plugins/remocn/skills/remocn/SKILL.md",
+      "computedHash": "206ec029e2ae2ac0a4bf1f9c3267a72ecb43670ff94d24df89ed0b997833b2c1"
+    },
     "remotion-best-practices": {
       "source": "remotion-dev/skills",
       "commit": "6f55706d1069e512430582ad86e4e57dc07afe1b",
@@ -169,6 +190,13 @@
       "skillPath": "skills/reverse-engineer-marketing/SKILL.md",
       "computedHash": "8aa7c101abf2aabe3bdd9f6bd262511c78533fe786f9319f725e4d943281f60d"
     },
+    "setup": {
+      "source": "Remocn/remocn",
+      "commit": "cf4fa254915e858e0bed31b5795b9d2b508f47e4",
+      "sourceType": "github",
+      "skillPath": "plugins/remocn/skills/setup/SKILL.md",
+      "computedHash": "a3a77999e950d8ec13cda5e3eccbf6bb57e25c0c8999bc44f5ad29c46febb77f"
+    },
     "social": {
       "source": "coreyhaines31/marketingskills",
       "commit": "73573e94a06a39965978b3fa1f9c1eace8cebc7c",
@@ -184,11 +212,11 @@
       "computedHash": "f426a07c06316201360be19324f2689c5bd3ab2d1669848c9383c321efa4386f"
     },
     "video": {
-      "source": "coreyhaines31/marketingskills",
-      "commit": "73573e94a06a39965978b3fa1f9c1eace8cebc7c",
+      "source": "Remocn/remocn",
+      "commit": "cf4fa254915e858e0bed31b5795b9d2b508f47e4",
       "sourceType": "github",
-      "skillPath": "skills/video/SKILL.md",
-      "computedHash": "e0397f9bd7f3f10db2cad07ad12c2249b786484befd25dc296119a88b4e457e6"
+      "skillPath": "plugins/remocn/skills/video/SKILL.md",
+      "computedHash": "ce25c608f534b43ca6b316a6bd196ece6017df7806fa2fa9f2ed76bf4cf2c91b"
     },
     "web-design-guidelines": {
       "source": "vercel-labs/agent-skills",

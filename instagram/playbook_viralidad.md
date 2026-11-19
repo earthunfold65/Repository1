@@ -41,10 +41,15 @@ Para copiar el estilo de un referente: frames + transcripción → beat sheet (p
 |---|---|
 | Idea y serie | `content-strategy`, `marketing-ideas`, `ig-plan` |
 | Investigar referentes | `ig-referentes`, `reverse-engineer-marketing`, `competitor-profiling` |
-| Gancho y guion | `ig-reel`, `social` (short-form-video), `ad-creative` (hooks), `marketing-psychology` |
-| Pulir texto | `copy-editing`, `ig-human`, `writing-guidelines` |
-| Animación | `hyperframes`, `remotion-best-practices`, `remotion-maps` (mapas), `remotion-captions` |
+| Gancho y guion | `eu-voice` (+ `hookscore.py`, `beats.py`), `ig-reel`, `social` (short-form-video), `ad-creative` (hooks), `marketing-psychology` |
+| Pulir texto | `ig-human` (+ `detect.py` ≥ 70, `humanize.py`), `copy-editing`, `writing-guidelines` |
+| Animación | `hyperframes`, `remocn` / `remocn-video` / `remocn-add` (932 componentes Remotion), `remotion-best-practices`, `remotion-maps`, `remotion-captions` |
 | Portada y gráficos | `canvas-design`, `frontend-design`, `image` |
 | Sonido | `ig-sonido`, `earshot`, `real-sfx`, `real-sound` |
-| Textos de publicación | `ig-caption`, `social` |
+| Textos de publicación | `ig-caption` (+ `caption.py` → READY), `eu-voice`, `social` |
 | Medir y mejorar | `ig-viral`, `ab-testing`, `marketing-loops` |
+
+## 9. Lecciones de las herramientas (2026-11-19)
+- hookscore: EP.1 "In this town… your front door decides…" = 26,8 (FRONTLOAD 0) → coincide con su 48,7 % de skip. EP.2 v3 = 54,9. Regla: lo imposible en las primeras 3 palabras.
+- detect: el caption del EP.2 bajó de 52,9 a 80,8 quitando la raya (—), variando el largo de las frases y hablando de "you" con contracciones.
+- caption.py solo reconoce peticiones explícitas ("tell me", "which one", "save this", "follow for"…): "Comment 1–5" no cuenta; usar "Which one got you? Tell me the number 👇".

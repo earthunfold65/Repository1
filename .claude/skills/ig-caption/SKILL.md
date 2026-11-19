@@ -22,3 +22,7 @@ Tres versiones etiquetadas:
 3. **Larga / micro-blog** (150–300 palabras) — para carruseles educativos o historias personales.
 
 Después, 3 alternativas solo de la línea 1 para hacer A/B.
+
+## Herramientas (MIT, repo original)
+- `python3 -I .claude/skills/ig-caption/caption.py caption.txt` → lo que muestra el feed antes del "… more", una sola petición, hashtags. No entregar sin READY.
+- Después: `python3 -I .claude/skills/ig-human/detect.py caption.txt` (HUMAN SCORE ≥ 70).

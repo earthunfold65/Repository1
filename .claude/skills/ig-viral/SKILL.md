@@ -30,3 +30,6 @@ Si llegan archivos, procésalos con un script (Python/Node) en el scratchpad; no
 - Añade las reglas nuevas a `instagram/aprendizajes.md` (mismo formato que usa `/ig-referentes`).
 - Para analizar cuentas ajenas usa `/ig-referentes`.
 - Guarda el informe en `instagram/analisis/AAAA-MM-DD-viral.md`.
+
+## Herramienta (MIT, repo original)
+- `python3 -I .claude/skills/ig-viral/swipe.py capturados.tsv --out instagram/analisis/swipe.md` → ranking por múltiplo sobre la mediana de cada cuenta. Ver `UPSTREAM_SKILL.md` para el formato del TSV.

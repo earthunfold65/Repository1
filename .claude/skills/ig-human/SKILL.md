@@ -22,3 +22,7 @@ Entrada: un texto (guion, caption, DM). Lee la sección **Voz** de `instagram/ma
 
 ## Entregable
 El texto reescrito. Debajo, máx. 5 viñetas con los cambios más importantes. No cambies datos ni el mensaje de fondo.
+
+## Herramientas (MIT, repo original)
+- Detectar: `python3 -I .claude/skills/ig-human/detect.py texto.txt` (5 señales: burstiness, specificity, slop, fingerprint, voice).
+- Limpiar: `python3 -I .claude/skills/ig-human/humanize.py texto.txt --report` (quita rayas, vocabulario de IA y caracteres invisibles; lista en `slop.json`).

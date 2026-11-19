@@ -48,3 +48,8 @@ Guarda el borrador en `instagram/reels/AAAA-MM-DD-<slug>.md` y di la ruta.
 
 ## Opcional: producirlo
 Si el usuario quiere el video, ofrece montarlo con **Remotion** o **HyperFrames** + **GSAP** (instalados en el repo) a 1080×1920, 30 fps, usando el beat sheet como línea de tiempo. Voz en off: ElevenLabs si está conectado. El sonido (música, efectos, mezcla y master) se hace siempre con `/ig-sonido`; la columna "Sonido / SFX" del beat sheet sigue sus reglas (nada en cortes duros, ~5 efectos cada 10 s, un whoosh solo en grandes movimientos).
+
+## Herramientas (del repo original instagram-agent-skill, MIT)
+- Puntuar ganchos: `python3 -I .claude/skills/ig-reel/hookscore.py ganchos.txt` (si el mejor < 50, reescribe).
+- Beat sheet con tiempos: `python3 -I .claude/skills/ig-reel/beats.py guion.txt --wpm 185 --target 40`.
+- `hooks.json`: las 26 fórmulas originales con puntuación. Guía original: `UPSTREAM_SKILL.md`. Voz: `instagram/voice.md` y skill `/eu-voice`.

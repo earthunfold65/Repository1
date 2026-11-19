@@ -23,19 +23,18 @@ No se encontraron piezas de National Geographic / Discovery / History sobre el t
 Sound: "Dilemma 2A - Mystery Music Loop" by RokZRooM, "Deep Cinematic Impact" by MeijstroAudio, "Melee Combat Whoosh" by EminYILDIRIM, "thick-stamp-nosub.wav" by newagesoup (Freesound.org, CC BY 4.0, edited). UI sounds: uisfx (CC0), earshot (MIT). Voice: AI.
 ```
 
-### Instagram Reels
+### Instagram Reels (v3 · detect 80,8 PASS · caption lint READY)
 ```
 This hill is in 3 countries at once… but it used to be 4. 🤯🇳🇱🇧🇪🇩🇪
 
-5 insane facts about the country that vanished:
-1️⃣ Europe's biggest outdoor hedge maze sits on the border
-2️⃣ It existed because of ONE zinc mine
-3️⃣ Its people had no nationality — and no army
-4️⃣ It opened a casino almost overnight
-5️⃣ It became the world capital of Esperanto
+The 4th was a tiny triangle called Neutral Moresnet. It lasted 104 years, and only because two kingdoms couldn't agree who owned one zinc mine.
 
-Which fact got you? Comment 1–5 👇
-Part 3: the island that switches countries every 6 months.
+So they shared it.
+
+If you'd lived there, you'd have had no nationality. No army either. When Belgium banned gambling, Moresnet opened a casino almost overnight, and in 1908 it became the world capital of Esperanto. Then World War I hit and it's been gone ever since.
+
+Which one got you? Tell me the number 👇
+Part 3 is coming: the island that switches countries every 6 months.
 
 #geography #history #europe #didyouknow #borderoddities
 ```

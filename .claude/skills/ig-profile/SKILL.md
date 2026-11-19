@@ -19,3 +19,6 @@ Entrada: bio actual, nombre, link, destacados y fijados (texto o captura). Lee `
 1. Diagnóstico corto (qué falla y por qué, máx. 5 puntos).
 2. **3 bios alternativas** con conteo de caracteres (verifícalo contando de verdad, no a ojo).
 3. Nombre sugerido, estructura de destacados y qué fijar.
+
+## Rúbrica (MIT, repo original)
+- `rubric.json`: puntuación del perfil sobre 100. Guía original en `UPSTREAM_SKILL.md`.
