@@ -199,7 +199,7 @@ SCENES[k] = scene_file(k, f"""
       tl.to("#gn-cam", {{ x: 16, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }}, {t_gone + 0.05:.3f});""")
 cues += [{"t": round(S[k] + 0.23, 3), "kind": "hit", "label": "WORLD WAR I"},
          {"t": round(S[k] + max(0.02, t_tw - 0.2) + 0.2, 3), "kind": "thunk", "label": "1920"},
-         {"t": round(S[k] + t_gone + 0.04, 3), "kind": "hit", "label": "GONE + sacudida"}]
+         {"t": round(S[k] + t_gone + 0.04, 3), "kind": "hit", "gain": 3, "label": "GONE + sacudida"}]
 
 # ---------- 10. CIERRE: EP. 3 (c13) ----------
 k = "end"
@@ -226,7 +226,7 @@ SCENES[k] = scene_file(k, f"""
       tl.fromTo("#en-ep", {{ opacity: 0, y: 20 }}, {{ opacity: 1, y: 0, duration: 0.25 }}, 0.2);
       tl.fromTo("#en-title", {{ opacity: 0, y: 40 }}, {{ opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }}, {max(0.3, L(k, wt('island')) - 0.1):.3f});
       tl.fromTo("#en-follow", {{ opacity: 0, scale: 0.9 }}, {{ opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }}, {L(k, wt('switches')):.3f});""")
-cues += [{"t": round(S[k] + 0.02, 3), "kind": "whoosh_soft", "label": "entra la tarjeta final"}]
+cues += [{"t": round(S[k] + 0.03, 3), "kind": "pop", "pitch": 5, "gain": 3, "label": "entra la tarjeta final"}]
 
 # ---------- HOOK: la colina de 3 países… que fueron 4 (c0–c1) ----------
 k = "hook"
@@ -365,7 +365,7 @@ SCENES[k] = scene_file(k, f"""
       <div id="cs-clock">⏰</div>
     </div>""",
     f"""      tl.fromTo("#cs-cam", {{ scale: 1.0 }}, {{ scale: 1.1, duration: {SLOT[k][1]}, ease: "none" }}, 0);
-      tl.fromTo("#cs-slot", {{ opacity: 0.25, scale: 0.85 }}, {{ opacity: 0.25, scale: 0.85, duration: 0.01 }}, 0);
+      tl.fromTo("#cs-slot", {{ opacity: 0.25, scale: 0.85, rotation: -4 }}, {{ opacity: 0.4, scale: 0.92, rotation: 4, duration: {max(0.3, t_cas - 0.35):.3f}, ease: "sine.inOut" }}, 0);
       tl.fromTo("#cs-ban", {{ opacity: 0, scale: 2, rotation: -16 }}, {{ opacity: 1, scale: 1, rotation: -7, duration: 0.16, ease: "power4.in" }}, {t_ban - 0.1:.3f});
       tl.to("#cs-ban", {{ opacity: 0, scale: 0.7, duration: 0.2 }}, {t_cas - 0.45:.3f});
       tl.to("#cs-slot", {{ opacity: 1, scale: 1.08, duration: 0.25, ease: "back.out(2.5)" }}, {t_cas - 0.3:.3f});
@@ -373,7 +373,7 @@ SCENES[k] = scene_file(k, f"""
       tl.to("#cs-open", {{ opacity: 0.55, duration: 0.07, yoyo: true, repeat: 5, ease: "none" }}, {t_cas + 0.15:.3f});
       tl.fromTo("#cs-clock", {{ opacity: 0, rotation: 0 }}, {{ opacity: 1, rotation: 720, duration: 0.6, ease: "power2.out" }}, {t_night - 0.3:.3f});
       tl.to("#cs-slot", {{ rotation: 4, duration: 0.12, yoyo: true, repeat: 5, ease: "sine.inOut" }}, {t_cas:.3f});""")
-cues += [{"t": round(S[k] + t_ban + 0.06, 3), "kind": "stamp", "label": "sello GAMBLING BANNED"},
+cues += [{"t": round(S[k] + t_ban + 0.06, 3), "kind": "stamp", "gain": 8, "pitch": -2, "label": "sello GAMBLING BANNED"},
          {"t": round(S[k] + t_cas - 0.15 + 0.05, 3), "kind": "hit", "label": "OPEN! casino"},
          {"t": round(S[k] + t_night - 0.25, 3), "kind": "whoosh_soft", "label": "reloj gira (pico)"}]
 
@@ -403,7 +403,7 @@ SCENES[k] = scene_file(k, f"""
       tl.fromTo("#es-yr", {{ opacity: 0, scale: 0.6 }}, {{ opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2.5)" }}, {t_1908 - 0.1:.3f});
       tl.fromTo("#es-crown", {{ opacity: 0, y: -80 }}, {{ opacity: 1, y: 0, duration: 0.3, ease: "bounce.out" }}, {t_cap - 0.2:.3f});
       tl.fromTo("#es-st", {{ opacity: 0, scale: 1.7, rotation: -10 }}, {{ opacity: 1, scale: 1, rotation: -3, duration: 0.16, ease: "power4.in" }}, {t_esp - 0.25:.3f});""")
-cues += [{"t": round(S[k] + 0.3, 3), "kind": "thunk", "pitch": 3, "label": "cae la bandera"},
+cues += [
          {"t": round(S[k] + t_cap - 0.05, 3), "kind": "pop", "pitch": 4, "label": "corona"},
          {"t": round(S[k] + t_esp - 0.09, 3), "kind": "stamp", "label": "sello WORLD CAPITAL"}]
 
@@ -434,7 +434,8 @@ SCENES[k] = scene_file(k, f"""
     f"""      tl.fromTo("#pl-q", {{ opacity: 0, y: 30 }}, {{ opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }}, 0.02);
 """ + "".join(f'      tl.fromTo("#pl-b{n}", {{ opacity: 0, scale: 0.3 }}, {{ opacity: 1, scale: 1, duration: 0.22, ease: "back.out(3)" }}, {0.2 + n * 0.08:.2f});\n' for n in range(1, 6))
     + f"""      tl.to("#pl-b4", {{ scale: 1.12, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }}, 0.9);
-      tl.fromTo("#pl-c", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.25 }}, 0.7);""")
+      tl.fromTo("#pl-c", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.25 }}, 0.7);
+      tl.to(".nb", {{ y: -12, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut", stagger: 0.06 }}, 1.0);""")
 cues += [{"t": round(S[k] + 0.3, 3), "kind": "pop", "label": "botones 1–5"}]
 
 # ---------- contador FACT n/5 (capa superior del index) ----------
@@ -552,17 +553,17 @@ open(os.path.join(HERE, "index.html"), "w").write(index)
 
 LIBR = "../../../sonido/libreria"
 SFX = {   # elegidos y ajustados con earshot (ver out/oido/INFORME_OIDO.md)
-    "whoosh": (f"{LIBR}/whoosh/fs-60007_swipe-whoosh.mp3", "peak", -11),
-    "whoosh2": (f"{LIBR}/whoosh/fs-539172_melee-combat-whoosh.mp3", "peak", -13),
+    "whoosh": (f"{LIBR}/whoosh/fs-60007_swipe-whoosh.mp3", "peak", -14),
+    "whoosh2": (f"{LIBR}/whoosh/fs-539172_melee-combat-whoosh.mp3", "peak", -16),
     "whoosh_soft": (f"{LIBR}/whoosh/fs-60007_swipe-whoosh.mp3", "peak", -10),
     "click": (f"{LIBR}/click/uisfx_soft_select.mp3", "peak", -9),
-    "tick": (f"{LIBR}/pop/earshot_ui_pop_step.wav", "attack", -8),
-    "pop": (f"{LIBR}/pop/earshot_ui_pop_wide.wav", "attack", -8),
-    "stamp": (f"{LIBR}/stamp/fs-362624_stamp.mp3", "attack", -10),
-    "thunk": (f"{LIBR}/stamp/fs-347325_thick-stamp-nosub-wav.mp3", "attack", -14),
+    "tick": (f"{LIBR}/pop/earshot_ui_pop_step.wav", "attack", -11),
+    "pop": (f"{LIBR}/pop/earshot_ui_pop_wide.wav", "attack", -11),
+    "stamp": (f"{LIBR}/stamp/fs-362624_stamp.mp3", "attack", -13),
+    "thunk": (f"{LIBR}/stamp/fs-347325_thick-stamp-nosub-wav.mp3", "attack", -17),
     "hit": (f"{LIBR}/hit/fs-377303_deep-cinematic-impact.mp3", "attack", -8),
     "hit_soft": (f"{LIBR}/hit/fs-377303_deep-cinematic-impact.mp3", "attack", -13),
-    "sub": (f"{LIBR}/sub/earshot_cut_hit_punch.wav", "attack", -7),
+    "sub": (f"{LIBR}/sub/earshot_cut_hit_punch.wav", "attack", -10),
 }
 # correcciones de sincronía medidas con earshot (s): el impacto se percibía ~55 ms antes
 OFFSET = {"hit": 0.05, "sub": 0.05}

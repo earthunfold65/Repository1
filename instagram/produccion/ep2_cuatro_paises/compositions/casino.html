@@ -31,7 +31,7 @@
     (function () {
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#cs-cam", { scale: 1.0 }, { scale: 1.1, duration: 4.6334, ease: "none" }, 0);
-      tl.fromTo("#cs-slot", { opacity: 0.25, scale: 0.85 }, { opacity: 0.25, scale: 0.85, duration: 0.01 }, 0);
+      tl.fromTo("#cs-slot", { opacity: 0.25, scale: 0.85, rotation: -4 }, { opacity: 0.4, scale: 0.92, rotation: 4, duration: 2.658, ease: "sine.inOut" }, 0);
       tl.fromTo("#cs-ban", { opacity: 0, scale: 2, rotation: -16 }, { opacity: 1, scale: 1, rotation: -7, duration: 0.16, ease: "power4.in" }, 1.308);
       tl.to("#cs-ban", { opacity: 0, scale: 0.7, duration: 0.2 }, 2.558);
       tl.to("#cs-slot", { opacity: 1, scale: 1.08, duration: 0.25, ease: "back.out(2.5)" }, 2.708);

@@ -34,6 +34,7 @@
       tl.fromTo("#pl-b5", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.22, ease: "back.out(3)" }, 0.60);
       tl.to("#pl-b4", { scale: 1.12, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, 0.9);
       tl.fromTo("#pl-c", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 0.7);
+      tl.to(".nb", { y: -12, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut", stagger: 0.06 }, 1.0);
       window.__timelines["poll"] = tl;
     })();
   </script>

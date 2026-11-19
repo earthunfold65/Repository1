@@ -75,11 +75,14 @@
   {
    "t": 35.633,
    "kind": "hit",
+   "gain": 3,
    "label": "GONE + sacudida"
   },
   {
-   "t": 39.487,
-   "kind": "whoosh_soft",
+   "t": 39.497,
+   "kind": "pop",
+   "pitch": 5,
+   "gain": 3,
    "label": "entra la tarjeta final"
   },
   {
@@ -133,6 +136,8 @@
   {
    "t": 22.901,
    "kind": "stamp",
+   "gain": 8,
+   "pitch": -2,
    "label": "sello GAMBLING BANNED"
   },
   {
@@ -144,12 +149,6 @@
    "t": 25.151,
    "kind": "whoosh_soft",
    "label": "reloj gira (pico)"
-  },
-  {
-   "t": 26.367,
-   "kind": "thunk",
-   "pitch": 3,
-   "label": "cae la bandera"
   },
   {
    "t": 29.036,
